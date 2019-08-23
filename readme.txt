@@ -4,7 +4,7 @@ Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 4.9
 Tested up to: 5.2
 Requires PHP: 7.1
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://support.laquadrature.net/
@@ -70,6 +70,12 @@ Support is provided via the official [support page](https://wordpress.org/suppor
 You can report bugs and suggest ideas via the official [support page](https://wordpress.org/support/plugin/oembed-manager).
 
 == Changelog ==
+
+= 1.2.6 =
+
+Release Date: August 23rd, 2019
+
+* Improvement: development workflow based now on GitHub.
 
 = 1.2.5 =
 
