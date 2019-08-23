@@ -1,21 +1,24 @@
-on:
-  release:
-    actions:
-      - published
-        name: New WordPress.org release
-        jobs:
-          tag:
-            runs-on: ubuntu-latest
-            steps:
-            - uses: actions/checkout@master
-            - name: tag
-              uses: actions/bin/filter@master
-              with:
-                args: tag
-            - name: WordPress Plugin Deploy
-              uses: Pierre-Lannoy/wordpress-actions/dotorg-plugin-deploy@master
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                SLUG: oembed-manager
-                SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-                SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+on: release
+name: New WordPress.org release
+jobs:
+  publish:
+    steps:
+      - name: Cancel if not a release publish # workaround has `on` doesn't have this filter
+        run: exit 1
+        if: github.event.action != 'published'
+      - uses: actions/checkout@v1
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: tag
+        uses: actions/bin/filter@master
+        with:
+          args: tag
+      - name: WordPress Plugin Deploy
+        uses: Pierre-Lannoy/wordpress-actions/dotorg-plugin-deploy@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLUG: oembed-manager
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
