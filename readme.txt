@@ -4,7 +4,7 @@ Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 4.9
 Tested up to: 5.2
 Requires PHP: 7.1
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://support.laquadrature.net/
@@ -71,11 +71,11 @@ You can report bugs and suggest ideas via the official [support page](https://wo
 
 == Changelog ==
 
-= 1.2.6 =
+= 1.2.6-7-8 =
 
 Release Date: August 23rd, 2019
 
-* Improvement: development workflow based now on GitHub.
+* Improvement: development workflow now based on GitHub.
 
 = 1.2.5 =
 

@@ -1,6 +1,9 @@
 name: New WordPress.org release
 
-on: [release]
+on:
+  release:
+    branches:
+      - refs/tags/*
 
 jobs:
   tag:
