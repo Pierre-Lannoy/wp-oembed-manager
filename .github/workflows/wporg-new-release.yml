@@ -1,4 +1,5 @@
-on: release
+on:
+  release:
 name: New WordPress.org release
 jobs:
   tag:
