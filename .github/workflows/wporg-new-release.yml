@@ -1,12 +1,6 @@
 on: release
 name: New WordPress.org release
 jobs:
-  publish:
-    steps:
-      - name: Cancel if not a release publish # workaround has `on` doesn't have this filter
-        run: exit 1
-        if: github.event.action != 'published'
-      - uses: actions/checkout@v1
   tag:
     runs-on: ubuntu-latest
     steps:
