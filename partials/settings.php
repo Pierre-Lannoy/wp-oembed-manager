@@ -39,9 +39,9 @@ if (isset($integrations)) {
 
     <?php if ($active_tab === 'tools') { ?>
         <?php if ($cached === 0) {?>
-            <p><?php echo __('Your WordPress cache does not contain oEmbed content.', 'oembed-manager');?></p>
+            <p><?php echo __('Your WordPress cache does not contain embedded content.', 'oembed-manager');?></p>
         <?php } else { ?>
-            <p><?php echo sprintf(_n('Your WordPress cache contains %s oEmbed content.', 'Your WordPress cache contains %s oEmbed contents.', $cached, 'oembed-manager'), $cached);?></p>
+            <p><?php echo sprintf(_n('Your WordPress cache contains %s embedded content.', 'Your WordPress cache contains %s embedded contents.', $cached, 'oembed-manager'), $cached);?></p>
         <?php } ?>
         <p><a class="button button-primary <?php echo $cached===0?'button-disabled':'';?>" href="<?php echo esc_url(oemm_get_settings_page_url('oemm-settings', $active_tab, 'reset-cache')); ?>"><?php echo __('Purge Cache', 'oembed-manager');?></a></p>
     <?php } else { ?>

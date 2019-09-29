@@ -9,7 +9,7 @@
  * Plugin Name:       oEmbed Manager
  * Plugin URI:        https://wordpress.org/plugins/oembed-manager/
  * Description:       Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content.
- * Version:           1.2.9-dev1
+ * Version:           1.2.9
  * Author:            Pierre Lannoy
  * Author URI:        https://pierre.lannoy.fr
  * License:           GPLv2 or later
@@ -578,12 +578,26 @@ class OEmbedManager {
         $oemm_exception_dnt_param = get_option ('oemm_exception_dnt_param', self::$oemm_exception_dnt_param);
         $allowedtags = array(
             'a' => array( 'href' => array(), 'title' => array(), 'target' => array() ),
-            'abbr' => array( 'title' => array() ), 'acronym' => array( 'title' => array() ),
-            'code' => array(), 'pre' => array(), 'em' => array(), 'strong' => array(),
-            'div' => array( 'class' => array() ), 'span' => array( 'class' => array() ),
-            'p' => array(), 'br' => array(), 'ul' => array(), 'ol' => array(), 'li' => array(),
-            'h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(),
-            'img' => array( 'src' => array(), 'class' => array(), 'alt' => array() ),
+            'abbr' => array( 'title' => array() ),
+            'acronym' => array( 'title' => array() ),
+            'code' => array(),
+            'pre' => array(),
+            'em' => array(),
+            'strong' => array(),
+            'div' => array( 'class' => array(), 'style' => array() ),
+            'span' => array( 'class' => array(), 'style' => array() ),
+            'p' => array( 'class' => array(), 'style' => array() ),
+            'br' => array(),
+            'ul' => array(),
+            'ol' => array(),
+            'li' => array(),
+            'h1' => array(),
+            'h2' => array(),
+            'h3' => array(),
+            'h4' => array(),
+            'h5' => array(),
+            'h6' => array(),
+            'img' => array( 'src' => array(), 'class' => array(), 'alt' => array(), 'style' => array() ),
             'blockquote' => array( 'cite' => true ),
         );
         if (array_key_exists('oemm_consumer_mode', $_POST)) {

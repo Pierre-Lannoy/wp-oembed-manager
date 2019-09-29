@@ -2,9 +2,9 @@
 Contributors: PierreLannoy
 Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 4.9
-Tested up to: 5.2
+Tested up to: 5.3
 Requires PHP: 7.1
-Stable tag: 1.2.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://support.laquadrature.net/
@@ -71,6 +71,14 @@ You can report bugs and suggest ideas via the official [support page](https://wo
 
 == Changelog ==
 
+= 1.2.9 =
+
+Release Date: September 29th, 2019
+
+* Improvement: `p`, `span` and `div` tags now allow classes and styles (thanks to [@peexy](https://profiles.wordpress.org/peexy/)).
+* Improvement: WordPress 5.3 compatibility.
+* Bug fix: typos in "Purge Cache" explanation.
+
 = 1.2.6-7-8 =
 
 Release Date: August 23rd, 2019
@@ -87,7 +95,7 @@ Release Date: April 28th, 2019
 
 Release Date: February 26th, 2019
 
-* bug fix: typos in version matching.
+* Bug fix: typos in version matching.
 
 = 1.2.3 =
 
