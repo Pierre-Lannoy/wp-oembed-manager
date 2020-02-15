@@ -144,9 +144,9 @@ class OEMMCookieIntegration extends OEMMIntegration{
         $result['url'] = 'https://wordpress.org/plugins/cookie-law-info/';
         $result['image'] = plugin_dir_url(__FILE__) . 'medias/' . $result['id'] . '-icon-128x128.png';
         $result['backend_detection']['rule'] = 'function_exists';
-        $result['backend_detection']['name'] = 'cookielawinfo_plugin_action_links';
+        $result['backend_detection']['name'] = 'run_cookie_law_info';
         $result['frontend_detection']['rule'] = 'function_exists';
-        $result['frontend_detection']['name'] = 'cookielawinfo_plugin_action_links';
+        $result['frontend_detection']['name'] = 'run_cookie_law_info';
         $result['execution']['rule'] = 'cookie';
         $result['execution']['name'] = 'viewed_cookie_policy';
         $result['execution']['format'] = 'raw-single';

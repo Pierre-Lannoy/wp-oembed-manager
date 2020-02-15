@@ -9,7 +9,7 @@
  * Plugin Name:       oEmbed Manager
  * Plugin URI:        https://wordpress.org/plugins/oembed-manager/
  * Description:       Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content.
- * Version:           1.2.9
+ * Version:           1.2.10
  * Author:            Pierre Lannoy
  * Author URI:        https://pierre.lannoy.fr
  * License:           GPLv2 or later

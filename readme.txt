@@ -2,9 +2,9 @@
 Contributors: PierreLannoy
 Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 4.9
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 7.1
-Stable tag: 1.2.9
+Stable tag: 1.2.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://support.laquadrature.net/
@@ -70,6 +70,13 @@ Support is provided via the official [support page](https://wordpress.org/suppor
 You can report bugs and suggest ideas via the official [support page](https://wordpress.org/support/plugin/oembed-manager).
 
 == Changelog ==
+
+= 1.2.10 =
+
+Release Date: February 15th, 2020
+
+* Improvement: WordPress 5.4 compatibility.
+* Bug fix: the GDPR Cookie Consent plugin is not fully detected (thanks to [@marcoboom](https://wordpress.org/support/users/marcoboom/)).
 
 = 1.2.9 =
 
