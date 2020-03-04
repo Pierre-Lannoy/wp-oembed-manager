@@ -10,6 +10,7 @@
  */
 
 namespace Oemm\System;
+
 use Oemm\System\Environment;
 
 /**
@@ -65,17 +66,35 @@ class Option {
 	 * @since 1.0.0
 	 */
 	public static function init() {
-		self::$defaults['use_cdn']          = false;
-		self::$defaults['script_in_footer'] = false;
-		self::$defaults['display_nag']      = true;
-		self::$defaults['nags']             = [];
-		self::$defaults['version']          = '0.0.0';
-		self::$defaults['last_check']       = [];
-		self::$defaults['history']          = 21;
-		self::$defaults['analytics']        = true;
-		self::$defaults['status']           = true;
-		self::$defaults['info']             = true;
-		self::$network                      = [ 'version', 'use_cdn', 'script_in_footer', 'display_nag', 'analytics', 'history' ];
+		self::$defaults['use_cdn']                 = false;
+		self::$defaults['script_in_footer']        = false;
+		self::$defaults['display_nag']             = true;
+		self::$defaults['nags']                    = [];
+		self::$defaults['version']                 = '0.0.0';
+		self::$defaults['last_check']              = [];
+		self::$defaults['history']                 = 21;
+		self::$defaults['analytics']               = true;
+		self::$network                             = [ 'version', 'use_cdn', 'script_in_footer', 'display_nag', 'analytics', 'history' ];
+		self::$defaults['disable_producer']        = false;
+		self::$defaults['disable_consumer']        = false;
+		self::$defaults['consumer_mode']           = false;
+		self::$defaults['advanced_clickable']      = false;
+		self::$defaults['advanced_ttl']            = 24;   //hours
+		self::$defaults['advanced_timeout']        = 5;    //seconds
+		self::$defaults['advanced_size']           = 150;  //Kb
+		self::$defaults['exception_consent_block'] = false;
+		self::$defaults['exception_cookie_block']  = false;
+		self::$defaults['exception_dnt_block']     = false;
+		self::$defaults['exception_consent_param'] = '';
+		self::$defaults['exception_cookie_param']  = '';
+		self::$defaults['exception_dnt_param']     = '';
+		self::$defaults['exception_consent_id']    = '';
+		self::$defaults['exception_cookie_id']     = '';
+		self::$defaults['exception_dnt_id']        = '';
+		self::$defaults['exception_consent_text']  = '<p>' . __( 'In order to respect your opposition to our privacy policy, this embedded content have been disabled.', 'oembed-manager' ) . '</p>';
+		self::$defaults['exception_cookie_text']   = '<p>' . __( 'In order to respect your choice about cookies, this embedded content have been disabled.', 'oembed-manager' ) . '</p>';
+		self::$defaults['exception_dnt_text']      = '<p>' . __( 'In order to honor the <em>Do Not Track</em> request sent by your browser, this embedded content have been disabled to prevent third-party tracking cookies.', 'oembed-manager' ) . '</p>';
+		self::$site                                = [ 'disable_producer', 'disable_consumer', 'consumer_mode', 'advanced_clickable', 'advanced_ttl', 'advanced_timeout', 'advanced_size', 'exception_consent_block', 'exception_cookie_block', 'exception_dnt_block', 'exception_consent_param', 'exception_cookie_param', 'exception_dnt_param', 'exception_consent_id', 'exception_cookie_id', 'exception_dnt_id', 'exception_consent_text', 'exception_cookie_text', 'exception_dnt_text' ];
 	}
 
 	/**

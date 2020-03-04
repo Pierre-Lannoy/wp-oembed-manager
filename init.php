@@ -10,7 +10,7 @@
 define( 'OEMM_PRODUCT_NAME', 'oEmbed Manager' );
 define( 'OEMM_PRODUCT_URL', 'https://github.com/Pierre-Lannoy/wp-oembed-manager' );
 define( 'OEMM_PRODUCT_SHORTNAME', 'oEmbed Manager' );
-define( 'OEMM_PRODUCT_ABBREVIATION', 'oembed-manager' );
+define( 'OEMM_PRODUCT_ABBREVIATION', 'oemm' );
 define( 'OEMM_SLUG', 'oembed-manager' );
 define( 'OEMM_VERSION', '2.0.0-dev0' );
 define( 'OEMM_CODENAME', '"-"' );
