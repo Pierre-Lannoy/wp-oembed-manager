@@ -1,0 +1,42 @@
+<?php
+/**
+ * Autoload for oEmbed Manager.
+ *
+ * @package Bootstrap
+ * @author  Pierre Lannoy <https://pierre.lannoy.fr/>.
+ * @since   1.0.0
+ */
+
+spl_autoload_register(
+	function ( $class ) {
+		$classname = $class;
+		$filepath  = __DIR__ . '/';
+		if ( strpos( $classname, 'Oemm\\' ) === 0 ) {
+			while ( strpos( $classname, '\\' ) !== false ) {
+				$classname = substr( $classname, strpos( $classname, '\\' ) + 1, 1000 );
+			}
+			$filename = 'class-' . str_replace( '_', '-', strtolower( $classname ) ) . '.php';
+			if ( strpos( $class, 'Oemm\System\\' ) === 0 ) {
+				$filepath = OEMM_INCLUDES_DIR . 'system/';
+			}
+			if ( strpos( $class, 'Oemm\Plugin\Feature\\' ) === 0 ) {
+				$filepath = OEMM_INCLUDES_DIR . 'features/';
+			} elseif ( strpos( $class, 'Oemm\Plugin\\' ) === 0 ) {
+				$filepath = OEMM_INCLUDES_DIR . 'plugin/';
+			}
+			if ( strpos( $class, 'Oemm\Library\\' ) === 0 ) {
+				$filepath = OEMM_VENDOR_DIR;
+			}
+			if ( strpos( $filename, '-public' ) !== false ) {
+				$filepath = OEMM_PUBLIC_DIR;
+			}
+			if ( strpos( $filename, '-admin' ) !== false ) {
+				$filepath = OEMM_ADMIN_DIR;
+			}
+			$file = $filepath . $filename;
+			if ( file_exists( $file ) ) {
+				include_once $file;
+			}
+		}
+	}
+);

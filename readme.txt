@@ -1,13 +1,12 @@
 === oEmbed Manager ===
 Contributors: PierreLannoy
 Tags: oembed, embed, privacy, gdpr, manager
-Requires at least: 4.9
+Requires at least: 5.2
 Tested up to: 5.4
-Requires PHP: 7.1
-Stable tag: 1.2.10
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Donate link: https://support.laquadrature.net/
+Requires PHP: 7.2
+Stable tag: 2.0.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content.
 
@@ -55,7 +54,7 @@ If you use one of these plugins, you can set oEmbed to display embedded content 
 
 = What are the requirements for this plugin to work? =
 
-You need **WordPress 4.9** and at least **PHP 7.1**.
+You need **WordPress 5.2** and at least **PHP 7.2**.
 
 = What are the cases where this plugin does not work? =
 
@@ -71,91 +70,9 @@ You can report bugs and suggest ideas via the official [support page](https://wo
 
 == Changelog ==
 
-= 1.2.10 =
-
-Release Date: February 15th, 2020
-
-* Improvement: WordPress 5.4 compatibility.
-* Bug fix: the GDPR Cookie Consent plugin is not fully detected (thanks to [@marcoboom](https://wordpress.org/support/users/marcoboom/)).
-
-= 1.2.9 =
-
-Release Date: September 29th, 2019
-
-* Improvement: `p`, `span` and `div` tags now allow classes and styles (thanks to [@peexy](https://profiles.wordpress.org/peexy/)).
-* Improvement: WordPress 5.3 compatibility.
-* Bug fix: typos in "Purge Cache" explanation.
-
-= 1.2.6-7-8 =
-
-Release Date: August 23rd, 2019
-
-* Improvement: development workflow now based on GitHub.
-
-= 1.2.5 =
-
-Release Date: April 28th, 2019
-
-* Improvement: WordPress 5.2 compatibility.
-
-= 1.2.4 =
-
-Release Date: February 26th, 2019
-
-* Bug fix: typos in version matching.
-
-= 1.2.3 =
-
-Release Date: February 25th, 2019
-
-* Improvement: WordPress 5.1 compatibility.
-
-= 1.2.2 =
-
-Release Date: November 2nd, 2018
-
-* Improvement: full compatibility with WordPress 5.0.
-
-= 1.2.1 =
-
-Release Date: September 18th, 2018
-
-* Improvement: better support for integrations needing cookie evaluation.
-
-= 1.2.0 =
-
-Release Date: August 15th, 2018
-
-* New: now integrated with *Cookie Consent* plugin.
-* New: now integrated with *GDPR Cookie Compliance* plugin.
-* New: now integrated with *GDPR Cookie Consent* plugin.
-* Bug fix: there are (again and again) some typos in localizable strings.
-
-= 1.1.0 =
-
-Release Date: August 11th, 2018
-
-* New: now integrated with *EU Cookie Law* plugin.
-* Improvement: better support for JetPack embedded videos.
-* Bug fix: there are (again) some typos in localizable strings.
-
-= 1.0.1 =
-
-Release Date: August 7th, 2018
-
-* Improvement: better `readme.txt` file.
-* Bug fix: there are many typos in localizable strings.
-
-= 1.0.0 =
-
-Release Date: August 7th, 2018
-
-* First public version
+Please, see [full changelog](https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md) on GitHub.
 
 == Upgrade Notice ==
-
-= 1.0.X =
-Initial version
 
 == Screenshots ==
 
