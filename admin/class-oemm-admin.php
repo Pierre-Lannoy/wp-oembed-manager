@@ -57,11 +57,6 @@ class Oemm_Admin {
 	 */
 	public function enqueue_styles() {
 		$this->assets->register_style( OEMM_ASSETS_ID, OEMM_ADMIN_URL, 'css/oembed-manager.min.css' );
-		$this->assets->register_style( 'oemm-daterangepicker', OEMM_ADMIN_URL, 'css/daterangepicker.min.css' );
-		$this->assets->register_style( 'oemm-switchery', OEMM_ADMIN_URL, 'css/switchery.min.css' );
-		$this->assets->register_style( 'oemm-tooltip', OEMM_ADMIN_URL, 'css/tooltip.min.css' );
-		$this->assets->register_style( 'oemm-chartist', OEMM_ADMIN_URL, 'css/chartist.min.css' );
-		$this->assets->register_style( 'oemm-chartist-tooltip', OEMM_ADMIN_URL, 'css/chartist-plugin-tooltip.min.css' );
 
 	}
 
@@ -72,11 +67,6 @@ class Oemm_Admin {
 	 */
 	public function enqueue_scripts() {
 		$this->assets->register_script( OEMM_ASSETS_ID, OEMM_ADMIN_URL, 'js/oembed-manager.min.js', [ 'jquery' ] );
-		$this->assets->register_script( 'oemm-moment-with-locale', OEMM_ADMIN_URL, 'js/moment-with-locales.min.js', [ 'jquery' ] );
-		$this->assets->register_script( 'oemm-daterangepicker', OEMM_ADMIN_URL, 'js/daterangepicker.min.js', [ 'jquery' ] );
-		$this->assets->register_script( 'oemm-switchery', OEMM_ADMIN_URL, 'js/switchery.min.js', [ 'jquery' ] );
-		$this->assets->register_script( 'oemm-chartist', OEMM_ADMIN_URL, 'js/chartist.min.js', [ 'jquery' ] );
-		$this->assets->register_script( 'oemm-chartist-tooltip', OEMM_ADMIN_URL, 'js/chartist-plugin-tooltip.min.js', [ 'oemm-chartist' ] );
 	}
 
 	/**
@@ -87,7 +77,7 @@ class Oemm_Admin {
 	 * @since 1.0.0
 	 */
 	public function init_perfops_admin_menus( $perfops ) {
-		if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() ) {
+		if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
 			$perfops['settings'][] = [
 				'name'          => OEMM_PRODUCT_NAME,
 				'description'   => '',
@@ -106,14 +96,14 @@ class Oemm_Admin {
 				'statistics'    => [ '\Oemm\System\Statistics', 'sc_get_raw' ],
 			];
 		}
-		if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
+		/*if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
 			$perfops['analytics'][] = [
 				'name'          => esc_html__( 'API oEmbed Manager', 'oembed-manager' ),
-				/* translators: as in the sentence "Find out inbound and outbound API calls made to/from your network." or "Find out inbound and outbound API calls made to/from your website." */
+				/* translators: as in the sentence "Find out inbound and outbound API calls made to/from your network." or "Find out inbound and outbound API calls made to/from your website." *
 				'description'   => sprintf( esc_html__( 'Find out inbound and outbound API calls made to/from your %s.', 'oembed-manager' ), Environment::is_wordpress_multisite() ? esc_html__( 'network', 'oembed-manager' ) : esc_html__( 'website', 'oembed-manager' ) ),
 				'icon_callback' => [ \Oemm\Plugin\Core::class, 'get_base64_logo' ],
 				'slug'          => 'oemm-viewer',
-				/* translators: as in the sentence "DecaLog Viewer" */
+				/* translators: as in the sentence "DecaLog Viewer" *
 				'page_title'    => sprintf( esc_html__( 'API oEmbed Manager', 'oembed-manager' ), OEMM_PRODUCT_NAME ),
 				'menu_title'    => esc_html__( 'API oEmbed Manager', 'oembed-manager' ),
 				'capability'    => 'manage_options',
@@ -123,7 +113,7 @@ class Oemm_Admin {
 				'activated'     => true,
 				'remedy'        => '',
 			];
-		}
+		}*/
 		return $perfops;
 	}
 
@@ -143,7 +133,6 @@ class Oemm_Admin {
 	 * @since 1.0.0
 	 */
 	public function init_settings_sections() {
-		add_settings_section( 'oemm_plugin_features_section', esc_html__( 'Plugin features', 'oembed-manager' ), [ $this, 'plugin_features_section_callback' ], 'oemm_plugin_features_section' );
 		add_settings_section( 'oemm_plugin_options_section', esc_html__( 'Plugin options', 'oembed-manager' ), [ $this, 'plugin_options_section_callback' ], 'oemm_plugin_options_section' );
 	}
 
@@ -161,7 +150,7 @@ class Oemm_Admin {
 	 */
 	public function add_actions_links( $actions, $plugin_file, $plugin_data, $context ) {
 		$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-settings' ) ), esc_html__( 'Settings', 'oembed-manager' ) );
-		$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-viewer' ) ), esc_html__( 'Statistics', 'oembed-manager' ) );
+		//$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-viewer' ) ), esc_html__( 'Statistics', 'oembed-manager' ) );
 		return $actions;
 	}
 
@@ -179,16 +168,6 @@ class Oemm_Admin {
 			$links[] = '<a href="https://github.com/Pierre-Lannoy/wp-oembed-manager">' . __( 'GitHub repository', 'oembed-manager' ) . '</a>';
 		}
 		return $links;
-	}
-
-	/**
-	 * Get the content of the tools page.
-	 *
-	 * @since 1.0.0
-	 */
-	public function get_viewer_page() {
-		$analytics = AnalyticsFactory::get_analytics();
-		include OEMM_ADMIN_DIR . 'partials/oembed-manager-admin-view-analytics.php';
 	}
 
 	/**
@@ -233,8 +212,6 @@ class Oemm_Admin {
 			if ( array_key_exists( '_wpnonce', $_POST ) && wp_verify_nonce( $_POST['_wpnonce'], 'oemm-plugin-options' ) ) {
 				Option::network_set( 'use_cdn', array_key_exists( 'oemm_plugin_options_usecdn', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_options_usecdn' ) : false );
 				Option::network_set( 'display_nag', array_key_exists( 'oemm_plugin_options_nag', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_options_nag' ) : false );
-				Option::network_set( 'status', array_key_exists( 'oemm_plugin_features_status', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_features_status' ) : false );
-				Option::network_set( 'info', array_key_exists( 'oemm_plugin_features_info', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_features_info' ) : false );
 				flush_rewrite_rules();
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
@@ -328,47 +305,6 @@ class Oemm_Admin {
 			]
 		);
 		register_setting( 'oemm_plugin_options_section', 'oemm_plugin_options_nag' );
-	}
-
-	/**
-	 * Callback for plugin features section.
-	 *
-	 * @since 1.0.0
-	 */
-	public function plugin_features_section_callback() {
-		$form = new Form();
-		add_settings_field(
-			'oemm_plugin_features_status',
-			__( 'Server status', 'oembed-manager' ),
-			[ $form, 'echo_field_checkbox' ],
-			'oemm_plugin_features_section',
-			'oemm_plugin_features_section',
-			[
-				'text'        => sprintf( esc_html__( 'Activate .htaccess rule for %s', 'oembed-manager' ), 'mod_status' ),
-				'id'          => 'oemm_plugin_features_status',
-				'checked'     => Option::network_get( 'status' ),
-				'description' => sprintf( esc_html__( 'If checked, Apache server status will be served via l\'url %s.', 'oembed-manager' ), site_url( 'server-status') ) . '<br/>' . esc_html__( 'Note: this only sets up your .htaccess file. For this to work, the module must be activated in your Apache configuration.', 'oembed-manager' ),
-				'full_width'  => true,
-				'enabled'     => true,
-			]
-		);
-		register_setting( 'oemm_plugin_features_section', 'oemm_plugin_features_status' );
-		add_settings_field(
-			'oemm_plugin_features_info',
-			__( 'Server info', 'htaccess-server-info-server-info' ),
-			[ $form, 'echo_field_checkbox' ],
-			'oemm_plugin_features_section',
-			'oemm_plugin_features_section',
-			[
-				'text'        => sprintf( esc_html__( 'Activate .htaccess rule for %s', 'oembed-manager' ), 'mod_info' ),
-				'id'          => 'oemm_plugin_features_info',
-				'checked'     => Option::network_get( 'info' ),
-				'description' => sprintf( esc_html__( 'If checked, Apache server info will be served via l\'url %s.', 'oembed-manager' ), site_url( 'server-info') ) . '<br/>' . esc_html__( 'Note: this only sets up your .htaccess file. For this to work, the module must be activated in your Apache configuration.', 'oembed-manager' ),
-				'full_width'  => true,
-				'enabled'     => true,
-			]
-		);
-		register_setting( 'oemm_plugin_features_section', 'oemm_plugin_features_info' );
 	}
 
 }
