@@ -9,10 +9,13 @@
  * @since   1.0.0
  */
 
+use Oemm\System\Role;
+
 // phpcs:ignore
 $active_tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'misc' );
-
-
+if ( 'misc' === $active_tab && ! ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() ) ) {
+	$active_tab = 'producer';
+}
 
 ?>
 
@@ -22,27 +25,55 @@ $active_tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'misc' );
 	<?php settings_errors(); ?>
 
 	<h2 class="nav-tab-wrapper">
-		<a href="
+        <a href="
 		<?php
 		echo esc_url(
 			add_query_arg(
-				array(
+				[
 					'page' => 'oemm-settings',
-					'tab'  => 'misc',
-				),
+					'tab'  => 'consumer',
+				],
 				admin_url( 'admin.php' )
 			)
 		);
 		?>
-		" class="nav-tab <?php echo 'misc' === $active_tab ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Options', 'oembed-manager' ); ?></a>
+		" class="nav-tab <?php echo 'consumer' === $active_tab ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Consumer', 'oembed-manager' ); ?></a>
+        <a href="
+		<?php
+		echo esc_url(
+			add_query_arg(
+				[
+					'page' => 'oemm-settings',
+					'tab'  => 'producer',
+				],
+				admin_url( 'admin.php' )
+			)
+		);
+		?>
+		" class="nav-tab <?php echo 'producer' === $active_tab ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Producer', 'oembed-manager' ); ?></a>
+		<?php if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() ) { ?>
+            <a href="
+            <?php
+            echo esc_url(
+                add_query_arg(
+                    [
+                        'page' => 'oemm-settings',
+                        'tab'  => 'misc',
+                    ],
+                    admin_url( 'admin.php' )
+                )
+            );
+            ?>
+            " class="nav-tab <?php echo 'misc' === $active_tab ? 'nav-tab-active' : ''; ?>"><?php esc_html_e( 'Options', 'oembed-manager' ); ?></a>
+		<?php } ?>
 		<a href="
 		<?php
 		echo esc_url(
 			add_query_arg(
-				array(
+				[
 					'page' => 'oemm-settings',
 					'tab'  => 'about',
-				),
+				],
 				admin_url( 'admin.php' )
 			)
 		);
@@ -52,10 +83,10 @@ $active_tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'misc' );
 		<?php
 		echo esc_url(
 			add_query_arg(
-				array(
+				[
 					'page' => 'oemm-settings',
 					'tab'  => 'integrations',
-				),
+				],
 				admin_url( 'admin.php' )
 			)
 		);
@@ -63,8 +94,14 @@ $active_tab = ( isset( $_GET['tab'] ) ? $_GET['tab'] : 'misc' );
 		" class="nav-tab <?php echo 'integrations' === $active_tab ? 'nav-tab-active' : ''; ?>" style="float:right;"><?php esc_html_e( 'Integrations', 'oembed-manager' ); ?></a>
 	</h2>
     
-	<?php if ( 'misc' === $active_tab ) { ?>
+	<?php if ( 'misc' === $active_tab && ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() ) ) { ?>
 		<?php include __DIR__ . '/oembed-manager-admin-settings-options.php'; ?>
+	<?php } ?>
+	<?php if ( 'consumer' === $active_tab ) { ?>
+		<?php include __DIR__ . '/oembed-manager-admin-settings-consumer.php'; ?>
+	<?php } ?>
+	<?php if ( 'producer' === $active_tab ) { ?>
+		<?php include __DIR__ . '/oembed-manager-admin-settings-producer.php'; ?>
 	<?php } ?>
 	<?php if ( 'integrations' === $active_tab ) { ?>
 		<?php include __DIR__ . '/oembed-manager-admin-settings-integrations.php'; ?>
