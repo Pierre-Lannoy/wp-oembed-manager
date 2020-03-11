@@ -43,7 +43,7 @@ class Consent extends Integration {
 		$result['id']                         = 'gdpr';
 		$result['name']                       = 'GDPR';
 		$result['url']                        = 'https://wordpress.org/plugins/gdpr/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon.svg';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon.svg';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'has_consent';
 		$result['frontend_detection']['rule'] = 'function_exists';

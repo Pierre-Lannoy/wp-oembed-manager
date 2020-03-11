@@ -48,7 +48,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'uk-cookie-consent';
 		$result['name']                       = 'Cookie Consent';
 		$result['url']                        = 'https://wordpress.org/plugins/uk-cookie-consent/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.png';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'ctcc_create_policy_page';
 		$result['frontend_detection']['rule'] = 'function_exists';
@@ -71,7 +71,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'cookie-notice';
 		$result['name']                       = 'Cookie Notice for GDPR';
 		$result['url']                        = 'https://wordpress.org/plugins/cookie-notice/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.png';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'cn_cookies_accepted';
 		$result['frontend_detection']['rule'] = 'function_exists';
@@ -91,7 +91,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'gdpr';
 		$result['name']                       = 'GDPR';
 		$result['url']                        = 'https://wordpress.org/plugins/gdpr/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon.svg';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon.svg';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'is_allowed_cookie';
 		$result['frontend_detection']['rule'] = 'function_exists';
@@ -113,7 +113,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'eu-cookie-law';
 		$result['name']                       = 'EU Cookie Law';
 		$result['url']                        = 'https://wordpress.org/plugins/eu-cookie-law/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.jpg';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.jpg';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'peadig_eucookie_options';
 		$result['frontend_detection']['rule'] = 'function_exists';
@@ -133,7 +133,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'gdpr-cookie-compliance';
 		$result['name']                       = 'GDPR Cookie Compliance';
 		$result['url']                        = 'https://wordpress.org/plugins/gdpr-cookie-compliance/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.png';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'moove_gdpr_activate';
 		$result['frontend_detection']['rule'] = 'function_exists';
@@ -156,7 +156,7 @@ class Cookie extends Integration {
 		$result['id']                         = 'cookie-law-info';
 		$result['name']                       = 'GDPR Cookie Consent';
 		$result['url']                        = 'https://wordpress.org/plugins/cookie-law-info/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.png';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
 		$result['backend_detection']['name']  = 'run_cookie_law_info';
 		$result['frontend_detection']['rule'] = 'function_exists';

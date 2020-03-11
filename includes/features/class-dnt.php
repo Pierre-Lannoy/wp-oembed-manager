@@ -43,7 +43,7 @@ class DNT extends Integration {
 		$result['id']                         = 'do-not-track-stats';
 		$result['name']                       = 'Do Not Track Stats';
 		$result['url']                        = 'https://wordpress.org/plugins/do-not-track-stats/';
-		$result['image']                      = OEMM_ADMIN_DIR . 'medias/' . $result['id'] . '-icon-128x128.png';
+		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'defined';
 		$result['backend_detection']['name']  = 'DO_NOT_TRACK_STATUS';
 		$result['frontend_detection']['rule'] = 'defined';
