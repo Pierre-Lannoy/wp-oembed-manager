@@ -9,6 +9,9 @@
  * @since   1.0.0
  */
 
+wp_enqueue_style( OEMM_ASSETS_ID );
+wp_enqueue_script( OEMM_ASSETS_ID );
+
 ?>
 
 <form action="
@@ -25,7 +28,9 @@
 		);
 		?>
 	" method="POST">
-	<?php do_settings_sections( 'oemm_consumer' ); ?>
+	<?php do_settings_sections( 'oemm_consumer_misc_section' ); ?>
+	<?php do_settings_sections( 'oemm_consumer_rules_section' ); ?>
+	<?php do_settings_sections( 'oemm_consumer_advanced_section' ); ?>
 	<?php wp_nonce_field( 'oemm-plugin-options' ); ?>
     <p><?php echo get_submit_button( null, 'primary', 'submit', false ); ?></p>
 </form>

@@ -25,9 +25,7 @@
 		);
 		?>
 	" method="POST">
-	<?php do_settings_sections( 'oemm_producer_misc' ); ?>
-	<?php do_settings_sections( 'oemm_producer_rules' ); ?>
-	<?php do_settings_sections( 'oemm_producer_advanced' ); ?>
+	<?php do_settings_sections( 'oemm_producer_section' ); ?>
 	<?php wp_nonce_field( 'oemm-plugin-options' ); ?>
     <p><?php echo get_submit_button( null, 'primary', 'submit', false ); ?></p>
 </form>
