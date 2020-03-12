@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: oEmbed Manager\n"
-"POT-Creation-Date: 2020-03-03 16:24+0100\n"
+"POT-Creation-Date: 2020-03-12 15:37+0100\n"
 "PO-Revision-Date: 2019-07-08 14:07+0200\n"
 "Last-Translator: Pierre Lannoy <pierre@lannoy.fr>\n"
 "Language-Team: Pierre Lannoy <pierre@lannoy.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: oembed-manager.php\n"
@@ -22,147 +22,249 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. translators: as in the sentence "oEmbed Manager Settings" or "WordPress Settings"
-#: admin/class-oemm-admin.php:97
-#: admin/partials/oembed-manager-admin-settings-main.php:28
+#: admin/class-oemm-admin.php:88 admin/partials/oembed-manager-admin-settings-main.php:24
 #: perfopsone/class-adminmenus.php:70
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#. translators: as in the sentence "DecaLog Viewer"
-#: admin/class-oemm-admin.php:111 admin/class-oemm-admin.php:117
-#: admin/class-oemm-admin.php:118
-msgid "API oEmbed Manager"
+#: admin/class-oemm-admin.php:138
+msgid "Advanced options"
 msgstr ""
 
-#. translators: as in the sentence "Find out inbound and outbound API calls made to/from your network." or "Find out inbound and outbound API calls made to/from your website."
-#: admin/class-oemm-admin.php:113
-#, php-format
-msgid "Find out inbound and outbound API calls made to/from your %s."
-msgstr ""
-
-#: admin/class-oemm-admin.php:113
-msgid "network"
-msgstr ""
-
-#: admin/class-oemm-admin.php:113
-msgid "website"
-msgstr ""
-
-#: admin/class-oemm-admin.php:146
-msgid "Plugin features"
-msgstr ""
-
-#: admin/class-oemm-admin.php:147
+#: admin/class-oemm-admin.php:140
 msgid "Plugin options"
 msgstr ""
 
-#: admin/class-oemm-admin.php:163
+#: admin/class-oemm-admin.php:145
+msgid "Exceptions rules"
+msgstr ""
+
+#: admin/class-oemm-admin.php:166
 msgid "Settings"
 msgstr ""
 
-#: admin/class-oemm-admin.php:164
-msgid "Statistics"
-msgstr ""
-
-#: admin/class-oemm-admin.php:178
+#: admin/class-oemm-admin.php:181
 msgid "Support"
 msgstr ""
 
-#: admin/class-oemm-admin.php:179
+#: admin/class-oemm-admin.php:182
 msgid "GitHub repository"
 msgstr ""
 
-#: admin/class-oemm-admin.php:239
+#: admin/class-oemm-admin.php:251 admin/class-oemm-admin.php:295
+#: admin/class-oemm-admin.php:322
 msgid "Plugin settings have been saved."
 msgstr ""
 
-#: admin/class-oemm-admin.php:244
+#: admin/class-oemm-admin.php:256 admin/class-oemm-admin.php:300
+#: admin/class-oemm-admin.php:327
 msgid "Plugin settings have not been saved. Please try again."
 msgstr ""
 
-#: admin/class-oemm-admin.php:261
+#: admin/class-oemm-admin.php:273
 msgid "Plugin settings have been reset to defaults."
 msgstr ""
 
-#: admin/class-oemm-admin.php:266
+#: admin/class-oemm-admin.php:278
 msgid "Plugin settings have not been reset to defaults. Please try again."
 msgstr ""
 
-#: admin/class-oemm-admin.php:283
+#: admin/class-oemm-admin.php:344
 #, php-format
 msgid "Your site is currently using %s."
 msgstr ""
 
-#: admin/class-oemm-admin.php:286
+#: admin/class-oemm-admin.php:347
 #, php-format
 msgid ""
-"Your site does not use any logging plugin. To log all events triggered in Apache Status "
-"& Info, I recommend you to install the excellent (and free) %s. But it is not mandatory."
+"Your site does not use any logging plugin. To log all events triggered in oEmbed "
+"Manager, I recommend you to install the excellent (and free) %s. But it is not "
+"mandatory."
 msgstr ""
 
-#: admin/class-oemm-admin.php:290
+#: admin/class-oemm-admin.php:351
 msgid "Logging"
 msgstr ""
 
-#: admin/class-oemm-admin.php:301
+#: admin/class-oemm-admin.php:362
 msgid "Resources"
 msgstr ""
 
-#: admin/class-oemm-admin.php:306
+#: admin/class-oemm-admin.php:367
 msgid "Use public CDN"
 msgstr ""
 
-#: admin/class-oemm-admin.php:309
+#: admin/class-oemm-admin.php:370
 msgid ""
 "If checked, oEmbed Manager will use a public CDN (jsDelivr) to serve scripts and "
 "stylesheets."
 msgstr ""
 
-#: admin/class-oemm-admin.php:317
+#: admin/class-oemm-admin.php:378
 msgid "Admin notices"
 msgstr ""
 
-#: admin/class-oemm-admin.php:322
+#: admin/class-oemm-admin.php:383 admin/class-oemm-admin.php:432
 msgid "Display"
 msgstr ""
 
-#: admin/class-oemm-admin.php:325
-msgid ""
-"Allows oEmbed Manager to display admin notices throughout the admin dashboard."
+#: admin/class-oemm-admin.php:386
+msgid "Allows oEmbed Manager to display admin notices throughout the admin dashboard."
 msgstr ""
 
-#: admin/class-oemm-admin.php:325
+#: admin/class-oemm-admin.php:386
 msgid "Note: oEmbed Manager respects DISABLE_NAG_NOTICES flag."
 msgstr ""
 
-#: admin/class-oemm-admin.php:342
-msgid "Server status"
+#: admin/class-oemm-admin.php:401
+msgid "Styled and formated content"
 msgstr ""
 
-#: admin/class-oemm-admin.php:347 admin/class-oemm-admin.php:363
+#: admin/class-oemm-admin.php:402
+msgid "Just the URL"
+msgstr ""
+
+#: admin/class-oemm-admin.php:403
+msgid "Nothing"
+msgstr ""
+
+#: admin/class-oemm-admin.php:416
+msgid "oEmbed consumer"
+msgstr ""
+
+#: admin/class-oemm-admin.php:421 admin/class-oemm-admin.php:659
+msgid "Disabled"
+msgstr ""
+
+#: admin/class-oemm-admin.php:424
 #, php-format
-msgid "Activate .htaccess rule for %s"
+msgid "Prevents you and your contributors to embed external content in %s."
 msgstr ""
 
-#: admin/class-oemm-admin.php:350
+#: admin/class-oemm-admin.php:440
+msgid "How the embedded content must be displayed."
+msgstr ""
+
+#: admin/class-oemm-admin.php:461
+msgid "Don't display if consent is not given"
+msgstr ""
+
+#: admin/class-oemm-admin.php:462
 #, php-format
-msgid "If checked, Apache server status will be served via l'url %s."
-msgstr ""
-
-#: admin/class-oemm-admin.php:350 admin/class-oemm-admin.php:366
 msgid ""
-"Note: this only sets up your .htaccess file. For this to work, the module must be "
-"activated in your Apache configuration."
+"If checked, no embedded content will be outputted as long as the plugin %s does not "
+"have collected the consent."
 msgstr ""
 
-#: admin/class-oemm-admin.php:358
-msgid "Server info"
+#: admin/class-oemm-admin.php:465
+msgid "Don't display if cookie consent is not given"
 msgstr ""
 
-#: admin/class-oemm-admin.php:366
+#: admin/class-oemm-admin.php:466
 #, php-format
-msgid "If checked, Apache server info will be served via l'url %s."
+msgid ""
+"If checked, no embedded content will be outputted as long as the plugin %s does not "
+"have collected the cookie consent."
+msgstr ""
+
+#: admin/class-oemm-admin.php:469
+msgid "Honor <em>Do Not Track</em> requests"
+msgstr ""
+
+#: admin/class-oemm-admin.php:470
+#, php-format
+msgid ""
+"If checked, no embedded content will be outputted if the plugin %s detects a Do Not "
+"Track header."
+msgstr ""
+
+#: admin/class-oemm-admin.php:499
+#, php-format
+msgid "Item to verify - in doubt, see %s settings."
+msgstr ""
+
+#: admin/class-oemm-admin.php:516
+msgid "Replacement text displayed while consent is not given."
+msgstr ""
+
+#: admin/class-oemm-admin.php:516
+msgid "Could be plain HTML. Let blank to fully hide the placeholder."
+msgstr ""
+
+#: admin/class-oemm-admin.php:537
+msgid "1 hour"
+msgstr ""
+
+#: admin/class-oemm-admin.php:538
+msgid "1 day"
+msgstr ""
+
+#: admin/class-oemm-admin.php:539
+msgid "1 week"
+msgstr ""
+
+#: admin/class-oemm-admin.php:540
+msgid "1 month"
+msgstr ""
+
+#: admin/class-oemm-admin.php:541
+msgid "1 year"
+msgstr ""
+
+#: admin/class-oemm-admin.php:553
+#, php-format
+msgid "%s seconds"
+msgstr ""
+
+#: admin/class-oemm-admin.php:566
+#, php-format
+msgid "%s kilobytes"
+msgstr ""
+
+#: admin/class-oemm-admin.php:580
+msgid "Links"
+msgstr ""
+
+#: admin/class-oemm-admin.php:585
+msgid "Clickable URL"
+msgstr ""
+
+#: admin/class-oemm-admin.php:588
+msgid "If WordPress outputs oEmbed URLs, transform them into clickable links."
+msgstr ""
+
+#: admin/class-oemm-admin.php:597
+msgid "Cache"
+msgstr ""
+
+#: admin/class-oemm-admin.php:605
+msgid "How long the embedded content is cached by WordPress."
+msgstr ""
+
+#: admin/class-oemm-admin.php:613
+msgid "Connection timeout"
+msgstr ""
+
+#: admin/class-oemm-admin.php:621
+msgid "How long WordPress can wait the external website when fetching content."
+msgstr ""
+
+#: admin/class-oemm-admin.php:629
+msgid "Maximum size"
+msgstr ""
+
+#: admin/class-oemm-admin.php:637
+msgid "How much WordPress can retrieve of the original content."
+msgstr ""
+
+#: admin/class-oemm-admin.php:654
+msgid "oEmbed producer"
+msgstr ""
+
+#: admin/class-oemm-admin.php:662
+#, php-format
+msgid "Prevents other websites to embed content from %s."
 msgstr ""
 
 #: admin/partials/oembed-manager-admin-settings-about.php:20
@@ -200,385 +302,75 @@ msgstr ""
 msgid "Changelog"
 msgstr ""
 
-#: admin/partials/oembed-manager-admin-settings-main.php:22
-#, php-format
-msgid "Note: analytics reports are available via the <a href=\"%s\">tools menu</a>."
+#: admin/partials/oembed-manager-admin-settings-integrations.php:11
+msgid "View on WordPress.org"
 msgstr ""
 
-#: admin/partials/oembed-manager-admin-settings-main.php:44
+#: admin/partials/oembed-manager-admin-settings-integrations.php:12
+#, php-format
+msgid "this plugin is activated on %s"
+msgstr ""
+
+#: admin/partials/oembed-manager-admin-settings-main.php:40
+msgid "Consumer"
+msgstr ""
+
+#: admin/partials/oembed-manager-admin-settings-main.php:53
+msgid "Producer"
+msgstr ""
+
+#: admin/partials/oembed-manager-admin-settings-main.php:67
 msgid "Options"
 msgstr ""
 
-#: admin/partials/oembed-manager-admin-settings-main.php:57
+#: admin/partials/oembed-manager-admin-settings-main.php:81
 msgid "About"
+msgstr ""
+
+#: admin/partials/oembed-manager-admin-settings-main.php:94
+msgid "Integrations"
 msgstr ""
 
 #: admin/partials/oembed-manager-admin-settings-options.php:33
 msgid "Reset to Defaults"
 msgstr ""
 
-#: includes/features/class-analytics.php:427 includes/features/class-analytics.php:429
-#: includes/features/class-analytics.php:531 includes/features/class-analytics.php:685
-msgid "Other"
+#: includes/features/class-consent.php:54
+msgid "consent ID"
 msgstr ""
 
-#: includes/features/class-analytics.php:584
-msgid "Details"
+#: includes/features/class-cookie.php:102
+msgid "cookie name"
 msgstr ""
 
-#: includes/features/class-analytics.php:585
-msgid "Calls"
+#: includes/features/class-oembed.php:48
+msgid "Consent management"
 msgstr ""
 
-#: includes/features/class-analytics.php:586
-msgid "Data Volume"
+#: includes/features/class-oembed.php:49
+msgid ""
+"These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
+"the optional consent of your visitors:"
 msgstr ""
 
-#: includes/features/class-analytics.php:587
-msgid "Latency"
+#: includes/features/class-oembed.php:55
+msgid "Cookies management"
 msgstr ""
 
-#: includes/features/class-analytics.php:611
-#, php-format
-msgid "%d subdomain"
-msgid_plural "%d subdomains"
-msgstr[0] ""
-msgstr[1] ""
-
-#: includes/features/class-analytics.php:612
-#, php-format
-msgid "%d endpoint"
-msgid_plural "%d endpoints"
-msgstr[0] ""
-msgstr[1] ""
-
-#: includes/features/class-analytics.php:703 includes/features/class-analytics.php:709
-msgctxt "Unit symbol - Stands for \"second\"."
-msgid "s"
-msgstr ""
-
-#: includes/features/class-analytics.php:705 includes/features/class-analytics.php:711
-#: includes/features/class-analytics.php:713 includes/features/class-analytics.php:715
-msgctxt "Unit symbol - Stands for \"millisecond\"."
-msgid "ms"
-msgstr ""
-
-#: includes/features/class-analytics.php:777
-msgid "calls"
-msgstr ""
-
-#: includes/features/class-analytics.php:936
-msgid "Success"
-msgstr ""
-
-#: includes/features/class-analytics.php:940
-msgid "Error"
-msgstr ""
-
-#: includes/features/class-analytics.php:944
-msgid "Quota Error"
-msgstr ""
-
-#: includes/features/class-analytics.php:973
-msgid "Incoming Data"
-msgstr ""
-
-#: includes/features/class-analytics.php:977
-msgid "Outcoming Data"
-msgstr ""
-
-#: includes/features/class-analytics.php:993
-msgid "Perceived Uptime"
-msgstr ""
-
-#: includes/features/class-analytics.php:1107
-#, php-format
-msgid "avg latency: %s ms."
-msgstr ""
-
-#: includes/features/class-analytics.php:1213
-#, php-format
-msgid "%s calls in error"
-msgstr ""
-
-#: includes/features/class-analytics.php:1216
-#, php-format
-msgid "%s blocked calls"
-msgstr ""
-
-#: includes/features/class-analytics.php:1219
-#, php-format
-msgid "%s successful calls"
-msgstr ""
-
-#: includes/features/class-analytics.php:1225
-msgid "no downtime"
-msgstr ""
-
-#: includes/features/class-analytics.php:1227
-#, php-format
-msgid "down %s"
-msgstr ""
-
-#: includes/features/class-analytics.php:1248 includes/features/class-analytics.php:1269
-#: includes/features/class-analytics.php:1314
-msgid "HTTP Codes Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1251 includes/features/class-analytics.php:1272
-#: includes/features/class-analytics.php:1317
-msgid "Protocols Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1254 includes/features/class-analytics.php:1275
-#: includes/features/class-analytics.php:1320
-msgid "Methods Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1257 includes/features/class-analytics.php:1278
-#: includes/features/class-analytics.php:1323
-msgid "Countries Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1260
-msgid "Domains Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1264 includes/features/class-analytics.php:1284
-#: includes/features/class-analytics.php:1299 includes/features/class-analytics.php:1341
-#: includes/features/class-analytics.php:1368
-msgid "Domain Summary"
-msgstr ""
-
-#: includes/features/class-analytics.php:1281
-msgid "Domain Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1285 includes/features/class-analytics.php:1300
-#: includes/features/class-analytics.php:1330 includes/features/class-analytics.php:1342
-#: includes/features/class-analytics.php:1357 includes/features/class-analytics.php:1369
-#, php-format
-msgid "Return to %s"
-msgstr ""
-
-#: includes/features/class-analytics.php:1297 includes/features/class-analytics.php:1329
-#: includes/features/class-analytics.php:1356
-msgid "Subdomain Summary"
-msgstr ""
-
-#: includes/features/class-analytics.php:1326
-msgid "Subdomain Details"
-msgstr ""
-
-#: includes/features/class-analytics.php:1354
-msgid "Endpoint Summary"
-msgstr ""
-
-#: includes/features/class-analytics.php:1381
-msgid "Country"
-msgstr ""
-
-#: includes/features/class-analytics.php:1387 includes/features/class-analytics.php:1434
-msgid "Main Summary"
-msgstr ""
-
-#: includes/features/class-analytics.php:1388
-msgid "Return to oEmbed Manager main page."
-msgstr ""
-
-#: includes/features/class-analytics.php:1412
-msgid "All Sites"
-msgstr ""
-
-#: includes/features/class-analytics.php:1416 includes/features/class-analytics.php:1418
-#, php-format
-msgid "Site ID %s"
-msgstr ""
-
-#: includes/features/class-analytics.php:1484
-msgid "Responses types distribution."
-msgstr ""
-
-#: includes/features/class-analytics.php:1485
-msgid "Data volume distribution."
-msgstr ""
-
-#: includes/features/class-analytics.php:1486
-msgid "Uptime variation."
-msgstr ""
-
-#: includes/features/class-analytics.php:1492
-msgid "Metrics Variations"
-msgstr ""
-
-#: includes/features/class-analytics.php:1516
-msgid "Sites Breakdown"
-msgstr ""
-
-#: includes/features/class-analytics.php:1536
-msgid "All Domains"
-msgstr ""
-
-#: includes/features/class-analytics.php:1556
-msgid "All Subdomains"
-msgstr ""
-
-#: includes/features/class-analytics.php:1576 includes/features/class-analytics.php:1609
-msgid "All Endpoints"
-msgstr ""
-
-#: includes/features/class-analytics.php:1597
-msgid "All HTTP Codes"
-msgstr ""
-
-#: includes/features/class-analytics.php:1600
-msgid "All Protocols"
-msgstr ""
-
-#: includes/features/class-analytics.php:1603
-msgid "All Methods"
-msgstr ""
-
-#: includes/features/class-analytics.php:1606
-msgid "All Countries"
-msgstr ""
-
-#: includes/features/class-analytics.php:1633
-msgid "View the details of all domains."
-msgstr ""
-
-#: includes/features/class-analytics.php:1635
-msgid "Top Domains"
-msgstr ""
-
-#: includes/features/class-analytics.php:1662
-msgid "View the details of all subdomains."
-msgstr ""
-
-#: includes/features/class-analytics.php:1664
-msgid "Top Subdomains"
-msgstr ""
-
-#: includes/features/class-analytics.php:1691
-msgid "View the details of all endpoints."
-msgstr ""
-
-#: includes/features/class-analytics.php:1693
-msgid "Top Endpoints"
-msgstr ""
-
-#: includes/features/class-analytics.php:1743
-msgid "View the details of all countries."
-msgstr ""
-
-#: includes/features/class-analytics.php:1745
-msgid "Countries"
-msgstr ""
-
-#: includes/features/class-analytics.php:1795
-msgid "View the details of all codes."
-msgstr ""
-
-#: includes/features/class-analytics.php:1797
-msgid "HTTP codes"
-msgstr ""
-
-#: includes/features/class-analytics.php:1847
-msgid "View the details of protocols breakdown."
-msgstr ""
-
-#: includes/features/class-analytics.php:1849
-msgid "Protocols"
-msgstr ""
-
-#: includes/features/class-analytics.php:1899
-msgid "View the details of all methods."
-msgstr ""
-
-#: includes/features/class-analytics.php:1901
-msgid "Methods"
-msgstr ""
-
-#: includes/features/class-analytics.php:1924
-msgctxt "Noun - Number API calls."
-msgid "Number of Calls"
-msgstr ""
-
-#: includes/features/class-analytics.php:1925
-msgid "Number of API calls."
-msgstr ""
-
-#: includes/features/class-analytics.php:1929
-msgctxt "Noun - Volume of transferred data."
-msgid "Data Volume"
-msgstr ""
-
-#: includes/features/class-analytics.php:1930
-msgid "Volume of transferred data."
-msgstr ""
-
-#: includes/features/class-analytics.php:1934
-msgctxt "Noun - Ratio of the number of HTTP errors to the total number of calls."
-msgid "Server Error Rate"
-msgstr ""
-
-#: includes/features/class-analytics.php:1935
-msgid "Ratio of the number of HTTP errors to the total number of calls."
-msgstr ""
-
-#: includes/features/class-analytics.php:1939
-msgctxt "Noun - Ratio of the quota enforcement number to the total number of calls."
-msgid "Quotas Error Rate"
-msgstr ""
-
-#: includes/features/class-analytics.php:1940
-msgid "Ratio of the quota enforcement number to the total number of calls."
-msgstr ""
-
-#: includes/features/class-analytics.php:1944
-msgctxt "Noun - Ratio of the number of HTTP success to the total number of calls."
-msgid "Effective Pass Rate"
-msgstr ""
-
-#: includes/features/class-analytics.php:1945
-msgid "Ratio of the number of HTTP success to the total number of calls."
-msgstr ""
-
-#: includes/features/class-analytics.php:1949
-msgctxt "Noun - Perceived uptime, from the viewpoint of the site."
-msgid "Perceived Uptime"
-msgstr ""
-
-#: includes/features/class-analytics.php:1950
-msgid "Perceived uptime, from the viewpoint of the site."
-msgstr ""
-
-#: includes/features/class-analytics.php:2164
-msgid "Custom Range"
-msgstr ""
-
-#: includes/features/class-analytics.php:2164
-msgid "Cancel"
-msgstr ""
-
-#: includes/features/class-analytics.php:2164
-msgid "Apply"
-msgstr ""
-
-#: includes/features/class-analytics.php:2166
-msgid "Today"
-msgstr ""
-
-#: includes/features/class-analytics.php:2167
-msgid "Yesterday"
+#: includes/features/class-oembed.php:56
+msgid ""
+"These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
+"the consent of your visitors about cookies:"
 msgstr ""
 
-#: includes/features/class-analytics.php:2168
-msgid "This Month"
+#: includes/features/class-oembed.php:62
+msgid "<em>Do Not Track</em> policy"
 msgstr ""
 
-#: includes/features/class-analytics.php:2169
-msgid "Last Month"
+#: includes/features/class-oembed.php:63
+msgid ""
+"These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
+"the <em>Do Not Track</em> header sent by your visitors' browser:"
 msgstr ""
 
 #: includes/libraries/class-libraries.php:67 includes/libraries/class-libraries.php:79
@@ -760,6 +552,23 @@ msgstr ""
 
 #: includes/system/class-environment.php:203
 msgid "Debug disabled"
+msgstr ""
+
+#: includes/system/class-option.php:94
+msgid ""
+"In order to respect your opposition to our privacy policy, this embedded content have "
+"been disabled."
+msgstr ""
+
+#: includes/system/class-option.php:95
+msgid ""
+"In order to respect your choice about cookies, this embedded content have been disabled."
+msgstr ""
+
+#: includes/system/class-option.php:96
+msgid ""
+"In order to honor the <em>Do Not Track</em> request sent by your browser, this embedded "
+"content have been disabled to prevent third-party tracking cookies."
 msgstr ""
 
 #: includes/system/class-sitehealth.php:122
@@ -967,8 +776,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Automatically add rules to .htaccess file to support server-info and server-status "
-"Apache mod."
+"Manage oEmbed capabilities of your website and take a new step in the GDPR compliance "
+"of your embedded content."
 msgstr ""
 
 #. Author of the plugin/theme
