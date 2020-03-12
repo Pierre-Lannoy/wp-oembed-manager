@@ -107,6 +107,29 @@ class Form {
 	}
 
 	/**
+	 * Get a hidden form field.
+	 *
+	 * @param   string  $id The id (and the name) of the control.
+	 * @param   string  $value  The string to put in the hidden field.
+	 * @return  string The HTML string ready to print.
+	 * @since   1.0.0
+	 */
+	public function field_input_hidden( $id, $value = '' ) {
+		$html = '<input name="' . $id . '" type="hidden" id="' . $id . '" value="' . $value . '"/>';
+		return $html;
+	}
+
+	/**
+	 * Echoes a hidden form field.
+	 *
+	 * @param   array $args   The call arguments.
+	 * @since   1.0.0
+	 */
+	public function echo_field_input_hidden( $args ) {
+		echo $this->field_input_hidden( $args['id'], $args['value'] );
+	}
+
+	/**
 	 * Get a text form field.
 	 *
 	 * @param   string  $id The id (and the name) of the control.

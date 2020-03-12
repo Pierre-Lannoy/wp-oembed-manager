@@ -77,7 +77,7 @@ class Option {
 		self::$network                             = [ 'version', 'use_cdn', 'script_in_footer', 'display_nag', 'analytics', 'history' ];
 		self::$defaults['disable_producer']        = false;
 		self::$defaults['disable_consumer']        = false;
-		self::$defaults['consumer_mode']           = false;
+		self::$defaults['consumer_mode']           = 0;
 		self::$defaults['advanced_clickable']      = false;
 		self::$defaults['advanced_ttl']            = 24;   //hours
 		self::$defaults['advanced_timeout']        = 5;    //seconds

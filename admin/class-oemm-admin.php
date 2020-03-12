@@ -37,10 +37,56 @@ class Oemm_Admin {
 	 * The assets manager that's responsible for handling all assets of the plugin.
 	 *
 	 * @since  1.0.0
-	 * @access protected
-	 * @var    Assets    $assets    The plugin assets manager.
 	 */
 	protected $assets;
+
+	/**
+	 * The allowed tags in replacement text blocks.
+	 *
+	 * @since  2.0.0
+	 */
+	private static $allowedtags = [
+		'a'          => [
+			'href'   => [],
+			'title'  => [],
+			'target' => [],
+		],
+		'abbr'       => [ 'title' => [] ],
+		'acronym'    => [ 'title' => [] ],
+		'code'       => [],
+		'pre'        => [],
+		'em'         => [],
+		'strong'     => [],
+		'div'        => [
+			'class' => [],
+			'style' => [],
+		],
+		'span'       => [
+			'class' => [],
+			'style' => [],
+		],
+		'p'          => [
+			'class' => [],
+			'style' => [],
+		],
+		'br'         => [],
+		'ul'         => [],
+		'ol'         => [],
+		'li'         => [],
+		'h1'         => [],
+		'h2'         => [],
+		'h3'         => [],
+		'h4'         => [],
+		'h5'         => [],
+		'h6'         => [],
+		'img'        => [
+			'src'   => [],
+			'class' => [],
+			'alt'   => [],
+			'style' => [],
+		],
+		'blockquote' => [ 'cite' => true ],
+	];
 
 	/**
 	 * Initialize the class and set its properties.
@@ -319,6 +365,14 @@ class Oemm_Admin {
 				Option::site_set( 'advanced_ttl', array_key_exists( 'oemm_consumer_advanced_ttl', $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_advanced_ttl', FILTER_SANITIZE_NUMBER_INT ) : Option::site_get( 'advanced_ttl' ) );
 				Option::site_set( 'advanced_timeout', array_key_exists( 'oemm_consumer_advanced_timeout', $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_advanced_timeout', FILTER_SANITIZE_NUMBER_INT ) : Option::site_get( 'advanced_timeout' ) );
 				Option::site_set( 'advanced_size', array_key_exists( 'oemm_consumer_advanced_size', $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_advanced_size', FILTER_SANITIZE_NUMBER_INT ) : Option::site_get( 'advanced_size' ) );
+				foreach ( oEmbed::get_descriptions() as $integrations ) {
+					if ( $integrations['enabled'] ) {
+						Option::site_set( 'exception_' . $integrations['prefix'] . '_block', array_key_exists( 'oemm_consumer_rules_block_' . $integrations['prefix'], $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_consumer_rules_block_' . $integrations['prefix'] ) : false );
+						Option::site_set( 'exception_' . $integrations['prefix'] . '_param', array_key_exists( 'oemm_consumer_rules_param_' . $integrations['prefix'], $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_rules_param_' . $integrations['prefix'], FILTER_SANITIZE_STRING ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_param' ) );
+						Option::site_set( 'exception_' . $integrations['prefix'] . '_id', array_key_exists( 'oemm_consumer_rules_id_' . $integrations['prefix'], $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_rules_id_' . $integrations['prefix'], FILTER_SANITIZE_STRING ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_id' ) );
+						Option::site_set( 'exception_' . $integrations['prefix'] . '_text', array_key_exists( 'oemm_consumer_rules_text_' . $integrations['prefix'], $_POST ) ? (string) wp_kses( $_POST[ 'oemm_consumer_rules_text_' . $integrations['prefix'] ], self::$allowedtags ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_text' ) );
+					}
+				}
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
@@ -458,15 +512,15 @@ class Oemm_Admin {
 					if ( $item['detected'] ) {
 						switch ( $integrations['prefix'] ) {
 							case 'consent':
-								$action      = esc_html__('Don\'t display if consent is not given', 'oembed-manager');
+								$action      = esc_html__( 'Don\'t display if consent is not given', 'oembed-manager' );
 								$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted as long as the plugin %s does not have collected the consent.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
 								break;
 							case 'cookie':
-								$action      = esc_html__('Don\'t display if cookie consent is not given', 'oembed-manager');
+								$action      = esc_html__( 'Don\'t display if cookie consent is not given', 'oembed-manager' );
 								$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted as long as the plugin %s does not have collected the cookie consent.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
 								break;
 							case 'dnt':
-								$action      = __('Honor <em>Do Not Track</em> requests', 'oembed-manager');
+								$action      = __( 'Honor <em>Do Not Track</em> requests', 'oembed-manager' );
 								$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted if the plugin %s detects a Do Not Track header.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
 								break;
 						}
@@ -513,7 +567,7 @@ class Oemm_Admin {
 							[
 								'id'          => 'oemm_consumer_rules_text_' . $integrations['prefix'],
 								'value'       => Option::site_get( 'exception_' . $integrations['prefix'] . '_text' ),
-								'description' => __('Replacement text displayed while consent is not given.', 'oembed-manager') . ' ' . __('Could be plain HTML. Let blank to fully hide the placeholder.', 'oembed-manager'),
+								'description' => __( 'Replacement text displayed while consent is not given.', 'oembed-manager' ) . ' ' . __( 'Could be plain HTML. Let blank to fully hide the placeholder.', 'oembed-manager' ),
 								'columns'     => 100,
 								'lines'       => 5,
 								'enabled'     => true,

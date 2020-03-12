@@ -9,9 +9,21 @@
  * @since   1.0.0
  */
 
+use Oemm\Plugin\Feature\oEmbed;
+
 wp_enqueue_style( OEMM_ASSETS_ID );
 wp_enqueue_script( OEMM_ASSETS_ID );
 
+$hidden = '';
+foreach ( oEmbed::get_descriptions() as $integrations ) {
+	if ( $integrations['enabled'] ) {
+		foreach ( $integrations['items'] as $item ) {
+			if ( $item['detected'] ) {
+				$hidden .= '<input type="hidden" name="exception_' . $integrations['prefix'] . '_id" id="exception_' . $integrations['prefix'] . '_id" value="' . $item['id'] . '">';
+			}
+		}
+	}
+}
 ?>
 
 <form action="
@@ -28,6 +40,7 @@ wp_enqueue_script( OEMM_ASSETS_ID );
 		);
 		?>
 	" method="POST">
+	<?php echo $hidden; ?>
 	<?php do_settings_sections( 'oemm_consumer_misc_section' ); ?>
 	<?php do_settings_sections( 'oemm_consumer_rules_section' ); ?>
 	<?php do_settings_sections( 'oemm_consumer_advanced_section' ); ?>
