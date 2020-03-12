@@ -368,7 +368,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_plugin_options_usecdn',
 				'checked'     => Option::network_get( 'use_cdn' ),
 				'description' => esc_html__( 'If checked, oEmbed Manager will use a public CDN (jsDelivr) to serve scripts and stylesheets.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -384,7 +384,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_plugin_options_nag',
 				'checked'     => Option::network_get( 'display_nag' ),
 				'description' => esc_html__( 'Allows oEmbed Manager to display admin notices throughout the admin dashboard.', 'oembed-manager' ) . '<br/>' . esc_html__( 'Note: oEmbed Manager respects DISABLE_NAG_NOTICES flag.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -422,7 +422,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_misc_disable_consumer',
 				'checked'     => Option::site_get( 'disable_consumer' ),
 				'description' => sprintf( esc_html__( 'Prevents you and your contributors to embed external content in %s.', 'oembed-manager' ), get_bloginfo( 'name' ) ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -438,7 +438,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_misc_mode',
 				'value'       => Option::site_get( 'consumer_mode' ),
 				'description' => esc_html__( 'How the embedded content must be displayed.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -481,68 +481,50 @@ class Oemm_Admin {
 								'id'          => 'oemm_consumer_rules_block_' . $integrations['prefix'],
 								'checked'     => Option::site_get( 'exception_' . $integrations['prefix'] . '_block' ),
 								'description' => $description,
-								'full_width'  => true,
+								'full_width'  => false,
 								'enabled'     => true,
 							]
 						);
 						register_setting( 'oemm_consumer_rules_section', 'oemm_consumer_rules_block_' . $integrations['prefix'] );
 						if ( $item['execution']['use_param'] ) {
-							switch ( $integrations['prefix'] ) {
-								case 'consent':
-									$action      = esc_html__('Don\'t display if consent is not given', 'oembed-manager');
-									$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted as long as the plugin %s does not have collected the consent.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
-									break;
-								case 'cookie':
-									$action      = esc_html__('Don\'t display if cookie consent is not given', 'oembed-manager');
-									$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted as long as the plugin %s does not have collected the cookie consent.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
-									break;
-								case 'dnt':
-									$action      = __('Honor <em>Do Not Track</em> requests', 'oembed-manager');
-									$description = sprintf( esc_html__( 'If checked, no embedded content will be outputted if the plugin %s detects a Do Not Track header.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' );
-									break;
-							}
 							add_settings_field(
 								'oemm_consumer_rules_param_' . $integrations['prefix'],
 								'',
-								[ $form, 'echo_field_checkbox' ],
+								[ $form, 'echo_field_input_text' ],
 								'oemm_consumer_rules_section',
 								'oemm_consumer_rules_section',
 								[
-									'text'        => $action,
 									'id'          => 'oemm_consumer_rules_param_' . $integrations['prefix'],
-									'checked'     => Option::site_get( 'exception_' . $integrations['prefix'] . '_param' ),
-									'description' => $description,
-									'full_width'  => true,
+									'value'       => Option::site_get( 'exception_' . $integrations['prefix'] . '_param' ),
+									'description' => sprintf( esc_html__( 'Item to verify - in doubt, see %s settings.', 'oembed-manager' ), '<strong>' . $item['name'] . '</strong>' ),
+									'full_width'  => false,
 									'enabled'     => true,
+									'placeholder' => $item['execution']['help'],
 								]
 							);
 							register_setting( 'oemm_consumer_rules_section', 'oemm_consumer_rules_param_' . $integrations['prefix'] );
 						}
-
-
-
-
-
-						/*add_settings_field('oemm_exception_' . $integrations['prefix'] . '_block', $integrations['title'],
-							array($this, 'oemm_exception_' . $integrations['prefix'] . '_block_callback'), 'oemm_exception', 'oemm_exception_section', array($item));
-
-
-
-						register_setting('oemm_exception', 'oemm_exception_' . $integrations['prefix'] . '_block');*/
+						add_settings_field(
+							'oemm_consumer_rules_text_' . $integrations['prefix'],
+							'',
+							[ $form, 'echo_field_input_textarea' ],
+							'oemm_consumer_rules_section',
+							'oemm_consumer_rules_section',
+							[
+								'id'          => 'oemm_consumer_rules_text_' . $integrations['prefix'],
+								'value'       => Option::site_get( 'exception_' . $integrations['prefix'] . '_text' ),
+								'description' => __('Replacement text displayed while consent is not given.', 'oembed-manager') . ' ' . __('Could be plain HTML. Let blank to fully hide the placeholder.', 'oembed-manager'),
+								'columns'     => 100,
+								'lines'       => 5,
+								'enabled'     => true,
+							]
+						);
+						register_setting( 'oemm_consumer_rules_section', 'oemm_consumer_rules_text_' . $integrations['prefix'] );
 						break;
 					}
 				}
-				/*add_settings_field('oemm_exception_' . $integrations['prefix'] . '_text', '',
-					array($this, 'oemm_exception_' . $integrations['prefix'] . '_text_callback'), 'oemm_exception', 'oemm_exception_section', array());
-				register_setting('oemm_exception', 'oemm_exception_' . $integrations['prefix'] . '_text');*/
-			} else {
-
 			}
 		}
-
-
-		///  oemm_consumer_rules_section
-
 	}
 
 	/**
@@ -604,7 +586,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_advanced_clickable',
 				'checked'     => Option::site_get( 'advanced_clickable' ),
 				'description' => esc_html__( 'If WordPress outputs oEmbed URLs, transform them into clickable links.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -621,7 +603,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_advanced_ttl',
 				'value'       => Option::site_get( 'advanced_ttl' ),
 				'description' => esc_html__( 'How long the embedded content is cached by WordPress.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -637,7 +619,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_advanced_timeout',
 				'value'       => Option::site_get( 'advanced_timeout' ),
 				'description' => esc_html__( 'How long WordPress can wait the external website when fetching content.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -653,7 +635,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_consumer_advanced_size',
 				'value'       => Option::site_get( 'advanced_size' ),
 				'description' => esc_html__( 'How much WordPress can retrieve of the original content.', 'oembed-manager' ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
@@ -678,7 +660,7 @@ class Oemm_Admin {
 				'id'          => 'oemm_producer_disable_producer',
 				'checked'     => Option::site_get( 'disable_producer' ),
 				'description' => sprintf( esc_html__( 'Prevents other websites to embed content from %s.', 'oembed-manager' ), get_bloginfo( 'name' ) ),
-				'full_width'  => true,
+				'full_width'  => false,
 				'enabled'     => true,
 			]
 		);
