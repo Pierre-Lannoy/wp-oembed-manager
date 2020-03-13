@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 - By default, if consent is not verifiable, the behaviour is to block content.
 - The license of the plugin is now GPLv3.
+- New logo for the plugin.
 ### Removed
 - Compatibility with WordPress versions prior to 5.2.
 
