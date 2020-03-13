@@ -38,7 +38,7 @@ class Initializer {
 		\Oemm\System\Logger::init();
 		\Oemm\System\Cache::init();
 		\Oemm\System\Sitehealth::init();
-		//\Oemm\Plugin\Feature\Rules::init( true );
+		\Oemm\Plugin\Feature\oEmbed::init();
 		\Oemm\System\APCu::init();
 	}
 

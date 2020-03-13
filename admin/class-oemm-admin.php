@@ -263,6 +263,8 @@ class Oemm_Admin {
 							if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
 								if ( ! empty( $_POST ) && array_key_exists( 'submit', $_POST ) ) {
 									$this->save_producer();
+									oEmbed::set_producer();
+									flush_rewrite_rules(true);
 								}
 							}
 							break;
@@ -274,6 +276,8 @@ class Oemm_Admin {
 							if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
 								if ( ! empty( $_POST ) && array_key_exists( 'submit', $_POST ) ) {
 									$this->save_consumer();
+									oEmbed::set_consumer();
+									oEmbed::purge_caches();
 								}
 							}
 							break;

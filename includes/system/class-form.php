@@ -293,7 +293,7 @@ class Form {
 		} else {
 			$width = '';
 		}
-		$html = '<fieldset' . $width . '><label><input' . ( $enabled ? '' : ' disabled' ) . ' name="' . $id . '" type="checkbox" value="1"' . ( $checked ? ' checked="checked"' : '' ) . '/>' . $text . '</label></fieldset>';
+		$html = '<fieldset' . $width . '><label><input' . ( $enabled ? '' : ' disabled' ) . ' name="' . $id . '" id="' . $id . '" type="checkbox" value="1"' . ( $checked ? ' checked="checked"' : '' ) . '/>' . $text . '</label></fieldset>';
 		if ( isset( $description ) ) {
 			if ( isset( $more ) ) {
 				$description .= '<img id="button-' . $id . '" style="cursor:pointer;vertical-align:middle;width:16px;margin-left:6px;" src="' . Feather\Icons::get_base64( 'help-circle', 'none', '#9999BB' ) . '" />';

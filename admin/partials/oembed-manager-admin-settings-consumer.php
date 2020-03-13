@@ -19,7 +19,7 @@ foreach ( oEmbed::get_descriptions() as $integrations ) {
 	if ( $integrations['enabled'] ) {
 		foreach ( $integrations['items'] as $item ) {
 			if ( $item['detected'] ) {
-				$hidden .= '<input type="hidden" name="exception_' . $integrations['prefix'] . '_id" id="exception_' . $integrations['prefix'] . '_id" value="' . $item['id'] . '">';
+				$hidden .= '<input type="hidden" name="oemm_consumer_rules_id_' . $integrations['prefix'] .'" id="oemm_consumer_rules_id_' . $integrations['prefix'] .'" value="' . $item['id'] . '">';
 			}
 		}
 	}
@@ -42,7 +42,7 @@ foreach ( oEmbed::get_descriptions() as $integrations ) {
 	" method="POST">
 	<?php echo $hidden; ?>
 	<?php do_settings_sections( 'oemm_consumer_misc_section' ); ?>
-	<?php do_settings_sections( 'oemm_consumer_rules_section' ); ?>
+    <div class="oemm-exclusion-section"><?php do_settings_sections( 'oemm_consumer_rules_section' ); ?></div>
 	<?php do_settings_sections( 'oemm_consumer_advanced_section' ); ?>
 	<?php wp_nonce_field( 'oemm-plugin-options' ); ?>
     <p><?php echo get_submit_button( null, 'primary', 'submit', false ); ?></p>

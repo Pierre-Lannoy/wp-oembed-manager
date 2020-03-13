@@ -7,9 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 - Full integration with PerfOps.One suite.
 - Full compatibility with [APCu Manager](https://wordpress.org/plugins/apcu-manager/).
-- Compatibility with WordPress 5.4.
 - New menu (in the left admin bar) for accessing features: "PerfOps Settings".
 ### Changed
+- By default, if consent is not verifiable, the behaviour is to block content.
 - The license of the plugin is now GPLv3.
 ### Removed
 - Compatibility with WordPress versions prior to 5.2.
