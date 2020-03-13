@@ -165,7 +165,7 @@ class oEmbed {
 		// Verify consent exclusions
 		if ( Option::site_get( 'exception_consent_block' ) ) {
 			if ( ! Consent::init()->evaluate( Option::site_get( 'exception_consent_id' ), Option::site_get( 'exception_consent_param', null ) ) ) {
-				Logger::emergency('oEmbed content blocked. Reason: consent not collected. Url: ' . $url );
+				Logger::debug( 'oEmbed content blocked. Reason: consent not collected. Url: ' . $url );
 				return Option::site_get( 'exception_consent_text' );
 			}
 		}
@@ -173,7 +173,7 @@ class oEmbed {
 		// Verify cookie exclusions
 		if ( Option::site_get( 'exception_cookie_block' ) ) {
 			if ( ! Cookie::init()->evaluate( Option::site_get( 'exception_cookie_id' ), Option::site_get( 'exception_cookie_param', null ) ) ) {
-				Logger::emergency('oEmbed content blocked. Reason: cookie consent not collected. Url: ' . $url );
+				Logger::debug( 'oEmbed content blocked. Reason: cookie consent not collected. Url: ' . $url );
 				return Option::site_get( 'exception_cookie_text' );
 			}
 		}
@@ -181,11 +181,11 @@ class oEmbed {
 		// Verify DNT exclusions
 		if ( Option::site_get( 'exception_dnt_block' ) ) {
 			if ( ! DNT::init()->evaluate( Option::site_get( 'exception_dnt_id' ), Option::site_get( 'exception_dnt_param', null ) ) ) {
-				Logger::emergency('oEmbed content blocked. Reason: Do Not Track headers detected. Url: ' . $url );
+				Logger::debug( 'oEmbed content blocked. Reason: Do Not Track headers detected. Url: ' . $url );
 				return Option::site_get( 'exception_dnt_text' );
 			}
 		}
-
+		Logger::debug( 'oEmbed content allowed. Url: ' . $url );
 		return $html;
 	}
 
