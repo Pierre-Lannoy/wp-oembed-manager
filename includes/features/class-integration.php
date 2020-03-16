@@ -239,7 +239,7 @@ abstract class Integration {
 	 * @since 1.0.0
 	 */
 	public function evaluate( $id, $param = null ) {
-		$result = false;
+		$result = true;
 		if ( false !== $item = $this->get( $id ) ) {
 			if ( $this->x_detect( $item, true ) ) {
 				if ( ! $item['execution']['use_param'] ) {
