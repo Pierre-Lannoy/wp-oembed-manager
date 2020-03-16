@@ -142,24 +142,21 @@ class oEmbed_Manager_Admin {
 				'remedy'        => '',
 				'statistics'    => [ '\Oemm\System\Statistics', 'sc_get_raw' ],
 			];
-		}
-		/*if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
-			$perfops['tools'][]    = [
-				'name'          => esc_html__( 'OPcache', 'opcache-manager' ),
-				/* translators: as in the sentence "View, invalidate and recompile OPcached files used by your network." or "View, invalidate and recompile OPcached files used by your website." *
-				'description'   => sprintf( esc_html__( 'View, invalidate and recompile OPcached files used by your %s.', 'opcache-manager' ), Environment::is_wordpress_multisite() ? esc_html__( 'network', 'opcache-manager' ) : esc_html__( 'website', 'opcache-manager' ) ),
-				'icon_callback' => [ \OPcacheManager\Plugin\Core::class, 'get_base64_logo' ],
-				'slug'          => 'opcm-tools',
-				'page_title'    => esc_html__( 'OPcache Management', 'opcache-manager' ),
-				'menu_title'    => esc_html__( 'OPcache', 'opcache-manager' ),
+			$perfops['tools'][] = [
+				'name'          => esc_html__( 'oEmbed', 'oembed-manager' ),
+				'description'   => esc_html__( 'View, flush or force oEmbed cached items used by your site.', 'oembed-manager' ),
+				'icon_callback' => [ \Oemm\Plugin\Core::class, 'get_base64_logo' ],
+				'slug'          => 'oemm-tools',
+				'page_title'    => esc_html__( 'oEmbed Cache Management', 'oembed-manager' ),
+				'menu_title'    => esc_html__( 'oEmbed', 'oembed-manager' ),
 				'capability'    => 'manage_options',
 				'callback'      => [ $this, 'get_tools_page' ],
 				'position'      => 50,
-				'plugin'        => OPCM_SLUG,
+				'plugin'        => OEMM_SLUG,
 				'activated'     => true,
 				'remedy'        => '',
 			];
-		}*/
+		}
 		return $perfops;
 	}
 
@@ -209,7 +206,7 @@ class oEmbed_Manager_Admin {
 	 */
 	public function add_actions_links( $actions, $plugin_file, $plugin_data, $context ) {
 		$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-settings' ) ), esc_html__( 'Settings', 'oembed-manager' ) );
-		//$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-viewer' ) ), esc_html__( 'Statistics', 'oembed-manager' ) );
+		$actions[] = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'admin.php?page=oemm-tools' ) ), esc_html__( 'Tools', 'oembed-manager' ) );
 		return $actions;
 	}
 
@@ -227,6 +224,15 @@ class oEmbed_Manager_Admin {
 			$links[] = '<a href="https://github.com/Pierre-Lannoy/wp-oembed-manager">' . esc_html__( 'GitHub repository', 'oembed-manager' ) . '</a>';
 		}
 		return $links;
+	}
+
+	/**
+	 * Get the content of the tools page.
+	 *
+	 * @since 1.0.0
+	 */
+	public function get_tools_page() {
+		include OEMM_ADMIN_DIR . 'partials/oembed-manager-admin-tools.php';
 	}
 
 	/**
@@ -276,7 +282,7 @@ class oEmbed_Manager_Admin {
 								if ( ! empty( $_POST ) && array_key_exists( 'submit', $_POST ) ) {
 									$this->save_consumer();
 									oEmbed::set_consumer();
-									oEmbed::purge_caches();
+									oEmbed::purge_cache();
 								}
 							}
 							break;

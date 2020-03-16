@@ -98,7 +98,7 @@ class Core {
 	 * @access private
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin = new Oemm_Admin();
+		$plugin_admin = new oEmbed_Manager_Admin();
 		$nag          = new Nag();
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -119,7 +119,7 @@ class Core {
 	 * @access private
 	 */
 	private function define_public_hooks() {
-		$plugin_public = new Oemm_Public();
+		$plugin_public = new oEmbed_Manager_Public();
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 	}

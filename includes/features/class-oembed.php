@@ -286,15 +286,70 @@ class oEmbed {
 	 *
 	 * @since 1.0.0
 	 */
-	public static function purge_caches() {
+	private static function purge_caches() {
 		global $wpdb;
 		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
 		if ( false === $count ) {
+			$count = 0;
 			Logger::warning( 'Unable to purge oEmbed cache.' );
 		} else {
+			$count = (int) ( $count / 2 );
 			Logger::info( sprintf( 'oEmbed cache purged: %d item(s) deleted.', $count ) );
 		}
 		return $count;
+	}
+
+	/**
+	 * Purge oEmbed caches.
+	 *
+	 * @param integer $id   Optional. The post id to clear.
+	 * @since 1.0.0
+	 */
+	public static function purge_cache( $id = null) {
+		if ( isset( $id ) ) {
+			global $wp_embed;
+			if ( is_int( $id ) ) {
+				$wp_embed->delete_oembed_caches( $id );
+			}
+			if ( is_array( $id ) ) {
+				Logger::emergency(print_r($id,true));
+				foreach ( $id as $i ) {
+					//
+				}
+			}
+		} else {
+			return self::purge_caches();
+		}
+	}
+
+
+
+	/**
+	 * Get cached content.
+	 *
+	 * @return array    The detail of cached items.
+	 * @since 1.0.0
+	 */
+	public static function get_cached() {
+		$result = [];
+		global $wpdb;
+		$sql = 'SELECT * FROM ' . $wpdb->postmeta . " WHERE meta_key LIKE '%_oembed_%' ORDER BY post_id DESC";
+		// phpcs:ignore
+		$caches =  $wpdb->get_results( $sql, ARRAY_A );
+		foreach ( $caches as $cache ) {
+			if ( ! array_key_exists( $cache['post_id'], $result ) ) {
+				$result[ $cache['post_id'] ]['count'] = 0;
+				$result[ $cache['post_id'] ]['size']  = 0;
+				$result[ $cache['post_id'] ]['ttl']   = time();
+			}
+			if ( 0 === strpos( $cache['meta_key'], '_oembed_time' ) ) {
+				$result[ $cache['post_id'] ]['ttl'] = $cache['meta_value'];
+			} else {
+				$result[ $cache['post_id'] ]['count'] += 1;
+				$result[ $cache['post_id'] ]['size']  += strlen( $cache['meta_value'] );
+			}
+		}
+		return $result;
 	}
 
 }
