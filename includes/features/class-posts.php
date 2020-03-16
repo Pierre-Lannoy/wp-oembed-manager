@@ -65,7 +65,7 @@ class Posts extends \WP_List_Table {
 	 * @since    1.0.0
 	 * @var      string    $orderby    The order by of the list.
 	 */
-	private $orderby = 'post';
+	private $orderby = 'id';
 
 	/**
 	 * The order of the list.
@@ -116,7 +116,7 @@ class Posts extends \WP_List_Table {
 		parent::__construct(
 			[
 				'singular' => 'post',
-				'plural'   => 'post',
+				'plural'   => 'posts',
 				'ajax'     => true,
 			]
 		);
@@ -159,7 +159,7 @@ class Posts extends \WP_List_Table {
 	public function column_cb( $item ) {
 		return sprintf(
 			'<input type="checkbox" name="bulk[]" value="%s" />',
-			$item['post']
+			$item['id']
 		);
 	}
 
@@ -170,7 +170,7 @@ class Posts extends \WP_List_Table {
 	 * @return  string  The cell formatted, ready to print.
 	 * @since    1.0.0
 	 */
-	protected function column_post( $item ) {
+	protected function column_id( $item ) {
 		return Post::get_post_string( $item['id'] );
 	}
 
@@ -219,7 +219,7 @@ class Posts extends \WP_List_Table {
 	public function get_columns() {
 		$columns = [
 			'cb'    => '<input type="checkbox" />',
-			'post'  => esc_html__( 'Post', 'oembed-manager' ),
+			'id'    => esc_html__( 'Post', 'oembed-manager' ),
 			'count' => esc_html__( 'oEmbed', 'oembed-manager' ),
 			'ttl'   => esc_html__( 'Status', 'oembed-manager' ),
 			'size'  => esc_html__( 'Size', 'oembed-manager' ),
@@ -245,7 +245,7 @@ class Posts extends \WP_List_Table {
 	 */
 	protected function get_sortable_columns() {
 		$sortable_columns = [
-			'post'  => [ 'post', true ],
+			'id'    => [ 'id', true ],
 			'count' => [ 'count', true ],
 			'ttl'   => [ 'ttl', true ],
 			'size'  => [ 'size', true ],
@@ -261,8 +261,8 @@ class Posts extends \WP_List_Table {
 	 */
 	public function get_bulk_actions() {
 		return [
-			'invalidate' => esc_html__( 'Clear cache', 'oembed-manager' ),
-			'recompile'  => esc_html__( 'Update cache', 'oembed-manager' ),
+			'invalidate' => esc_html__( 'Clear cache(s)', 'oembed-manager' ),
+			'recompile'  => esc_html__( 'Update cache(s)', 'oembed-manager' ),
 		];
 	}
 
@@ -327,7 +327,7 @@ class Posts extends \WP_List_Table {
 		usort(
 			$data,
 			function ( $a, $b ) {
-				if ( 'post' === $this->orderby ) {
+				if ( 'id' === $this->orderby ) {
 					$result = strcmp( strtolower( $a[ $this->orderby ] ), strtolower( $b[ $this->orderby ] ) );
 				} else {
 					$result = intval( $a[ $this->orderby ] ) < intval( $b[ $this->orderby ] ) ? 1 : -1;
@@ -573,7 +573,7 @@ class Posts extends \WP_List_Table {
 		}
 		$this->orderby = filter_input( INPUT_GET, 'orderby', FILTER_SANITIZE_STRING );
 		if ( ! $this->orderby ) {
-			$this->orderby = 'post';
+			$this->orderby = 'id';
 		}
 		foreach ( [ 'top', 'bottom' ] as $which ) {
 			if ( wp_verify_nonce( $this->nonce, 'bulk-oemm-tools' ) && array_key_exists( 'dowarmup-' . $which, $_POST ) ) {
@@ -608,7 +608,8 @@ class Posts extends \WP_List_Table {
 	public function process_action() {
 		switch ( $this->action ) {
 			case 'warmup':
-				$message = esc_html( sprintf( __( 'Site warm-up has been initiated. %d relevant files.', 'oembed-manager' ), OPcache::warmup( false ) ) );
+				oEmbed::set_cache();
+				$message = esc_html__( 'All caches have been updated or created.', 'oembed-manager' );
 				$code    = 0;
 				break;
 			case 'reset':
@@ -617,13 +618,13 @@ class Posts extends \WP_List_Table {
 				$code    = 0;
 				break;
 			case 'invalidate':
-				// phpcs:ignore
-				$message = esc_html( sprintf( __( 'Invalidation done: %d file(s).', 'oembed-manager' ), OPcache::invalidate( $this->bulk, false ) ) );
+				oEmbed::purge_cache( $this->bulk );
+				$message = esc_html__( 'Selected caches have been cleared.', 'oembed-manager' );
 				$code    = 0;
 				break;
 			case 'recompile':
-				// phpcs:ignore
-				$message = esc_html( sprintf( __( 'Recompilation done: %d file(s).', 'oembed-manager' ), OPcache::recompile( $this->bulk, true ) ) );
+				oEmbed::set_cache( $this->bulk );
+				$message = esc_html__( 'Selected caches have been updated or created.', 'oembed-manager' );
 				$code    = 0;
 				break;
 			default:
