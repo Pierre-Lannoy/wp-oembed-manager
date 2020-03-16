@@ -31,7 +31,7 @@ use Oemm\Plugin\Feature\oEmbed;
  * @author  Pierre Lannoy <https://pierre.lannoy.fr/>.
  * @since   1.0.0
  */
-class Oemm_Admin {
+class oEmbed_Manager_Admin {
 
 	/**
 	 * The assets manager that's responsible for handling all assets of the plugin.
@@ -144,19 +144,18 @@ class Oemm_Admin {
 			];
 		}
 		/*if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
-			$perfops['analytics'][] = [
-				'name'          => esc_html__( 'API oEmbed Manager', 'oembed-manager' ),
-				/* translators: as in the sentence "Find out inbound and outbound API calls made to/from your network." or "Find out inbound and outbound API calls made to/from your website." *
-				'description'   => sprintf( esc_html__( 'Find out inbound and outbound API calls made to/from your %s.', 'oembed-manager' ), Environment::is_wordpress_multisite() ? esc_html__( 'network', 'oembed-manager' ) : esc_html__( 'website', 'oembed-manager' ) ),
-				'icon_callback' => [ \Oemm\Plugin\Core::class, 'get_base64_logo' ],
-				'slug'          => 'oemm-viewer',
-				/* translators: as in the sentence "DecaLog Viewer" *
-				'page_title'    => sprintf( esc_html__( 'API oEmbed Manager', 'oembed-manager' ), OEMM_PRODUCT_NAME ),
-				'menu_title'    => esc_html__( 'API oEmbed Manager', 'oembed-manager' ),
+			$perfops['tools'][]    = [
+				'name'          => esc_html__( 'OPcache', 'opcache-manager' ),
+				/* translators: as in the sentence "View, invalidate and recompile OPcached files used by your network." or "View, invalidate and recompile OPcached files used by your website." *
+				'description'   => sprintf( esc_html__( 'View, invalidate and recompile OPcached files used by your %s.', 'opcache-manager' ), Environment::is_wordpress_multisite() ? esc_html__( 'network', 'opcache-manager' ) : esc_html__( 'website', 'opcache-manager' ) ),
+				'icon_callback' => [ \OPcacheManager\Plugin\Core::class, 'get_base64_logo' ],
+				'slug'          => 'opcm-tools',
+				'page_title'    => esc_html__( 'OPcache Management', 'opcache-manager' ),
+				'menu_title'    => esc_html__( 'OPcache', 'opcache-manager' ),
 				'capability'    => 'manage_options',
-				'callback'      => [ $this, 'get_viewer_page' ],
+				'callback'      => [ $this, 'get_tools_page' ],
 				'position'      => 50,
-				'plugin'        => OEMM_SLUG,
+				'plugin'        => OPCM_SLUG,
 				'activated'     => true,
 				'remedy'        => '',
 			];

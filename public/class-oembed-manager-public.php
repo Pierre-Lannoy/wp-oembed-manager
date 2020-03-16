@@ -18,7 +18,7 @@ use Oemm\System\Assets;
  * @author  Pierre Lannoy <https://pierre.lannoy.fr/>.
  * @since   1.0.0
  */
-class Oemm_Public {
+class oEmbed_Manager_Public {
 
 
 	/**
