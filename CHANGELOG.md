@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - New menu (in the left admin bar) for accessing features: "PerfOps Settings".
 ### Changed
 - By default, if consent is not verifiable, the behaviour is to block content.
+- Cached content may now have a 600K size.
 - The license of the plugin is now GPLv3.
 - New logo for the plugin.
 ### Removed

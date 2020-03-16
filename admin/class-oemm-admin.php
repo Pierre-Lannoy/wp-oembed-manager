@@ -620,7 +620,7 @@ class Oemm_Admin {
 	 */
 	public function get_sizes() {
 		$choices = [];
-		foreach ( [ 75, 150, 300 ] as $time ) {
+		foreach ( [ 75, 150, 300, 600 ] as $time ) {
 			$choices[] = [ $time, sprintf( esc_html__( '%s kilobytes', 'oembed-manager' ), $time ) ];
 		}
 		return $choices;
