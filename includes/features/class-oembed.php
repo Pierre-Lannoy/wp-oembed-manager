@@ -300,9 +300,9 @@ class oEmbed {
 	}
 
 	/**
-	 * Purge oEmbed caches.
+	 * Purge oEmbed cache.
 	 *
-	 * @param integer $id   Optional. The post id to clear.
+	 * @param null|integer|array $id   Optional. The post(s) id(s) to clear.
 	 * @since 1.0.0
 	 */
 	public static function purge_cache( $id = null) {
@@ -310,11 +310,14 @@ class oEmbed {
 			global $wp_embed;
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
+				Logger::info( sprintf( 'oEmbed cache purged for %d post(s).', 1 ) );
 			}
 			if ( is_array( $id ) ) {
-				Logger::emergency(print_r($id,true));
 				foreach ( $id as $i ) {
-					//
+					$wp_embed->delete_oembed_caches( $i );
+				}
+				if ( 0 < count( $id ) ) {
+					Logger::info( sprintf( 'oEmbed cache purged for %d post(s).', count( $id ) ) );
 				}
 			}
 		} else {
@@ -322,6 +325,52 @@ class oEmbed {
 		}
 	}
 
+	/**
+	 * set oEmbed caches.
+	 *
+	 * @since 1.0.0
+	 */
+	private static function set_caches() {
+		/*global $wpdb;
+		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
+		if ( false === $count ) {
+			$count = 0;
+			Logger::warning( 'Unable to set oEmbed cache.' );
+		} else {
+			$count = (int) ( $count / 2 );
+			Logger::info( sprintf( 'oEmbed cache setd: %d item(s) deleted.', $count ) );
+		}
+		return $count;*/
+	}
+
+	/**
+	 * Set oEmbed cache.
+	 *
+	 * @param null|integer|array $id   Optional. The post(s) id(s) to cache.
+	 * @since 1.0.0
+	 */
+	public static function set_cache( $id = null) {
+		if ( isset( $id ) ) {
+			global $wp_embed;
+			if ( is_int( $id ) ) {
+				$wp_embed->delete_oembed_caches( $id );
+				$wp_embed->cache_oembed( $id );
+				Logger::info( sprintf( 'oEmbed cache created for %d post(s).', 1 ) );
+			}
+			if ( is_array( $id ) ) {
+				foreach ( $id as $i ) {
+					$wp_embed->delete_oembed_caches( $i );
+					$wp_embed->cache_oembed( $i );
+				}
+				if ( 0 < count( $id ) ) {
+					Logger::info( sprintf( 'oEmbed cache created for %d post(s).', count( $id ) ) );
+				}
+			}
+		} else {
+			self::purge_caches();
+			return self::set_caches();
+		}
+	}
 
 
 	/**
