@@ -607,7 +607,7 @@ class Oemm_Admin {
 	 */
 	public function get_timeouts() {
 		$choices = [];
-		foreach ( [ 5, 10, 20, 40 ] as $time ) {
+		foreach ( [ 5, 10, 20, 40, 60 ] as $time ) {
 			$choices[] = [ $time, sprintf( esc_html__( '%s seconds', 'oembed-manager' ), $time ) ];
 		}
 		return $choices;
