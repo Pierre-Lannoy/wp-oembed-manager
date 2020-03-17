@@ -42,7 +42,13 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	public static function init() {
-		self::set_consumer();
+		global $pagenow;
+		// phpcs:ignore
+		if ( ( 'admin.php' === $pagenow ) && ( 'oemm-tools' === ( array_key_exists( 'page', $_GET ) ? (string) filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ) : '') ) ) {
+			self::set_consumer( true );
+		} else {
+			self::set_consumer();
+		}
 		self::set_producer();
 	}
 
@@ -220,33 +226,38 @@ class oEmbed {
 	/**
 	 * Set consumer mode.
 	 *
+	 * @param boolean   $bypass     Optional. Bypass the settings.
 	 * @since 1.0.0
 	 */
-	public static function set_consumer() {
-		if ( Option::site_get( 'disable_consumer' ) ) {
-			self::remove_autoembed();
-			remove_filter( 'the_content_feed', '_oembed_filter_feed_content' );
-			remove_action( 'plugins_loaded', 'wp_maybe_load_embeds', 0 );
-			add_filter( 'pre_option_embed_autourls', '__return_false' );
-			add_filter( 'embed_oembed_discover', '__return_false' );
-			remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-			remove_filter( 'excerpt_more', 'wp_embed_excerpt_more', 20 );
-			remove_filter( 'the_excerpt_embed', 'wptexturize' );
-			remove_filter( 'the_excerpt_embed', 'convert_chars' );
-			remove_filter( 'the_excerpt_embed', 'wpautop' );
-			remove_filter( 'the_excerpt_embed', 'shortcode_unautop' );
-			remove_filter( 'the_excerpt_embed', 'wp_embed_excerpt_attachment' );
-			remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result' );
-			remove_filter( 'oembed_response_data', 'get_oembed_response_data_rich' );
-			remove_filter( 'pre_oembed_result', 'wp_filter_pre_oembed_result' );
-			add_filter( 'tiny_mce_plugins', [ self::class, 'remove_tiny_mce_plugin' ] );
-			Logger::debug( 'oEmbed consumer disabled.' );
+	public static function set_consumer( $bypass = false ) {
+		if ( $bypass ) {
+			Logger::emergency( 'Consumer settings bypassed.' );
 		} else {
-			add_filter( 'embed_oembed_html', [ self::class, 'modify_oembed_html' ], PHP_INT_MAX, 4 );
-			add_filter( 'video_embed_html', [ self::class, 'modify_video_oembed_html' ], PHP_INT_MAX, 1 );
-			add_filter( 'oembed_ttl', [ self::class, 'get_cache_ttl' ], PHP_INT_MAX );
-			add_filter( 'oembed_remote_get_args', [ self::class, 'modify_fetch_args' ], PHP_INT_MAX );
-			Logger::debug( 'oEmbed consumer enabled.' );
+			if ( Option::site_get( 'disable_consumer' ) ) {
+				self::remove_autoembed();
+				remove_filter( 'the_content_feed', '_oembed_filter_feed_content' );
+				remove_action( 'plugins_loaded', 'wp_maybe_load_embeds', 0 );
+				add_filter( 'pre_option_embed_autourls', '__return_false' );
+				add_filter( 'embed_oembed_discover', '__return_false' );
+				remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+				remove_filter( 'excerpt_more', 'wp_embed_excerpt_more', 20 );
+				remove_filter( 'the_excerpt_embed', 'wptexturize' );
+				remove_filter( 'the_excerpt_embed', 'convert_chars' );
+				remove_filter( 'the_excerpt_embed', 'wpautop' );
+				remove_filter( 'the_excerpt_embed', 'shortcode_unautop' );
+				remove_filter( 'the_excerpt_embed', 'wp_embed_excerpt_attachment' );
+				remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result' );
+				remove_filter( 'oembed_response_data', 'get_oembed_response_data_rich' );
+				remove_filter( 'pre_oembed_result', 'wp_filter_pre_oembed_result' );
+				add_filter( 'tiny_mce_plugins', [ self::class, 'remove_tiny_mce_plugin' ] );
+				Logger::debug( 'oEmbed consumer disabled.' );
+			} else {
+				add_filter( 'embed_oembed_html', [ self::class, 'modify_oembed_html' ], PHP_INT_MAX, 4 );
+				add_filter( 'video_embed_html', [ self::class, 'modify_video_oembed_html' ], PHP_INT_MAX, 1 );
+				add_filter( 'oembed_ttl', [ self::class, 'get_cache_ttl' ], PHP_INT_MAX );
+				add_filter( 'oembed_remote_get_args', [ self::class, 'modify_fetch_args' ], PHP_INT_MAX );
+				Logger::debug( 'oEmbed consumer enabled.' );
+			}
 		}
 	}
 
