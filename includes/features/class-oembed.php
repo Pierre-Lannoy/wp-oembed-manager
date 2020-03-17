@@ -231,7 +231,7 @@ class oEmbed {
 	 * @since 2.0.0
 	 */
 	public static function embed_cache_oembed_types( $args ) {
-		return [];
+		return [ 'public' => true ];
 	}
 
 	/**
@@ -242,8 +242,8 @@ class oEmbed {
 	 */
 	public static function set_consumer( $bypass = false ) {
 		if ( $bypass ) {
-			add_filter( 'embed_cache_oembed_types', [ self::class, 'embed_cache_oembed_types' ], PHP_INT_MAX );
-			Logger::emergency( 'Consumer settings bypassed.' );
+			//add_filter( 'embed_cache_oembed_types', [ self::class, 'embed_cache_oembed_types' ], PHP_INT_MAX );
+			Logger::debug( 'Consumer settings bypassed.' );
 		} else {
 			if ( Option::site_get( 'disable_consumer' ) ) {
 				self::remove_autoembed();
@@ -349,16 +349,34 @@ class oEmbed {
 	}
 
 	/**
+	 * Triggers a caching of all oEmbed results.
+	 *
+	 * @param int $post_ID Post ID to do the caching for.
+	 */
+	private static function cache_oembed( $post_ID ) {
+		global $wp_embed;
+		$post = get_post( $post_ID );
+		if ( ! empty( $post->post_content ) ) {
+			$wp_embed->post_ID  = $post->ID;
+			$wp_embed->usecache = false;
+
+			$content = $wp_embed->run_shortcode( $post->post_content );
+			$wp_embed->autoembed( $content );
+
+			$wp_embed->usecache = true;
+		}
+	}
+
+	/**
 	 * set oEmbed caches.
 	 *
 	 * @since 1.0.0
 	 */
 	private static function set_caches() {
 		global $wpdb;
-		global $wp_embed;
 		$posts = $wpdb->get_results( 'SELECT DISTINCT ID FROM ' . $wpdb->posts . " WHERE post_status = 'publish' ORDER BY ID DESC", ARRAY_A );
 		foreach ( $posts as $post ) {
-			$wp_embed->cache_oembed( $post['ID'] );
+			self::cache_oembed( $post['ID'] );
 		}
 		if ( 0 < count( $posts ) ) {
 			Logger::info( sprintf( '%d post(s) have been checked to update/create oEmbed cache if needed.', count( $posts ) ) );
