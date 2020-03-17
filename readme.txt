@@ -61,6 +61,10 @@ You need **WordPress 5.2** and at least **PHP 7.2**.
 
 oEmbed Manager works for all embedded content based on core WordPress features. This excludes exotic things like embedded content in JetPack comments and other plugins not relying on core WordPress features.
 
+= Can this plugin work on multisite? =
+
+Yes. It is designed to work on multisite too. Network Admins can configure the plugin options. Sites Admins can set the plugin and use management tools for their own site.
+
 = Where can I get support? =
 
 Support is provided via the official [support page](https://wordpress.org/support/plugin/oembed-manager).
