@@ -331,16 +331,15 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	private static function set_caches() {
-		/*global $wpdb;
-		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
-		if ( false === $count ) {
-			$count = 0;
-			Logger::warning( 'Unable to set oEmbed cache.' );
-		} else {
-			$count = (int) ( $count / 2 );
-			Logger::info( sprintf( 'oEmbed cache setd: %d item(s) deleted.', $count ) );
+		global $wpdb;
+		global $wp_embed;
+		$posts = $wpdb->get_results( 'SELECT DISTINCT ID FROM ' . $wpdb->posts . " WHERE post_status = 'publish' ORDER BY ID DESC", ARRAY_A );
+		foreach ( $posts as $post ) {
+			$wp_embed->cache_oembed( $post['ID'] );
 		}
-		return $count;*/
+		if ( 0 < count( $posts ) ) {
+			Logger::info( sprintf( '%d post(s) have been checked to update/create oEmbed cache if needed.', count( $posts ) ) );
+		}
 	}
 
 	/**
@@ -355,7 +354,7 @@ class oEmbed {
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
 				$wp_embed->cache_oembed( $id );
-				Logger::info( sprintf( 'oEmbed cache created for %d post(s).', 1 ) );
+				Logger::info( sprintf( 'oEmbed cache updated/created for %d post(s).', 1 ) );
 			}
 			if ( is_array( $id ) ) {
 				foreach ( $id as $i ) {
@@ -363,12 +362,12 @@ class oEmbed {
 					$wp_embed->cache_oembed( $i );
 				}
 				if ( 0 < count( $id ) ) {
-					Logger::info( sprintf( 'oEmbed cache created for %d post(s).', count( $id ) ) );
+					Logger::info( sprintf( 'oEmbed cache updated/created for %d post(s).', count( $id ) ) );
 				}
 			}
 		} else {
 			self::purge_caches();
-			return self::set_caches();
+			self::set_caches();
 		}
 	}
 

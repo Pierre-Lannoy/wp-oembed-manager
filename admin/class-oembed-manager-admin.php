@@ -144,7 +144,7 @@ class oEmbed_Manager_Admin {
 			];
 			$perfops['tools'][] = [
 				'name'          => esc_html__( 'oEmbed', 'oembed-manager' ),
-				'description'   => esc_html__( 'View, flush or force oEmbed cached items used by your site.', 'oembed-manager' ),
+				'description'   => esc_html__( 'View, clear and update/create oEmbed cached items used by your site.', 'oembed-manager' ),
 				'icon_callback' => [ \Oemm\Plugin\Core::class, 'get_base64_logo' ],
 				'slug'          => 'oemm-tools',
 				'page_title'    => esc_html__( 'oEmbed Cache Management', 'oembed-manager' ),

@@ -16,7 +16,8 @@ oEmbed Manager helps you to:
 
 * allow/disallow other websites to embed your content;
 * conditionally allow/disallow the display of embedded content on your site;
-* fine tune the way oEmbed operates in the WordPress core.
+* fine tune the way oEmbed operates in the WordPress core;
+* list, clear and update/create oEmbed cached items.
 
 To conditionally allow/disallow the display of embedded content, oEmbed Manager fully integrates with:
 
