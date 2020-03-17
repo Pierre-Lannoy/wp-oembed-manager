@@ -65,6 +65,15 @@ class oEmbed_Manager_Admin {
 			'class' => [],
 			'style' => [],
 		],
+		'i'          => [
+			'class' => [],
+			'style' => [],
+		],
+		'button'     => [
+			'class'    => [],
+			'style'    => [],
+			'data-tab' => [],
+		],
 		'p'          => [
 			'class' => [],
 			'style' => [],
@@ -379,7 +388,7 @@ class oEmbed_Manager_Admin {
 						Option::site_set( 'exception_' . $integrations['prefix'] . '_block', array_key_exists( 'oemm_consumer_rules_block_' . $integrations['prefix'], $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_consumer_rules_block_' . $integrations['prefix'] ) : false );
 						Option::site_set( 'exception_' . $integrations['prefix'] . '_param', array_key_exists( 'oemm_consumer_rules_param_' . $integrations['prefix'], $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_rules_param_' . $integrations['prefix'], FILTER_SANITIZE_STRING ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_param' ) );
 						Option::site_set( 'exception_' . $integrations['prefix'] . '_id', array_key_exists( 'oemm_consumer_rules_id_' . $integrations['prefix'], $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_rules_id_' . $integrations['prefix'], FILTER_SANITIZE_STRING ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_id' ) );
-						Option::site_set( 'exception_' . $integrations['prefix'] . '_text', array_key_exists( 'oemm_consumer_rules_text_' . $integrations['prefix'], $_POST ) ? (string) wp_kses( $_POST[ 'oemm_consumer_rules_text_' . $integrations['prefix'] ], self::$allowedtags ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_text' ) );
+						Option::site_set( 'exception_' . $integrations['prefix'] . '_text', array_key_exists( 'oemm_consumer_rules_text_' . $integrations['prefix'], $_POST ) ? (string) filter_input( INPUT_POST, 'oemm_consumer_rules_text_' . $integrations['prefix'], FILTER_UNSAFE_RAW ) : Option::site_get( 'exception_' . $integrations['prefix'] . '_text' ) );
 					}
 				}
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
