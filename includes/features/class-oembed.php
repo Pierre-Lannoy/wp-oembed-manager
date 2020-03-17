@@ -224,6 +224,17 @@ class oEmbed {
 	}
 
 	/**
+	 * Reset the array of post types to cache oEmbed results for.
+	 *
+	 * @param array $args The current args.
+	 * @return array The modified args.
+	 * @since 2.0.0
+	 */
+	public static function embed_cache_oembed_types( $args ) {
+		return [];
+	}
+
+	/**
 	 * Set consumer mode.
 	 *
 	 * @param boolean   $bypass     Optional. Bypass the settings.
@@ -231,6 +242,7 @@ class oEmbed {
 	 */
 	public static function set_consumer( $bypass = false ) {
 		if ( $bypass ) {
+			add_filter( 'embed_cache_oembed_types', [ self::class, 'embed_cache_oembed_types' ], PHP_INT_MAX );
 			Logger::emergency( 'Consumer settings bypassed.' );
 		} else {
 			if ( Option::site_get( 'disable_consumer' ) ) {
