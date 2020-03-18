@@ -1,0 +1,179 @@
+# Translation of Plugins - oEmbed Manager - Stable Readme (latest release) in French (Belgium)
+# This file is distributed under the same license as the Plugins - oEmbed Manager - Stable Readme (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-18 12:05+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.2.4\n"
+"Language: fr_BE\n"
+"Project-Id-Version: Plugins - oEmbed Manager - Stable Readme (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#. Short description.
+msgid "Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content."
+msgstr "Ajustez les capacités oEmbed de votre site Web et franchissez une nouvelle étape dans la conformité RGPD de votre contenu intégré."
+
+#. Plugin name.
+msgid "oEmbed Manager"
+msgstr "oEmbed Manager"
+
+#. Found in faq paragraph.
+msgid "Yes. It is designed to work on multisite too. Network Admins can configure the plugin options. Sites Admins can set the plugin and use management tools for their own site."
+msgstr "Oui. Cette extension est conçue pour fonctionner sur un multisite aussi. Les administrateurs du réseau peuvent configurer les options générales de l’extension. Les administrateurs de site peuvent régler l’extension et avoir accès aux outils de gestion pour leur propre site."
+
+#. Found in faq header.
+msgid "Can this plugin work on multisite?"
+msgstr "Cette extension fonctionne-t’elle sur un multisite ?"
+
+#. Found in description list item.
+msgid "list, clear and update/create oEmbed cached items."
+msgstr "lister, purger et mettre à jour ou créer les éléments oEmbed en cache."
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/cookie-law-info/\">GDPR Cookie Consent</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/cookie-law-info/\">GDPR Cookie Consent</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/gdpr-cookie-compliance/\">GDPR Cookie Compliance</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/gdpr-cookie-compliance/\">GDPR Cookie Compliance</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/uk-cookie-consent/\">Cookie Consent</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/uk-cookie-consent/\">Cookie Consent</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/eu-cookie-law/\">EU Cookie Law</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/eu-cookie-law/\">EU Cookie Law</a>"
+
+#. Found in faq paragraph.
+msgid "You can report bugs and suggest ideas via the official <a href=\"https://wordpress.org/support/plugin/oembed-manager\">support page</a>."
+msgstr "Vous pouvez signaler des bogues ou soumettre des idées d’amélioration via la page officielle <a href=\"https://wordpress.org/support/plugin/oembed-manager\">d’assistance</a>."
+
+#. Found in faq paragraph.
+msgid "Support is provided via the official <a href=\"https://wordpress.org/support/plugin/oembed-manager\">support page</a>."
+msgstr "L’assistance est proposée via la page officielle <a href=\"https://wordpress.org/support/plugin/oembed-manager\">d’assistance</a>."
+
+#. Found in faq paragraph.
+msgid "You need <strong>WordPress 5.2</strong> and at least <strong>PHP 7.2</strong>."
+msgstr "Vous avez besoin d’au moins <strong>WordPress 5.2</strong> et <strong>PHP 7.2</strong>."
+
+#. Found in faq paragraph.
+msgid "oEmbed Manager works for all embedded content based on core WordPress features. This excludes exotic things like embedded content in JetPack comments and other plugins not relying on core WordPress features."
+msgstr "oEmbed Manager fonctionne pour tout le contenu intégré s’appuyant sur les fonctionnalités du cœur de WordPress. Cela exclut les choses exotiques comme le contenu intégré dans les commentaires Jetpack ainsi que d’autres extensions qui n’utilisent pas les fonctionnalités de base de WordPress."
+
+#. Found in faq header.
+msgid "Where can I report a bug?"
+msgstr "Où puis-je signaler un bogue ?"
+
+#. Found in faq header.
+msgid "Where can I get support?"
+msgstr "Où puis-je obtenir de l’aide ?"
+
+#. Found in faq header.
+msgid "What are the requirements for this plugin to work?"
+msgstr "Quels sont les prérequis pour que cette extension fonctionne ?"
+
+#. Found in faq header.
+msgid "What are the cases where this plugin does not work?"
+msgstr "Quels sont les cas où cette extension ne fonctionne pas ?"
+
+#. Found in installation list item.
+msgid "Enjoy!"
+msgstr "Profitez !"
+
+#. Found in installation list item.
+msgid "Visit 'oEmbed' in the 'Settings' menu of your WP Admin to adjust settings."
+msgstr "Visitez « oEmbed » dans le menu de gauche de l’Admin WP pour ajuster les réglages."
+
+#. Found in installation list item.
+msgid "Activate oEmbed Manager from your Plugins page."
+msgstr "Activez oEmbed Manager depuis votre page Extensions."
+
+#. Found in installation list item.
+msgid "Upload the <code>oembed-manager</code> directory to your <code>/wp-content/plugins/</code> directory, using your favorite method (ftp, sftp, scp, etc...)."
+msgstr "Téléversez le dossier <code>oembed-manager</code> dans votre dossier <code>/wp-content/plugins/</code>, en utilisant votre méthode préférée (ftp, sftp, scp, etc...)."
+
+#. Found in installation list item.
+msgid "Download oEmbed Manager."
+msgstr "Téléchargez oEmbed Manager."
+
+#. Found in installation list item.
+msgid "Activate oEmbed Manager."
+msgstr "Activez oEmbed Manager."
+
+#. Found in installation list item.
+msgid "Click on the 'Install Now' button."
+msgstr "Cliquez sur le bouton « Installer maintenant »."
+
+#. Found in installation list item.
+msgid "Search for 'oEmbed Manager'."
+msgstr "Recherchez « oEmbed Manager »."
+
+#. Found in installation list item.
+msgid "Visit 'Plugins &gt; Add New'."
+msgstr "Visitez « Extensions > Ajouter »."
+
+#. Found in installation header.
+msgid "Once Activated"
+msgstr "Une fois activé"
+
+#. Found in installation header.
+msgid "From WordPress.org"
+msgstr "Sur WordPress.org"
+
+#. Found in installation header.
+msgid "From your WordPress dashboard"
+msgstr "Depuis votre tableau de bord WordPress"
+
+#. Found in description paragraph.
+msgid "If you use one of these plugins, you can set oEmbed to display embedded content only when a visitor has agreed your cookie or privacy policy, or when she/he has not set the Do Not Track flag of her/his browser."
+msgstr "Si vous utilisez l’une de ces extensions, vous pouvez paramétrer oEmbed pour qu’il affiche le contenu intégré uniquement lorsqu’un visiteur a accepté votre politique de confidentialité ou de cookies, ou lorsque son navigateur n’envoie pas d’en-tête Do Not Track."
+
+#. Found in description paragraph.
+msgid "To conditionally allow/disallow the display of embedded content, oEmbed Manager fully integrates with:"
+msgstr "Pour autoriser ou interdire de façon conditionnelle l’affichage de contenu intégré, oEmbed Manager s’intègre parfaitement avec :"
+
+#. Found in description paragraph.
+msgid "oEmbed Manager helps you to:"
+msgstr "oEmbed Manager vous aide à :"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/gdpr/\">GDPR</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/gdpr/\">GDPR</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/do-not-track-stats/\">Do Not Track Stats</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/do-not-track-stats/\">Do Not Track Stats</a>"
+
+#. Found in description list item.
+msgid "<a href=\"https://wordpress.org/plugins/cookie-notice/\">Cookie Notice for GDPR</a>"
+msgstr "<a href=\"https://wordpress.org/plugins/cookie-notice/\">Cookie Notice for GDPR</a>"
+
+#. Found in description list item.
+msgid "fine tune the way oEmbed operates in the WordPress core;"
+msgstr "affiner la façon dont oEmbed opère nativement dans WordPress ;"
+
+#. Found in description list item.
+msgid "conditionally allow/disallow the display of embedded content on your site;"
+msgstr "autoriser ou interdire, de façon conditionnelle, l’affichage de contenu intégré sur votre site ;"
+
+#. Found in description list item.
+msgid "allow/disallow other websites to embed your content;"
+msgstr "autoriser ou empêcher d’autres sites Web d'intégrer votre contenu ;"
+
+#. Screenshot description.
+msgid "Producer Settings"
+msgstr "Réglages du producteur"
+
+#. Screenshot description.
+msgid "Consumer Settings"
+msgstr "Réglages du consommateur"
+
+#. Found in changelog paragraph.
+msgid "Please, see <a href=\"https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md\">full changelog</a> on GitHub."
+msgstr "Merci de consulter le <a href=\"https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md\">registre des modifications</a> sur GitHub."

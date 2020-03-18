@@ -1,0 +1,846 @@
+# Translation of Plugins - oEmbed Manager - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - oEmbed Manager - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-03-18 12:46+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 2.2.4\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - oEmbed Manager - Stable (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: admin/class-oembed-manager-admin.php:571
+msgid "Item to verify - in doubt, see %s settings."
+msgstr "Élément permettant la vérification - dans le doute, consulter les réglages %s."
+
+#: admin/class-oembed-manager-admin.php:458
+msgid "Note: oEmbed Manager respects DISABLE_NAG_NOTICES flag."
+msgstr "Note : oEmbed Manager respecte l’indicateur DISABLE_NAG_NOTICES."
+
+#: admin/class-oembed-manager-admin.php:458
+msgid "Allows oEmbed Manager to display admin notices throughout the admin dashboard."
+msgstr "Autoriser oEmbed Manager à afficher les avis d’administration dans le Tableau de bord."
+
+#: admin/class-oembed-manager-admin.php:450
+msgid "Admin notices"
+msgstr "Avis d’administration"
+
+#: admin/class-oembed-manager-admin.php:442
+msgid "If checked, oEmbed Manager will use a public CDN (jsDelivr) to serve scripts and stylesheets."
+msgstr "Si coché, oEmbed Manager utilisera un CDN public (jsDelivr) pour la distribution des scripts et des feuilles de style."
+
+#: admin/class-oembed-manager-admin.php:439
+msgid "Use public CDN"
+msgstr "Utiliser un CDN public"
+
+#: admin/class-oembed-manager-admin.php:434
+msgid "Resources"
+msgstr "Ressources"
+
+#: admin/class-oembed-manager-admin.php:423
+msgid "Logging"
+msgstr "Journalisation"
+
+#: admin/class-oembed-manager-admin.php:419
+msgid "Your site does not use any logging plugin. To log all events triggered in oEmbed Manager, I recommend you to install the excellent (and free) %s. But it is not mandatory."
+msgstr "Votre site n’utilise aucune extension de journalisation. Pour enregistrer tous les évènements déclenchés par oEmbed Manager, je vous recommande d’installer l’excellent (et gratuit) %s. Mais ce n’est pas obligatoire."
+
+#: admin/class-oembed-manager-admin.php:416
+msgid "Your site is currently using %s."
+msgstr "Votre site utilise actuellement %s."
+
+#: admin/class-oembed-manager-admin.php:342
+msgid "Plugin settings have not been reset to defaults. Please try again."
+msgstr "Les réglages n’ont pas été réinitialisés à leurs valeurs par défaut. Veuillez réessayer."
+
+#: admin/class-oembed-manager-admin.php:337
+msgid "Plugin settings have been reset to defaults."
+msgstr "Le réglages ont été réinitialisées aux valeurs par défaut."
+
+#: admin/class-oembed-manager-admin.php:320
+#: admin/class-oembed-manager-admin.php:364
+#: admin/class-oembed-manager-admin.php:399
+msgid "Plugin settings have not been saved. Please try again."
+msgstr "Les réglages n’ont pas été mis à jour. Veuillez réessayer."
+
+#: admin/class-oembed-manager-admin.php:315
+#: admin/class-oembed-manager-admin.php:359
+#: admin/class-oembed-manager-admin.php:394
+msgid "Plugin settings have been saved."
+msgstr "Les réglages ont été mis à jour."
+
+#: admin/class-oembed-manager-admin.php:233
+msgid "GitHub repository"
+msgstr "Dépôt GitHub"
+
+#: admin/class-oembed-manager-admin.php:191
+msgid "Plugin options"
+msgstr "Options de l’extension"
+
+#: admin/class-oembed-manager-admin.php:159
+msgid "oEmbed Cache Management"
+msgstr "Gestion du cache oEmbed"
+
+#: admin/class-oembed-manager-admin.php:156
+msgid "View, clear and update/create oEmbed cached items used by your site."
+msgstr "Voir, purger et mettre à jour ou créer les éléments oEmbed en cache."
+
+#: admin/partials/oembed-manager-admin-tools-lines.php:28
+msgid "Update All Caches"
+msgstr "Mettre à jour tous les caches"
+
+#: admin/partials/oembed-manager-admin-tools-lines.php:27
+msgid "Clear All Caches"
+msgstr "Purger tous les caches"
+
+#: admin/partials/oembed-manager-admin-tools-lines.php:23
+msgid "Apply"
+msgstr "Appliquer"
+
+#: admin/partials/oembed-manager-admin-tools-lines.php:17
+msgid "Number of posts to display"
+msgstr "Nombre de contenus à afficher"
+
+#: admin/partials/oembed-manager-admin-settings-main.php:94
+msgid "Integrations"
+msgstr "Intégrations"
+
+#: admin/partials/oembed-manager-admin-settings-main.php:81
+msgid "About"
+msgstr "À propos"
+
+#: admin/partials/oembed-manager-admin-settings-main.php:67
+msgid "Options"
+msgstr "Options"
+
+#: admin/partials/oembed-manager-admin-settings-about.php:38
+msgid "Changelog"
+msgstr "Journal des modifications"
+
+#: admin/partials/oembed-manager-admin-settings-about.php:35
+msgid "Disclaimer"
+msgstr "Avertissement"
+
+#: admin/partials/oembed-manager-admin-settings-about.php:27
+msgid "All brands, icons and graphic illustrations are registered trademarks of their respective owners."
+msgstr "Toutes les marques, icônes et illustrations graphiques sont des marques déposées par leurs propriétaires respectifs."
+
+#: admin/partials/oembed-manager-admin-settings-about.php:26
+msgid "%1$s is a free and open source plugin for WordPress. It integrates other free and open source works (as-is or modified) like: %2$s."
+msgstr "%1$s est une extension libre et open source pour WordPress. Elle intègre de nombreuses autres œuvres libres et open source (telles quelles ou modifiées) dont : %2$s."
+
+#: admin/partials/oembed-manager-admin-settings-about.php:24
+msgid "This version of %s is a release candidate. Although ready for production, this version is not officially supported in production environments."
+msgstr "Cette version de %s est une « release candidate ». Bien que prête pour la production, il n’y a pas d’assistance fournie pour cette version dans des conditions de production."
+
+#: admin/partials/oembed-manager-admin-settings-about.php:20
+msgid "This version of %s is not production-ready. It is a development preview. Use it at your own risk!"
+msgstr "Cette version de %s n’est pas destinée à être mise en production. Il s’agit d’une « development preview ». Utilisez-la à vos risques et périls !"
+
+#: includes/plugin/class-updater.php:94
+msgid "Sorry, unable to find or read changelog file."
+msgstr "Désolé, il est impossible de trouver ou de lire le journal des modifications."
+
+#: includes/plugin/class-updater.php:50
+msgid "See <a href=\"%s\">what's new</a>."
+msgstr "Voir <a href=\"%s\">les nouveautés</a>."
+
+#: includes/plugin/class-updater.php:47
+msgid "%1$s has been correctly updated from version %2$s to version %3$s."
+msgstr "%1$s a été correctement mis à jour de la version %2$s à la version %3$s."
+
+#: includes/plugin/class-updater.php:43
+msgid "%1$s has been correctly installed."
+msgstr "%1$s a été correctement installé."
+
+#: includes/features/class-posts.php:627
+msgid "Selected caches have been updated or created."
+msgstr "Les caches sélectionnés ont été mis à jour ou créés."
+
+#: includes/features/class-posts.php:622
+msgid "Selected caches have been cleared."
+msgstr "Les caches sélectionnés ont été purgés."
+
+#: includes/features/class-posts.php:617
+msgid "All caches have been cleared."
+msgstr "Tous les caches ont été purgés."
+
+#: includes/features/class-posts.php:612
+msgid "All caches have been updated or created."
+msgstr "Tous les caches ont été mis à jour ou créés."
+
+#: includes/features/class-posts.php:486
+msgid "Select All"
+msgstr "Tout sélectionner"
+
+#: includes/features/class-posts.php:456
+msgid "Last page"
+msgstr "Dernière page"
+
+#: includes/features/class-posts.php:446
+msgid "Next page"
+msgstr "Page suivante"
+
+#: includes/features/class-posts.php:439
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr "%1$s of %2$s"
+
+#: includes/features/class-posts.php:428 includes/features/class-posts.php:432
+msgid "Current Page"
+msgstr "Page actuelle"
+
+#: includes/features/class-posts.php:422
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: includes/features/class-posts.php:412
+msgid "First page"
+msgstr "Première page"
+
+#: includes/features/class-posts.php:380
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s élément"
+msgstr[1] "%s éléments"
+
+#: includes/features/class-posts.php:353
+msgid "Display %d posts per page"
+msgstr "Afficher %d contenus par page"
+
+#: includes/features/class-posts.php:265
+msgid "Update cache(s)"
+msgstr "Mettre à jour le(s) cache(s)"
+
+#: includes/features/class-posts.php:264
+msgid "Clear cache(s)"
+msgstr "Purger le(s) cache(s)"
+
+#: includes/features/class-posts.php:225
+msgid "Size"
+msgstr "Taille"
+
+#: includes/features/class-posts.php:224
+msgid "Status"
+msgstr "État"
+
+#: includes/features/class-posts.php:223
+#: admin/class-oembed-manager-admin.php:155
+#: admin/class-oembed-manager-admin.php:160
+msgid "oEmbed"
+msgstr "oEmbed"
+
+#: includes/features/class-posts.php:222
+msgid "Post"
+msgstr "Contenu"
+
+#: includes/features/class-posts.php:210
+msgid "Valid for another %s"
+msgstr "Valable pour encore %s"
+
+#: includes/features/class-posts.php:208
+msgid "Staled"
+msgstr "Périmé"
+
+#: includes/system/class-environment.php:203
+msgid "Debug disabled"
+msgstr "Débogage désactivé"
+
+#: includes/system/class-environment.php:203
+msgid "Debug enabled"
+msgstr "Débogage activé"
+
+#: includes/system/class-environment.php:197
+msgid "display"
+msgstr "affichage"
+
+#: includes/system/class-environment.php:192
+msgid "log"
+msgstr "journal"
+
+#: includes/system/class-conversion.php:88
+msgctxt "Abbreviation - Stands for \"exabytes\"."
+msgid "EB"
+msgstr "Eo"
+
+#: includes/system/class-conversion.php:87
+msgctxt "Abbreviation - Stands for \"petabytes\"."
+msgid "PB"
+msgstr "Po"
+
+#: includes/system/class-conversion.php:86
+msgctxt "Abbreviation - Stands for \"terabytes\"."
+msgid "TB"
+msgstr "To"
+
+#: includes/system/class-conversion.php:85
+msgctxt "Abbreviation - Stands for \"gigabytes\"."
+msgid "GB"
+msgstr "Go"
+
+#: includes/system/class-conversion.php:84
+msgctxt "Abbreviation - Stands for \"megabytes\"."
+msgid "MB"
+msgstr "Mo"
+
+#: includes/system/class-conversion.php:83
+msgctxt "Abbreviation - Stands for \"kilobytes\"."
+msgid "KB"
+msgstr "Ko"
+
+#: includes/system/class-conversion.php:82
+msgctxt "Abbreviation - Stands for \"byte\"."
+msgid "B"
+msgstr "o"
+
+#: includes/system/class-conversion.php:51
+msgctxt "Abbreviation - Stands for \"quintillion\"."
+msgid "Qi"
+msgstr "Qi"
+
+#: includes/system/class-conversion.php:50
+msgctxt "Abbreviation - Stands for \"quadrillion\"."
+msgid "Qa"
+msgstr "Qa"
+
+#: includes/system/class-conversion.php:49
+msgctxt "Abbreviation - Stands for \"trillion\"."
+msgid "T"
+msgstr "T"
+
+#: includes/system/class-conversion.php:48
+msgctxt "Abbreviation - Stands for \"billion\"."
+msgid "B"
+msgstr "o"
+
+#: includes/system/class-conversion.php:47
+msgctxt "Abbreviation - Stands for \"million\"."
+msgid "M"
+msgstr "M"
+
+#: includes/system/class-conversion.php:46
+msgctxt "Abbreviation - Stands for \"thousand\"."
+msgid "K"
+msgstr "K"
+
+#: includes/system/class-date.php:114
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "heure"
+msgstr[1] "heures"
+
+#: includes/system/class-date.php:113
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "minute"
+msgstr[1] "minutes"
+
+#: includes/system/class-date.php:112
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "seconde"
+msgstr[1] "secondes"
+
+#: includes/system/class-date.php:108
+msgctxt "Unit abbreviation - Stands for \"hour\"."
+msgid "hr"
+msgstr "h."
+
+#: includes/system/class-date.php:107
+msgctxt "Unit abbreviation - Stands for \"minute\"."
+msgid "min"
+msgstr "min"
+
+#: includes/system/class-date.php:106
+msgctxt "Unit abbreviation - Stands for \"second\"."
+msgid "sec"
+msgstr "sec"
+
+#: includes/system/class-date.php:73
+msgid "in %s"
+msgstr "dans %s"
+
+#: includes/system/class-date.php:58
+msgid "currently"
+msgstr "actuellement"
+
+#: includes/system/class-date.php:56 includes/system/class-date.php:71
+msgid "%s ago"
+msgstr "il y a %s"
+
+#: includes/system/class-sitehealth.php:320
+msgid "You should consider using PHP Intl extension. It would improve localization features on your site."
+msgstr "Vous devriez envisager d’utiliser l’extension PHP Intl. Cela permettrait d’améliorer les fonctionnalités de traduction sur votre site."
+
+#: includes/system/class-sitehealth.php:314
+msgid "You should use Intl extension"
+msgstr "Vous devriez utiliser l’extension Intl"
+
+#: includes/system/class-sitehealth.php:308
+msgid "Your site uses PHP Intl extension to improve localization features. That's great."
+msgstr "Votre site utilise l’extension PHP Intl pour améliorer les fonctionnalités de traduction. C’est super."
+
+#: includes/system/class-sitehealth.php:305
+#: includes/system/class-sitehealth.php:317
+msgid "Internationalization"
+msgstr "Internationalisation"
+
+#: includes/system/class-sitehealth.php:302
+msgid "Your site uses Intl extension"
+msgstr "Votre site utilise l’extension Intl"
+
+#: includes/system/class-sitehealth.php:285
+msgid "I18n Extension Test"
+msgstr "Test d’extension I18n"
+
+#: includes/system/class-sitehealth.php:266
+msgid "You should consider using OPcache. It would improve PHP performance of your site."
+msgstr "Vous devriez envisager d’utiliser OPcache. Cela permettrait d’améliorer les performances PHP de votre site."
+
+#: includes/system/class-sitehealth.php:260
+msgid "You should use OPcache"
+msgstr "Vous devriez utiliser OPcache"
+
+#: includes/system/class-sitehealth.php:254
+msgid "Your site uses OPcache to improve PHP performance. That's great."
+msgstr "Votre site utilise OPcache pour améliorer les performances de PHP. C’est super."
+
+#: includes/system/class-sitehealth.php:248
+msgid "Your site uses OPcache"
+msgstr "Votre site utilise OPcache"
+
+#: includes/system/class-sitehealth.php:231
+msgid "OPcache Test"
+msgstr "Test OPcache"
+
+#: includes/system/class-sitehealth.php:212
+msgid "Your site uses a dedicated object caching mechanism. That's great."
+msgstr "Votre site utilise un mécanisme dédié de mise cache d’objets. C'est super."
+
+#: includes/system/class-sitehealth.php:206
+msgid "Your site uses object caching"
+msgstr "Votre site utilise la mise en cache d’objets"
+
+#: includes/system/class-sitehealth.php:200
+msgid "Your site uses APCu, but only a few plugins know how to take advantage of it."
+msgstr "Votre site utilise APCu, mais seules quelques extensions savent comment en profiter."
+
+#: includes/system/class-sitehealth.php:194
+msgid "You should improve object caching"
+msgstr "Vous devriez améliorer la mise en cache d’objets"
+
+#: includes/system/class-sitehealth.php:188
+#: includes/system/class-sitehealth.php:200
+msgid "You should consider using a dedicated object caching mechanism, like Memcached or Redis, to improve your site's speed."
+msgstr "Vous devriez envisager d’utiliser un mécanisme dédié de mise en cache d’objets, comme Memcached ou Redis, pour améliorer la vitesse de votre site."
+
+#: includes/system/class-sitehealth.php:188
+msgid "Your site uses database transient."
+msgstr "Votre site utilise des Transients stockés en base de données."
+
+#: includes/system/class-sitehealth.php:185
+#: includes/system/class-sitehealth.php:197
+#: includes/system/class-sitehealth.php:209
+#: includes/system/class-sitehealth.php:251
+#: includes/system/class-sitehealth.php:263
+msgid "Performance"
+msgstr "Performance"
+
+#: includes/system/class-sitehealth.php:182
+msgid "You should use object caching"
+msgstr "Vous devriez utiliser la mise en cache d’objets"
+
+#: includes/system/class-sitehealth.php:164
+msgid "Object Cache Test"
+msgstr "Test de cache objet"
+
+#: includes/system/class-sitehealth.php:147
+msgid "Plugin diagnostic information"
+msgstr "Informations de diagnostique de l’extension"
+
+#: includes/system/class-sitehealth.php:130
+msgid "OPcache settings and status"
+msgstr "Paramètres et état OPcache"
+
+#: includes/system/class-sitehealth.php:122
+msgid "Object cache"
+msgstr "Cache objet"
+
+#. translators: as in the sentence "Product W version X by author Y (license
+#. Z)"
+#: includes/libraries/class-libraries.php:212
+msgid "<a href=\"%1$s\">%2$s %3$s</a>%4$s by %5$s (%6$s)"
+msgstr "<a href=\"%1$s\">%2$s %3$s</a>%4$s par %5$s (%6$s)"
+
+#: includes/libraries/class-libraries.php:128
+msgid "unknown license"
+msgstr "licence inconnue"
+
+#: includes/libraries/class-libraries.php:125
+msgid "GPL-3.0 license"
+msgstr "Licence GPL-3.0"
+
+#: includes/libraries/class-libraries.php:122
+msgid "GPL-2.0 license"
+msgstr "Licence GPL-2.0"
+
+#: includes/libraries/class-libraries.php:119
+msgid "Apache license, version 2.0"
+msgstr "Licence Apache, version 2.0"
+
+#: includes/libraries/class-libraries.php:116
+msgid "MIT license"
+msgstr "Licence MIT"
+
+#: includes/libraries/class-libraries.php:67
+#: includes/libraries/class-libraries.php:79
+#: includes/libraries/class-libraries.php:172
+#: includes/libraries/class-libraries.php:180
+#: includes/libraries/class-libraries.php:188
+#: includes/libraries/class-libraries.php:195
+#: includes/libraries/class-libraries.php:202
+msgid "%s & contributors"
+msgstr "%s et contributeurs"
+
+#: perfopsone/class-adminmenus.php:379
+msgid "Requires at least PHP %1$s%2$s and WordPress %3$s%4$s."
+msgstr "Nécessite au moins PHP %1$s%2$s et WordPress %3$s%4$s."
+
+#: perfopsone/class-adminmenus.php:370
+msgid "contribution"
+msgstr "contribution"
+
+#: perfopsone/class-adminmenus.php:369
+msgid "support"
+msgstr "assistance"
+
+#: perfopsone/class-adminmenus.php:368
+msgid "about"
+msgstr "à propos"
+
+#: perfopsone/class-adminmenus.php:367
+msgid "settings"
+msgstr "réglages"
+
+#: perfopsone/class-adminmenus.php:241
+msgid "No review yet."
+msgstr "Pas encore d’avis."
+
+#: perfopsone/class-adminmenus.php:238
+msgid "%s reviews."
+msgstr "%s avis."
+
+#: perfopsone/class-adminmenus.php:233
+msgid "%s downloads."
+msgstr "%s téléchargements."
+
+#: perfopsone/class-adminmenus.php:228
+msgid "%s+ installs."
+msgstr "%s+ installations."
+
+#: perfopsone/class-adminmenus.php:211 perfopsone/class-adminmenus.php:218
+msgid "need update"
+msgstr "nécessite une mise à jour"
+
+#: perfopsone/class-adminmenus.php:209 perfopsone/class-adminmenus.php:216
+msgid "OK"
+msgstr "OK"
+
+#: perfopsone/class-adminmenus.php:203
+msgid "Need to be updated to %s."
+msgstr "Nécessite d’être mis à jour vers %s."
+
+#: perfopsone/class-adminmenus.php:108
+msgid "This analytics feature is currently disabled. Click here to activate it."
+msgstr "Cette fonctionnalité d’analyse est actuellement désactivée. Cliquez ici pour l’activer."
+
+#. translators: as in the sentence "oEmbed Manager Settings" or "WordPress
+#. Settings"
+#: perfopsone/class-adminmenus.php:70
+#: admin/partials/oembed-manager-admin-settings-main.php:24
+#: admin/class-oembed-manager-admin.php:143
+msgid "%s Settings"
+msgstr "Réglages %s"
+
+#: perfopsone/class-adminmenus.php:70 perfopsone/class-adminmenus.php:71
+msgid "Control Center"
+msgstr "Centre de contrôle"
+
+#: perfopsone/class-adminmenus.php:66
+msgid "%s Records"
+msgstr "Enregistrements %s"
+
+#: perfopsone/class-adminmenus.php:66 perfopsone/class-adminmenus.php:67
+msgid "Available Catalogues"
+msgstr "Catalogues disponibles"
+
+#: perfopsone/class-adminmenus.php:62
+msgid "%s Insights"
+msgstr "Idées %s"
+
+#: perfopsone/class-adminmenus.php:62 perfopsone/class-adminmenus.php:63
+msgid "Available Reports"
+msgstr "Rapports disponibles"
+
+#: perfopsone/class-adminmenus.php:58
+msgid "%s Tools"
+msgstr "Outils %s"
+
+#: perfopsone/class-adminmenus.php:58 perfopsone/class-adminmenus.php:59
+msgid "Available Tools"
+msgstr "Outils disponibles"
+
+#: perfopsone/class-adminmenus.php:54
+msgid "%s Analytics"
+msgstr "Statistiques %s"
+
+#: perfopsone/class-adminmenus.php:54 perfopsone/class-adminmenus.php:55
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/Pierre-Lannoy/wp-oembed-manager"
+msgstr "https://github.com/Pierre-Lannoy/wp-oembed-manager"
+
+#. Author URI of the plugin
+msgid "https://pierre.lannoy.fr"
+msgstr "https://pierre.lannoy.fr"
+
+#. Author of the plugin
+msgid "Pierre Lannoy"
+msgstr "Pierre Lannoy"
+
+#. Description of the plugin
+msgid "Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content."
+msgstr "Ajustez les capacités oEmbed de votre site et passez une nouvelle étape dans la conformité RGPD de votre contenu intégré."
+
+#. Plugin Name of the plugin
+msgid "oEmbed Manager"
+msgstr "oEmbed Manager"
+
+#: admin/class-oembed-manager-admin.php:189
+msgid "Advanced options"
+msgstr "Options avancées"
+
+#: admin/class-oembed-manager-admin.php:196
+msgid "Exceptions rules"
+msgstr "Règles d’exceptions"
+
+#: admin/class-oembed-manager-admin.php:218
+msgid "Tools"
+msgstr "Outils"
+
+#: admin/partials/oembed-manager-admin-settings-main.php:53
+msgid "Producer"
+msgstr "Producteur"
+
+#: admin/partials/oembed-manager-admin-settings-main.php:40
+msgid "Consumer"
+msgstr "Consommateur"
+
+#: admin/partials/oembed-manager-admin-settings-options.php:33
+msgid "Reset to Defaults"
+msgstr "Rétablir les valeurs par défaut"
+
+#: admin/partials/oembed-manager-admin-settings-integrations.php:12
+msgid "this plugin is activated on %s"
+msgstr "cette extension est activée sur %s"
+
+#: admin/partials/oembed-manager-admin-settings-integrations.php:11
+msgid "View on WordPress.org"
+msgstr "Voir sur WordPress.org"
+
+#: includes/features/class-oembed.php:79
+msgid "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on the <em>Do Not Track</em> header sent by your visitors' browser:"
+msgstr "Ces extensions aident <strong>oEmbed Manager</strong> à construire des règles d’exceptions basées sur la valeur de l’en-tête <em>Do Not Track</em> envoyé par le navigateur de vos visiteurs :"
+
+#: includes/features/class-oembed.php:78
+msgid "<em>Do Not Track</em> policy"
+msgstr "Directive <em>Do Not Track</em>"
+
+#: includes/features/class-oembed.php:72
+msgid "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on the consent of your visitors about cookies:"
+msgstr "Ces extensions aident <strong>oEmbed Manager</strong> à construire des règles d’exceptions basées sur le consentement ou le refus des cookies par vos visiteurs :"
+
+#: includes/features/class-oembed.php:71
+msgid "Cookies management"
+msgstr "Gestion des cookies"
+
+#: includes/features/class-oembed.php:65
+msgid "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on the optional consent of your visitors:"
+msgstr "Ces extensions aident <strong>oEmbed Manager</strong> à construire des règles d’exceptions basées sur le consentement facultatif donné par vos visiteurs :"
+
+#: includes/features/class-oembed.php:64
+msgid "Consent management"
+msgstr "Gestion du consentement"
+
+#: admin/class-oembed-manager-admin.php:734
+msgid "Prevents other websites to embed content from %s."
+msgstr "Empêche d’autres sites Web d’incorporer du contenu en provenance de %s."
+
+#: admin/class-oembed-manager-admin.php:726
+msgid "oEmbed producer"
+msgstr "Producteur oEmbed"
+
+#: admin/class-oembed-manager-admin.php:709
+msgid "How much WordPress can retrieve of the original content."
+msgstr "Quelle quantité du contenu original WordPress peut récupérer."
+
+#: admin/class-oembed-manager-admin.php:638
+msgid "%s kilobytes"
+msgstr "%s kilo-octets"
+
+#: admin/class-oembed-manager-admin.php:693
+msgid "How long WordPress can wait the external website when fetching content."
+msgstr "Combien de temps WordPress peut attendre le site Web distant lors de la récupération du contenu."
+
+#: admin/class-oembed-manager-admin.php:625
+msgid "%s seconds"
+msgstr "%s secondes"
+
+#: admin/class-oembed-manager-admin.php:677
+msgid "How long the embedded content is cached by WordPress."
+msgstr "Combien de temps le contenu intégré est mis en cache par WordPress."
+
+#: admin/class-oembed-manager-admin.php:613
+msgid "1 year"
+msgstr "1 an"
+
+#: admin/class-oembed-manager-admin.php:612
+msgid "1 month"
+msgstr "1 mois"
+
+#: admin/class-oembed-manager-admin.php:611
+msgid "1 week"
+msgstr "1 semaine"
+
+#: admin/class-oembed-manager-admin.php:610
+msgid "1 day"
+msgstr "1 jour"
+
+#: admin/class-oembed-manager-admin.php:609
+msgid "1 hour"
+msgstr "1 heure"
+
+#: admin/class-oembed-manager-admin.php:660
+msgid "If WordPress outputs oEmbed URLs, transform them into clickable links."
+msgstr "Si WordPress affiche des URLs oEmbed, les transformer en liens cliquables."
+
+#: admin/class-oembed-manager-admin.php:657
+msgid "Clickable URL"
+msgstr "URL cliquable"
+
+#: admin/class-oembed-manager-admin.php:541
+msgid "Honor <em>Do Not Track</em> requests"
+msgstr "Honorer les demandes <em>Do Not Track</em>"
+
+#: admin/class-oembed-manager-admin.php:542
+msgid "If checked, no embedded content will be outputted if the plugin %s detects a Do Not Track header."
+msgstr "Si coché, aucun contenu intégré ne sera affiché si l’extension %s détecte un en-tête Do Not Track."
+
+#: admin/class-oembed-manager-admin.php:588
+msgid "Replacement text displayed while consent is not given."
+msgstr "Texte de remplacement affiché quand le consentement n’a pas été donné."
+
+#: admin/class-oembed-manager-admin.php:537
+msgid "Don't display if cookie consent is not given"
+msgstr "Ne pas afficher si le consentement concernant les cookies n’est pas donné"
+
+#: admin/class-oembed-manager-admin.php:538
+msgid "If checked, no embedded content will be outputted as long as the plugin %s does not have collected the cookie consent."
+msgstr "Si coché, aucun contenu intégré ne sera affiché tant que l’extension %s n’aura pas recueilli le consentement de l’utilisateur concernant les cookies."
+
+#: admin/class-oembed-manager-admin.php:588
+msgid "Could be plain HTML. Let blank to fully hide the placeholder."
+msgstr "Peut être du HTML. Laissez vide pour complètement masquer l’emplacement."
+
+#: admin/class-oembed-manager-admin.php:533
+msgid "Don't display if consent is not given"
+msgstr "Ne pas afficher si le consentement n’est pas donné"
+
+#: admin/class-oembed-manager-admin.php:534
+msgid "If checked, no embedded content will be outputted as long as the plugin %s does not have collected the consent."
+msgstr "Si coché, aucun contenu intégré ne sera affiché tant que l’extension %s n’aura pas recueilli le consentement de l’utilisateur."
+
+#: admin/class-oembed-manager-admin.php:512
+msgid "How the embedded content must be displayed."
+msgstr "Comment le contenu incorporé doit être affiché."
+
+#: admin/class-oembed-manager-admin.php:475
+msgid "Nothing"
+msgstr "Rien"
+
+#: admin/class-oembed-manager-admin.php:474
+msgid "Just the URL"
+msgstr "Juste l’URL"
+
+#: admin/class-oembed-manager-admin.php:473
+msgid "Styled and formated content"
+msgstr "Contenu formaté"
+
+#: admin/class-oembed-manager-admin.php:496
+msgid "Prevents you and your contributors to embed external content in %s."
+msgstr "Vous empêche, ainsi que vos contributeurs, d’incorporer du contenu externe dans %s."
+
+#: admin/class-oembed-manager-admin.php:493
+#: admin/class-oembed-manager-admin.php:731
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: admin/class-oembed-manager-admin.php:701
+msgid "Maximum size"
+msgstr "Taille maximale"
+
+#: admin/class-oembed-manager-admin.php:685
+msgid "Connection timeout"
+msgstr "Délai de connexion dépassé"
+
+#: admin/class-oembed-manager-admin.php:669
+msgid "Cache"
+msgstr "Cache"
+
+#: admin/class-oembed-manager-admin.php:652
+msgid "Links"
+msgstr "Liens"
+
+#: admin/class-oembed-manager-admin.php:455
+#: admin/class-oembed-manager-admin.php:504
+msgid "Display"
+msgstr "Affichage"
+
+#: admin/class-oembed-manager-admin.php:488
+msgid "oEmbed consumer"
+msgstr "Consommateur oEmbed"
+
+#: admin/class-oembed-manager-admin.php:232
+msgid "Support"
+msgstr "Assistance"
+
+#: admin/class-oembed-manager-admin.php:217
+msgid "Settings"
+msgstr "Réglages"
+
+#: includes/system/class-option.php:96
+msgid "In order to honor the <em>Do Not Track</em> request sent by your browser, this embedded content have been disabled to prevent third-party tracking cookies."
+msgstr "Afin de respecter l’en-tête <em>Do Not Track</em> envoyé par votre navigateur, ce contenu intégré a été désactivé pour empêcher l’installation de cookies tiers."
+
+#: includes/system/class-option.php:95
+msgid "In order to respect your choice about cookies, this embedded content have been disabled."
+msgstr "Afin de respecter votre choix concernant les cookies, ce contenu incorporé a été désactivé."
+
+#: includes/system/class-option.php:94
+msgid "In order to respect your opposition to our privacy policy, this embedded content have been disabled."
+msgstr "Afin de respecter votre opposition à notre politique de confidentialité, ce contenu intégré a été désactivé."
+
+#: includes/features/class-cookie.php:102
+msgid "cookie name"
+msgstr "nom du cookie"
+
+#: includes/features/class-consent.php:54
+msgid "consent ID"
+msgstr "ID de consentement"
