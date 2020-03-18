@@ -20,7 +20,7 @@ wp_enqueue_style( OEMM_ASSETS_ID );
 ?>
 
 <div class="wrap">
-	<h2><?php echo OEMM_PRODUCT_NAME; ?></h2>
+	<h2><?php echo esc_html__( 'oEmbed Cache Management', 'oembed-manager' );; ?></h2>
 	<?php settings_errors(); ?>
 	<?php $scripts->views(); ?>
     <form id="oemm-tools" method="post" action="<?php echo $scripts->get_url(); ?>">
