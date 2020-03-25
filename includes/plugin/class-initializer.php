@@ -35,7 +35,6 @@ class Initializer {
 	 * @since 1.0.0
 	 */
 	public function initialize() {
-		\Oemm\System\Logger::init();
 		\Oemm\System\Cache::init();
 		\Oemm\System\Sitehealth::init();
 		\Oemm\Plugin\Feature\oEmbed::init();
