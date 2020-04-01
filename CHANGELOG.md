@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Compatibility with [DecaLog](https://wordpress.org/plugins/decalog/) early loading feature.
 ### Changed
 - The tool page is now called "oEmbed Cache Management".
+- In site health "info" tab, the boolean are now clearly displayed.
 ### Fixed
 - Some strings are not translatable.
 ### Removed
