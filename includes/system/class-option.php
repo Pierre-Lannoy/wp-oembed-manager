@@ -201,6 +201,9 @@ class Option {
 	 * @since 1.0.0
 	 */
 	public static function site_set( $option, $value, $autoload = null ) {
+		if ( false === $value ) {
+			$value = 0;
+		}
 		return update_option( OEMM_PRODUCT_ABBREVIATION . '_' . $option, $value, $autoload );
 	}
 
@@ -213,6 +216,9 @@ class Option {
 	 * @since 1.0.0
 	 */
 	public static function network_set( $option, $value ) {
+		if ( false === $value ) {
+			$value = 0;
+		}
 		return update_site_option( OEMM_PRODUCT_ABBREVIATION . '_' . $option, $value );
 	}
 

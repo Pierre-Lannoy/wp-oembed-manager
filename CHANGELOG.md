@@ -4,6 +4,8 @@ All notable changes to **oEmbed Manager** is documented in this *changelog*.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased - will be 2.1.2]
+### Fixed
+- When used for the first time, settings checkboxes may remain checked after being unchecked.
 
 ## [2.1.1] - 2020-05-04
 ### Fixed
