@@ -51,23 +51,23 @@ if ( ! class_exists( 'PerfOpsOne\AdminMenus' ) ) {
 				if ( ! in_array( 'perfopsone-' . $menu, self::$slugs, true ) ) {
 					switch ( $menu ) {
 						case 'analytics':
-							add_menu_page( esc_html__( 'Dashboard', 'oembed-manager' ), sprintf( esc_html__( '%s Analytics', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_analytics_page' ], 'dashicons-chart-bar', 81 );
+							add_menu_page( esc_html__( 'Dashboard', 'oembed-manager' ), sprintf( esc_html__( '%s Analytics', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_analytics_page' ], 'dashicons-chart-bar', 6666 );
 							add_submenu_page( 'perfopsone-' . $menu, esc_html__( 'Dashboard', 'oembed-manager' ), __( 'Dashboard', 'oembed-manager' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_analytics_page' ], 0 );
 							break;
 						case 'tools':
-							add_menu_page( esc_html__( 'Available Tools', 'oembed-manager' ), sprintf( esc_html__( '%s Tools', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_tools_page' ], 'dashicons-admin-tools', 81 );
+							add_menu_page( esc_html__( 'Available Tools', 'oembed-manager' ), sprintf( esc_html__( '%s Tools', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_tools_page' ], 'dashicons-admin-tools', 6666 );
 							add_submenu_page( 'perfopsone-' . $menu, esc_html__( 'Available Tools', 'oembed-manager' ), __( 'Available Tools', 'oembed-manager' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_tools_page' ], 0 );
 							break;
 						case 'insights':
-							add_menu_page( esc_html__( 'Available Reports', 'oembed-manager' ), sprintf( esc_html__( '%s Insights', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_insights_page' ], 'dashicons-lightbulb', 81 );
+							add_menu_page( esc_html__( 'Available Reports', 'oembed-manager' ), sprintf( esc_html__( '%s Insights', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_insights_page' ], 'dashicons-lightbulb', 6666 );
 							add_submenu_page( 'perfopsone-' . $menu, esc_html__( 'Available Reports', 'oembed-manager' ), __( 'Available Reports', 'oembed-manager' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_insights_page' ], 0 );
 							break;
 						case 'records':
-							add_menu_page( esc_html__( 'Available Catalogues', 'oembed-manager' ), sprintf( esc_html__( '%s Records', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_records_page' ], 'dashicons-book', 81 );
+							add_menu_page( esc_html__( 'Available Catalogues', 'oembed-manager' ), sprintf( esc_html__( '%s Records', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_records_page' ], 'dashicons-book', 6666 );
 							add_submenu_page( 'perfopsone-' . $menu, esc_html__( 'Available Catalogues', 'oembed-manager' ), __( 'Available Catalogues', 'oembed-manager' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_records_page' ], 0 );
 							break;
 						case 'settings':
-							add_menu_page( esc_html__( 'Control Center', 'oembed-manager' ), sprintf( esc_html__( '%s Settings', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_settings_page' ], 'dashicons-admin-settings', 81 );
+							add_menu_page( esc_html__( 'Control Center', 'oembed-manager' ), sprintf( esc_html__( '%s Settings', 'oembed-manager' ), 'PerfOps' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_settings_page' ], 'dashicons-admin-settings', 6666 );
 							add_submenu_page( 'perfopsone-' . $menu, esc_html__( 'Control Center', 'oembed-manager' ), __( 'Control Center', 'oembed-manager' ), 'manage_options', 'perfopsone-' . $menu, [ self::class, 'get_settings_page' ], 0 );
 							break;
 					}
