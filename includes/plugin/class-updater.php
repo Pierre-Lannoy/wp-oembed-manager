@@ -9,7 +9,6 @@
 
 namespace Oemm\Plugin;
 
-use Parsedown;
 use Oemm\System\Nag;
 use Oemm\System\Option;
 use Oemm\System\Environment;
