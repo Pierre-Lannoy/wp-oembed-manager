@@ -79,6 +79,21 @@ if ( 'misc' === $active_tab && ! ( Role::SUPER_ADMIN === Role::admin_type() || R
 		);
 		?>
 		" class="nav-tab <?php echo 'about' === $active_tab ? 'nav-tab-active' : ''; ?>" style="float:right;"><?php esc_html_e( 'About', 'oembed-manager' ); ?></a>
+		<?php if ( class_exists( 'Oemm\Plugin\Feature\Wpcli' ) ) { ?>
+            <a href="
+            <?php
+			echo esc_url(
+				add_query_arg(
+					array(
+						'page' => 'oemm-settings',
+						'tab'  => 'wpcli',
+					),
+					admin_url( 'admin.php' )
+				)
+			);
+			?>
+            " class="nav-tab <?php echo 'wpcli' === $active_tab ? 'nav-tab-active' : ''; ?>" style="float:right;">WP-CLI</a>
+		<?php } ?>
         <a href="
 		<?php
 		echo esc_url(
@@ -108,5 +123,9 @@ if ( 'misc' === $active_tab && ! ( Role::SUPER_ADMIN === Role::admin_type() || R
 	<?php } ?>
 	<?php if ( 'about' === $active_tab ) { ?>
 		<?php include __DIR__ . '/oembed-manager-admin-settings-about.php'; ?>
+	<?php } ?>
+	<?php if ( 'wpcli' === $active_tab ) { ?>
+		<?php wp_enqueue_style( OEMM_ASSETS_ID ); ?>
+		<?php echo do_shortcode( '[oemm-wpcli]' ); ?>
 	<?php } ?>
 </div>
