@@ -1,5 +1,5 @@
 # Changelog
-All notable changes to **oEmbed Manager** is documented in this *changelog*.
+All notable changes to **oEmbed Manager** are documented in this *changelog*.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - The remote IP can be wrongly detected when behind some types of reverse-proxies.
 - With Firefox, some links are unclickable in the Control Center (thanks to [Emil1](https://wordpress.org/support/users/milouze/)).
+- Some typos in `CHANGELOG.md`.
 
 ### Removed
 - Parsedown as integrated markdown parser.
