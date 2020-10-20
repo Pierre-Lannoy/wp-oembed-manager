@@ -46,7 +46,7 @@ class Cookie extends Integration {
 	private function add_uk_cookie_consent() {
 		$result                               = $this->get_template();
 		$result['id']                         = 'uk-cookie-consent';
-		$result['name']                       = 'Cookie Consent';
+		$result['name']                       = 'GDPR Cookie Consent Banner';
 		$result['url']                        = 'https://wordpress.org/plugins/uk-cookie-consent/';
 		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
@@ -69,7 +69,7 @@ class Cookie extends Integration {
 	private function add_cookie_notice() {
 		$result                               = $this->get_template();
 		$result['id']                         = 'cookie-notice';
-		$result['name']                       = 'Cookie Notice for GDPR';
+		$result['name']                       = 'Cookie Notice for GDPR & CCPA';
 		$result['url']                        = 'https://wordpress.org/plugins/cookie-notice/';
 		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
@@ -111,7 +111,7 @@ class Cookie extends Integration {
 	private function add_eu_cookie_law() {
 		$result                               = $this->get_template();
 		$result['id']                         = 'eu-cookie-law';
-		$result['name']                       = 'EU Cookie Law';
+		$result['name']                       = 'EU Cookie Law for GDPR/CCPA';
 		$result['url']                        = 'https://wordpress.org/plugins/eu-cookie-law/';
 		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.jpg';
 		$result['backend_detection']['rule']  = 'function_exists';
@@ -131,7 +131,7 @@ class Cookie extends Integration {
 	private function add_gdpr_cookie_compliance() {
 		$result                               = $this->get_template();
 		$result['id']                         = 'gdpr-cookie-compliance';
-		$result['name']                       = 'GDPR Cookie Compliance';
+		$result['name']                       = 'GDPR Cookie Compliance (CCPA, PIPEDA ready)';
 		$result['url']                        = 'https://wordpress.org/plugins/gdpr-cookie-compliance/';
 		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';
@@ -154,7 +154,7 @@ class Cookie extends Integration {
 	private function add_cookie_law_info() {
 		$result                               = $this->get_template();
 		$result['id']                         = 'cookie-law-info';
-		$result['name']                       = 'GDPR Cookie Consent';
+		$result['name']                       = 'GDPR Cookie Consent (CCPA Ready)';
 		$result['url']                        = 'https://wordpress.org/plugins/cookie-law-info/';
 		$result['image']                      = OEMM_ADMIN_URL . 'medias/' . $result['id'] . '-icon-128x128.png';
 		$result['backend_detection']['rule']  = 'function_exists';

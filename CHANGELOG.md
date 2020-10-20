@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Compatibility with WordPress 5.5.
 
 ### Changed
+- The names of integrated plugins have been updated.
 - The positions of PerfOps menus are pushed lower to avoid collision with other plugins (thanks to [Loïc Antignac](https://github.com/webaxones)).
 - Improved layout for language indicator.
 - Admin notices are now set to "don't display" by default.
