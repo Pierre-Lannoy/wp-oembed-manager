@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: oEmbed Manager\n"
-"POT-Creation-Date: 2020-03-17 12:53+0100\n"
+"POT-Creation-Date: 2020-11-05 18:17+0100\n"
 "PO-Revision-Date: 2019-07-08 14:07+0200\n"
 "Last-Translator: Pierre Lannoy <pierre@lannoy.fr>\n"
 "Language-Team: Pierre Lannoy <pierre@lannoy.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: oembed-manager.php\n"
@@ -22,78 +22,79 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. translators: as in the sentence "oEmbed Manager Settings" or "WordPress Settings"
-#: admin/class-oembed-manager-admin.php:134
+#: admin/class-oembed-manager-admin.php:143
 #: admin/partials/oembed-manager-admin-settings-main.php:24
 #: perfopsone/class-adminmenus.php:70
 #, php-format
 msgid "%s Settings"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:146 admin/class-oembed-manager-admin.php:151
+#: admin/class-oembed-manager-admin.php:155 admin/class-oembed-manager-admin.php:160
 #: includes/features/class-posts.php:223
 msgid "oEmbed"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:147
+#: admin/class-oembed-manager-admin.php:156
 msgid "View, clear and update/create oEmbed cached items used by your site."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:150
+#: admin/class-oembed-manager-admin.php:159
+#: admin/partials/oembed-manager-admin-tools.php:23
 msgid "oEmbed Cache Management"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:180
+#: admin/class-oembed-manager-admin.php:189
 msgid "Advanced options"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:182
+#: admin/class-oembed-manager-admin.php:191
 msgid "Plugin options"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:187
+#: admin/class-oembed-manager-admin.php:196
 msgid "Exceptions rules"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:208
+#: admin/class-oembed-manager-admin.php:217
 msgid "Settings"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:209
+#: admin/class-oembed-manager-admin.php:218
 msgid "Tools"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:223
+#: admin/class-oembed-manager-admin.php:232
 msgid "Support"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:224
+#: admin/class-oembed-manager-admin.php:233
 msgid "GitHub repository"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:306 admin/class-oembed-manager-admin.php:350
-#: admin/class-oembed-manager-admin.php:385
+#: admin/class-oembed-manager-admin.php:315 admin/class-oembed-manager-admin.php:359
+#: admin/class-oembed-manager-admin.php:394
 msgid "Plugin settings have been saved."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:311 admin/class-oembed-manager-admin.php:355
-#: admin/class-oembed-manager-admin.php:390
+#: admin/class-oembed-manager-admin.php:320 admin/class-oembed-manager-admin.php:364
+#: admin/class-oembed-manager-admin.php:399
 msgid "Plugin settings have not been saved. Please try again."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:328
+#: admin/class-oembed-manager-admin.php:337
 msgid "Plugin settings have been reset to defaults."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:333
+#: admin/class-oembed-manager-admin.php:342
 msgid "Plugin settings have not been reset to defaults. Please try again."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:407
+#: admin/class-oembed-manager-admin.php:416
 #, php-format
 msgid "Your site is currently using %s."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:410
+#: admin/class-oembed-manager-admin.php:419
 #, php-format
 msgid ""
 "Your site does not use any logging plugin. To log all events triggered in oEmbed "
@@ -101,186 +102,186 @@ msgid ""
 "mandatory."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:414
+#: admin/class-oembed-manager-admin.php:423
 msgid "Logging"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:425
+#: admin/class-oembed-manager-admin.php:434
 msgid "Resources"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:430
+#: admin/class-oembed-manager-admin.php:439
 msgid "Use public CDN"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:433
+#: admin/class-oembed-manager-admin.php:442
 msgid ""
 "If checked, oEmbed Manager will use a public CDN (jsDelivr) to serve scripts and "
 "stylesheets."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:441
+#: admin/class-oembed-manager-admin.php:450
 msgid "Admin notices"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:446 admin/class-oembed-manager-admin.php:495
+#: admin/class-oembed-manager-admin.php:455 admin/class-oembed-manager-admin.php:504
 msgid "Display"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:449
+#: admin/class-oembed-manager-admin.php:458
 msgid "Allows oEmbed Manager to display admin notices throughout the admin dashboard."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:449
+#: admin/class-oembed-manager-admin.php:458
 msgid "Note: oEmbed Manager respects DISABLE_NAG_NOTICES flag."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:464
+#: admin/class-oembed-manager-admin.php:473
 msgid "Styled and formated content"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:465
+#: admin/class-oembed-manager-admin.php:474
 msgid "Just the URL"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:466
+#: admin/class-oembed-manager-admin.php:475
 msgid "Nothing"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:479
+#: admin/class-oembed-manager-admin.php:488
 msgid "oEmbed consumer"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:484 admin/class-oembed-manager-admin.php:722
+#: admin/class-oembed-manager-admin.php:493 admin/class-oembed-manager-admin.php:731
 msgid "Disabled"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:487
+#: admin/class-oembed-manager-admin.php:496
 #, php-format
 msgid "Prevents you and your contributors to embed external content in %s."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:503
+#: admin/class-oembed-manager-admin.php:512
 msgid "How the embedded content must be displayed."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:524
+#: admin/class-oembed-manager-admin.php:533
 msgid "Don't display if consent is not given"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:525
+#: admin/class-oembed-manager-admin.php:534
 #, php-format
 msgid ""
 "If checked, no embedded content will be outputted as long as the plugin %s does not "
 "have collected the consent."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:528
+#: admin/class-oembed-manager-admin.php:537
 msgid "Don't display if cookie consent is not given"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:529
+#: admin/class-oembed-manager-admin.php:538
 #, php-format
 msgid ""
 "If checked, no embedded content will be outputted as long as the plugin %s does not "
 "have collected the cookie consent."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:532
+#: admin/class-oembed-manager-admin.php:541
 msgid "Honor <em>Do Not Track</em> requests"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:533
+#: admin/class-oembed-manager-admin.php:542
 #, php-format
 msgid ""
 "If checked, no embedded content will be outputted if the plugin %s detects a Do Not "
 "Track header."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:562
+#: admin/class-oembed-manager-admin.php:571
 #, php-format
 msgid "Item to verify - in doubt, see %s settings."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:579
+#: admin/class-oembed-manager-admin.php:588
 msgid "Replacement text displayed while consent is not given."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:579
+#: admin/class-oembed-manager-admin.php:588
 msgid "Could be plain HTML. Let blank to fully hide the placeholder."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:600
+#: admin/class-oembed-manager-admin.php:609
 msgid "1 hour"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:601
+#: admin/class-oembed-manager-admin.php:610
 msgid "1 day"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:602
+#: admin/class-oembed-manager-admin.php:611
 msgid "1 week"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:603
+#: admin/class-oembed-manager-admin.php:612
 msgid "1 month"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:604
+#: admin/class-oembed-manager-admin.php:613
 msgid "1 year"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:616
+#: admin/class-oembed-manager-admin.php:625
 #, php-format
 msgid "%s seconds"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:629
+#: admin/class-oembed-manager-admin.php:638
 #, php-format
 msgid "%s kilobytes"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:643
+#: admin/class-oembed-manager-admin.php:652
 msgid "Links"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:648
+#: admin/class-oembed-manager-admin.php:657
 msgid "Clickable URL"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:651
+#: admin/class-oembed-manager-admin.php:660
 msgid "If WordPress outputs oEmbed URLs, transform them into clickable links."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:660
+#: admin/class-oembed-manager-admin.php:669
 msgid "Cache"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:668
+#: admin/class-oembed-manager-admin.php:677
 msgid "How long the embedded content is cached by WordPress."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:676
+#: admin/class-oembed-manager-admin.php:685
 msgid "Connection timeout"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:684
+#: admin/class-oembed-manager-admin.php:693
 msgid "How long WordPress can wait the external website when fetching content."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:692
+#: admin/class-oembed-manager-admin.php:701
 msgid "Maximum size"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:700
+#: admin/class-oembed-manager-admin.php:709
 msgid "How much WordPress can retrieve of the original content."
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:717
+#: admin/class-oembed-manager-admin.php:726
 msgid "oEmbed producer"
 msgstr ""
 
-#: admin/class-oembed-manager-admin.php:725
+#: admin/class-oembed-manager-admin.php:734
 #, php-format
 msgid "Prevents other websites to embed content from %s."
 msgstr ""
@@ -345,7 +346,7 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: admin/partials/oembed-manager-admin-settings-main.php:94
+#: admin/partials/oembed-manager-admin-settings-main.php:109
 msgid "Integrations"
 msgstr ""
 
@@ -377,31 +378,31 @@ msgstr ""
 msgid "cookie name"
 msgstr ""
 
-#: includes/features/class-oembed.php:58
+#: includes/features/class-oembed.php:64
 msgid "Consent management"
 msgstr ""
 
-#: includes/features/class-oembed.php:59
+#: includes/features/class-oembed.php:65
 msgid ""
 "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
 "the optional consent of your visitors:"
 msgstr ""
 
-#: includes/features/class-oembed.php:65
+#: includes/features/class-oembed.php:71
 msgid "Cookies management"
 msgstr ""
 
-#: includes/features/class-oembed.php:66
+#: includes/features/class-oembed.php:72
 msgid ""
 "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
 "the consent of your visitors about cookies:"
 msgstr ""
 
-#: includes/features/class-oembed.php:72
+#: includes/features/class-oembed.php:78
 msgid "<em>Do Not Track</em> policy"
 msgstr ""
 
-#: includes/features/class-oembed.php:73
+#: includes/features/class-oembed.php:79
 msgid ""
 "These plugins help <strong>oEmbed Manager</strong> to build exception rules, based on "
 "the <em>Do Not Track</em> header sent by your visitors' browser:"
@@ -494,10 +495,7 @@ msgstr ""
 msgid "Selected caches have been updated or created."
 msgstr ""
 
-#: includes/libraries/class-libraries.php:67 includes/libraries/class-libraries.php:79
-#: includes/libraries/class-libraries.php:172 includes/libraries/class-libraries.php:180
-#: includes/libraries/class-libraries.php:188 includes/libraries/class-libraries.php:195
-#: includes/libraries/class-libraries.php:202
+#: includes/libraries/class-libraries.php:67 includes/libraries/class-libraries.php:78
 #, php-format
 msgid "%s & contributors"
 msgstr ""
@@ -523,7 +521,7 @@ msgid "unknown license"
 msgstr ""
 
 #. translators: as in the sentence "Product W version X by author Y (license Z)"
-#: includes/libraries/class-libraries.php:212
+#: includes/libraries/class-libraries.php:174
 #, php-format
 msgid "<a href=\"%1$s\">%2$s %3$s</a>%4$s by %5$s (%6$s)"
 msgstr ""
@@ -541,10 +539,6 @@ msgstr ""
 #: includes/plugin/class-updater.php:50
 #, php-format
 msgid "See <a href=\"%s\">what's new</a>."
-msgstr ""
-
-#: includes/plugin/class-updater.php:94
-msgid "Sorry, unable to find or read changelog file."
 msgstr ""
 
 #: includes/system/class-conversion.php:46
@@ -659,20 +653,24 @@ msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/system/class-environment.php:192
+#: includes/system/class-environment.php:193
 msgid "log"
 msgstr ""
 
-#: includes/system/class-environment.php:197
+#: includes/system/class-environment.php:198
 msgid "display"
 msgstr ""
 
-#: includes/system/class-environment.php:203
+#: includes/system/class-environment.php:204
 msgid "Debug enabled"
 msgstr ""
 
-#: includes/system/class-environment.php:203
+#: includes/system/class-environment.php:204
 msgid "Debug disabled"
+msgstr ""
+
+#: includes/system/class-markdown.php:46
+msgid "Sorry, unable to find or read the specified file."
 msgstr ""
 
 #: includes/system/class-option.php:94
@@ -692,99 +690,123 @@ msgid ""
 "content have been disabled to prevent third-party tracking cookies."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:122
+#: includes/system/class-sitehealth.php:123
 msgid "Object cache"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:130
+#: includes/system/class-sitehealth.php:131
 msgid "OPcache settings and status"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:147
+#: includes/system/class-sitehealth.php:148
 msgid "Plugin diagnostic information"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:164
+#: includes/system/class-sitehealth.php:165
 msgid "Object Cache Test"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:182
+#: includes/system/class-sitehealth.php:183
 msgid "You should use object caching"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:185 includes/system/class-sitehealth.php:197
-#: includes/system/class-sitehealth.php:209 includes/system/class-sitehealth.php:251
-#: includes/system/class-sitehealth.php:263
+#: includes/system/class-sitehealth.php:186 includes/system/class-sitehealth.php:198
+#: includes/system/class-sitehealth.php:210 includes/system/class-sitehealth.php:252
+#: includes/system/class-sitehealth.php:264 includes/system/class-sitehealth.php:306
+#: includes/system/class-sitehealth.php:318
 msgid "Performance"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:188
+#: includes/system/class-sitehealth.php:189
 msgid "Your site uses database transient."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:188 includes/system/class-sitehealth.php:200
+#: includes/system/class-sitehealth.php:189 includes/system/class-sitehealth.php:201
 msgid ""
 "You should consider using a dedicated object caching mechanism, like Memcached or "
 "Redis, to improve your site's speed."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:194
+#: includes/system/class-sitehealth.php:195
 msgid "You should improve object caching"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:200
+#: includes/system/class-sitehealth.php:201
 msgid "Your site uses APCu, but only a few plugins know how to take advantage of it."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:206
+#: includes/system/class-sitehealth.php:207
 msgid "Your site uses object caching"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:212
+#: includes/system/class-sitehealth.php:213
 msgid "Your site uses a dedicated object caching mechanism. That's great."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:231
+#: includes/system/class-sitehealth.php:232
 msgid "OPcache Test"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:248
+#: includes/system/class-sitehealth.php:249
 msgid "Your site uses OPcache"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:254
+#: includes/system/class-sitehealth.php:255
 msgid "Your site uses OPcache to improve PHP performance. That's great."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:260
+#: includes/system/class-sitehealth.php:261
 msgid "You should use OPcache"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:266
+#: includes/system/class-sitehealth.php:267
 msgid "You should consider using OPcache. It would improve PHP performance of your site."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:285
+#: includes/system/class-sitehealth.php:286
+msgid "Shared Memory Test"
+msgstr ""
+
+#: includes/system/class-sitehealth.php:303
+msgid "Your site can use shared memory"
+msgstr ""
+
+#: includes/system/class-sitehealth.php:309
+msgid ""
+"Your site can use shared memory to allow inter-process communication. That's great."
+msgstr ""
+
+#: includes/system/class-sitehealth.php:315
+msgid "You should allow inter-process communication"
+msgstr ""
+
+#: includes/system/class-sitehealth.php:321
+msgid ""
+"You should consider using shared memory (PHP shmop) to allow inter-process "
+"communication."
+msgstr ""
+
+#: includes/system/class-sitehealth.php:340
 msgid "I18n Extension Test"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:302
+#: includes/system/class-sitehealth.php:357
 msgid "Your site uses Intl extension"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:305 includes/system/class-sitehealth.php:317
+#: includes/system/class-sitehealth.php:360 includes/system/class-sitehealth.php:372
 msgid "Internationalization"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:308
+#: includes/system/class-sitehealth.php:363
 msgid "Your site uses PHP Intl extension to improve localization features. That's great."
 msgstr ""
 
-#: includes/system/class-sitehealth.php:314
+#: includes/system/class-sitehealth.php:369
 msgid "You should use Intl extension"
 msgstr ""
 
-#: includes/system/class-sitehealth.php:320
+#: includes/system/class-sitehealth.php:375
 msgid ""
 "You should consider using PHP Intl extension. It would improve localization features on "
 "your site."
@@ -830,59 +852,68 @@ msgstr ""
 msgid "Control Center"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:108
+#: perfopsone/class-adminmenus.php:74 perfopsone/class-adminmenus.php:75
+msgid "Available Consoles"
+msgstr ""
+
+#: perfopsone/class-adminmenus.php:74
+#, php-format
+msgid "%s Consoles"
+msgstr ""
+
+#: perfopsone/class-adminmenus.php:112
 msgid "This analytics feature is currently disabled. Click here to activate it."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:203
+#: perfopsone/class-adminmenus.php:230
 #, php-format
 msgid "Need to be updated to %s."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:209 perfopsone/class-adminmenus.php:216
+#: perfopsone/class-adminmenus.php:236 perfopsone/class-adminmenus.php:243
 msgid "OK"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:211 perfopsone/class-adminmenus.php:218
+#: perfopsone/class-adminmenus.php:238 perfopsone/class-adminmenus.php:245
 msgid "need update"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:228
+#: perfopsone/class-adminmenus.php:255
 #, php-format
 msgid "%s+ installs."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:233
+#: perfopsone/class-adminmenus.php:260
 #, php-format
 msgid "%s downloads."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:238
+#: perfopsone/class-adminmenus.php:265
 #, php-format
 msgid "%s reviews."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:241
+#: perfopsone/class-adminmenus.php:268
 msgid "No review yet."
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:367
+#: perfopsone/class-adminmenus.php:394
 msgid "settings"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:368
+#: perfopsone/class-adminmenus.php:395
 msgid "about"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:369
+#: perfopsone/class-adminmenus.php:396
 msgid "support"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:370
+#: perfopsone/class-adminmenus.php:397
 msgid "contribution"
 msgstr ""
 
-#: perfopsone/class-adminmenus.php:379
+#: perfopsone/class-adminmenus.php:406
 #, php-format
 msgid "Requires at least PHP %1$s%2$s and WordPress %3$s%4$s."
 msgstr ""
