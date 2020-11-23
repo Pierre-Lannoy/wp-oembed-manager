@@ -3,11 +3,11 @@ All notable changes to **oEmbed Manager** are documented in this *changelog*.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased - will 2.2.0]
+## [2.2.0] - 2020-11-23
 
 ### Added
 - New Site Health "info" section about shared memory.
-- Compatibility with WordPress 5.5.
+- Compatibility with WordPress 5.6.
 
 ### Changed
 - Improvement in the way roles are detected.
