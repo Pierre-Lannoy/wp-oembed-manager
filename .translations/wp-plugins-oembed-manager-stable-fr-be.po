@@ -1,18 +1,50 @@
-# Translation of Plugins - oEmbed Manager - Stable (latest release) in French (France)
+# Translation of Plugins - oEmbed Manager - Stable (latest release) in French (Belgium)
 # This file is distributed under the same license as the Plugins - oEmbed Manager - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-18 12:50+0100\n"
+"PO-Revision-Date: 2020-11-28 15:40+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 2.2.4\n"
-"Language: fr\n"
+"X-Generator: Poedit 2.4.1\n"
+"Language: fr_BE\n"
 "Project-Id-Version: Plugins - oEmbed Manager - Stable (latest release)\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+
+#: perfopsone/class-adminmenus.php:74
+msgid "%s Consoles"
+msgstr "Consoles %s"
+
+#: perfopsone/class-adminmenus.php:74 perfopsone/class-adminmenus.php:75
+msgid "Available Consoles"
+msgstr "Consoles disponibles"
+
+#: includes/system/class-markdown.php:46
+msgid "Sorry, unable to find or read the specified file."
+msgstr "Désolé, il est impossible de trouver ou de lire le fichier spécifié."
+
+#: includes/system/class-sitehealth.php:321
+msgid "You should consider using shared memory (PHP shmop) to allow inter-process communication."
+msgstr "Vous devriez envisager d’utiliser la mémoire partagée (PHP shmop) pour permettre la communication inter-processus."
+
+#: includes/system/class-sitehealth.php:315
+msgid "You should allow inter-process communication"
+msgstr "Vous devriez autoriser la communication inter-processus"
+
+#: includes/system/class-sitehealth.php:309
+msgid "Your site can use shared memory to allow inter-process communication. That's great."
+msgstr "Votre site peut utiliser la mémoire partagée pour permettre la communication inter-processus. C’est super."
+
+#: includes/system/class-sitehealth.php:303
+msgid "Your site can use shared memory"
+msgstr "Votre site peut utiliser la mémoire partagée"
+
+#: includes/system/class-sitehealth.php:286
+msgid "Shared Memory Test"
+msgstr "Test de mémoire partagée"
 
 #: admin/class-oembed-manager-admin.php:571
 msgid "Item to verify - in doubt, see %s settings."
@@ -83,6 +115,7 @@ msgid "Plugin options"
 msgstr "Options de l’extension"
 
 #: admin/class-oembed-manager-admin.php:159
+#: admin/partials/oembed-manager-admin-tools.php:23
 msgid "oEmbed Cache Management"
 msgstr "Gestion du cache oEmbed"
 
@@ -106,7 +139,7 @@ msgstr "Appliquer"
 msgid "Number of posts to display"
 msgstr "Nombre de contenus à afficher"
 
-#: admin/partials/oembed-manager-admin-settings-main.php:94
+#: admin/partials/oembed-manager-admin-settings-main.php:109
 msgid "Integrations"
 msgstr "Intégrations"
 
@@ -141,10 +174,6 @@ msgstr "Cette version de %s est une « release candidate ». Bien que prête p
 #: admin/partials/oembed-manager-admin-settings-about.php:20
 msgid "This version of %s is not production-ready. It is a development preview. Use it at your own risk!"
 msgstr "Cette version de %s n’est pas destinée à être mise en production. Il s’agit d’une « development preview ». Utilisez-la à vos risques et périls !"
-
-#: includes/plugin/class-updater.php:94
-msgid "Sorry, unable to find or read changelog file."
-msgstr "Désolé, il est impossible de trouver ou de lire le registre des modifications."
 
 #: includes/plugin/class-updater.php:50
 msgid "See <a href=\"%s\">what's new</a>."
@@ -229,9 +258,9 @@ msgstr "Taille"
 msgid "Status"
 msgstr "État"
 
-#: includes/features/class-posts.php:223
 #: admin/class-oembed-manager-admin.php:155
 #: admin/class-oembed-manager-admin.php:160
+#: includes/features/class-posts.php:223
 msgid "oEmbed"
 msgstr "oEmbed"
 
@@ -247,19 +276,19 @@ msgstr "Valable pour encore %s"
 msgid "Staled"
 msgstr "Périmé"
 
-#: includes/system/class-environment.php:203
+#: includes/system/class-environment.php:204
 msgid "Debug disabled"
 msgstr "Débogage désactivé"
 
-#: includes/system/class-environment.php:203
+#: includes/system/class-environment.php:204
 msgid "Debug enabled"
 msgstr "Débogage activé"
 
-#: includes/system/class-environment.php:197
+#: includes/system/class-environment.php:198
 msgid "display"
 msgstr "affichage"
 
-#: includes/system/class-environment.php:192
+#: includes/system/class-environment.php:193
 msgid "log"
 msgstr "registre"
 
@@ -373,107 +402,109 @@ msgstr "actuellement"
 msgid "%s ago"
 msgstr "il y a %s"
 
-#: includes/system/class-sitehealth.php:320
+#: includes/system/class-sitehealth.php:375
 msgid "You should consider using PHP Intl extension. It would improve localization features on your site."
 msgstr "Vous devriez envisager d’utiliser l’extension PHP Intl. Cela permettrait d’améliorer les fonctionnalités de traduction sur votre site."
 
-#: includes/system/class-sitehealth.php:314
+#: includes/system/class-sitehealth.php:369
 msgid "You should use Intl extension"
 msgstr "Vous devriez utiliser l’extension Intl"
 
-#: includes/system/class-sitehealth.php:308
+#: includes/system/class-sitehealth.php:363
 msgid "Your site uses PHP Intl extension to improve localization features. That's great."
 msgstr "Votre site utilise l’extension PHP Intl pour améliorer les fonctionnalités de traduction. C’est super."
 
-#: includes/system/class-sitehealth.php:305
-#: includes/system/class-sitehealth.php:317
+#: includes/system/class-sitehealth.php:360
+#: includes/system/class-sitehealth.php:372
 msgid "Internationalization"
 msgstr "Internationalisation"
 
-#: includes/system/class-sitehealth.php:302
+#: includes/system/class-sitehealth.php:357
 msgid "Your site uses Intl extension"
 msgstr "Votre site utilise l’extension Intl"
 
-#: includes/system/class-sitehealth.php:285
+#: includes/system/class-sitehealth.php:340
 msgid "I18n Extension Test"
 msgstr "Test d’extension I18n"
 
-#: includes/system/class-sitehealth.php:266
+#: includes/system/class-sitehealth.php:267
 msgid "You should consider using OPcache. It would improve PHP performance of your site."
 msgstr "Vous devriez envisager d’utiliser OPcache. Cela permettrait d’améliorer les performances PHP de votre site."
 
-#: includes/system/class-sitehealth.php:260
+#: includes/system/class-sitehealth.php:261
 msgid "You should use OPcache"
 msgstr "Vous devriez utiliser OPcache"
 
-#: includes/system/class-sitehealth.php:254
+#: includes/system/class-sitehealth.php:255
 msgid "Your site uses OPcache to improve PHP performance. That's great."
 msgstr "Votre site utilise OPcache pour améliorer les performances de PHP. C’est super."
 
-#: includes/system/class-sitehealth.php:248
+#: includes/system/class-sitehealth.php:249
 msgid "Your site uses OPcache"
 msgstr "Votre site utilise OPcache"
 
-#: includes/system/class-sitehealth.php:231
+#: includes/system/class-sitehealth.php:232
 msgid "OPcache Test"
 msgstr "Test OPcache"
 
-#: includes/system/class-sitehealth.php:212
+#: includes/system/class-sitehealth.php:213
 msgid "Your site uses a dedicated object caching mechanism. That's great."
 msgstr "Votre site utilise un mécanisme dédié de mise cache d’objets. C'est super."
 
-#: includes/system/class-sitehealth.php:206
+#: includes/system/class-sitehealth.php:207
 msgid "Your site uses object caching"
 msgstr "Votre site utilise la mise en cache d’objets"
 
-#: includes/system/class-sitehealth.php:200
+#: includes/system/class-sitehealth.php:201
 msgid "Your site uses APCu, but only a few plugins know how to take advantage of it."
 msgstr "Votre site utilise APCu, mais seules quelques extensions savent comment en profiter."
 
-#: includes/system/class-sitehealth.php:194
+#: includes/system/class-sitehealth.php:195
 msgid "You should improve object caching"
 msgstr "Vous devriez améliorer la mise en cache d’objets"
 
-#: includes/system/class-sitehealth.php:188
-#: includes/system/class-sitehealth.php:200
+#: includes/system/class-sitehealth.php:189
+#: includes/system/class-sitehealth.php:201
 msgid "You should consider using a dedicated object caching mechanism, like Memcached or Redis, to improve your site's speed."
 msgstr "Vous devriez envisager d’utiliser un mécanisme dédié de mise en cache d’objets, comme Memcached ou Redis, pour améliorer la vitesse de votre site."
 
-#: includes/system/class-sitehealth.php:188
+#: includes/system/class-sitehealth.php:189
 msgid "Your site uses database transient."
 msgstr "Votre site utilise des Transients stockés en base de données."
 
-#: includes/system/class-sitehealth.php:185
-#: includes/system/class-sitehealth.php:197
-#: includes/system/class-sitehealth.php:209
-#: includes/system/class-sitehealth.php:251
-#: includes/system/class-sitehealth.php:263
+#: includes/system/class-sitehealth.php:186
+#: includes/system/class-sitehealth.php:198
+#: includes/system/class-sitehealth.php:210
+#: includes/system/class-sitehealth.php:252
+#: includes/system/class-sitehealth.php:264
+#: includes/system/class-sitehealth.php:306
+#: includes/system/class-sitehealth.php:318
 msgid "Performance"
 msgstr "Performance"
 
-#: includes/system/class-sitehealth.php:182
+#: includes/system/class-sitehealth.php:183
 msgid "You should use object caching"
 msgstr "Vous devriez utiliser la mise en cache d’objets"
 
-#: includes/system/class-sitehealth.php:164
+#: includes/system/class-sitehealth.php:165
 msgid "Object Cache Test"
 msgstr "Test de cache objet"
 
-#: includes/system/class-sitehealth.php:147
+#: includes/system/class-sitehealth.php:148
 msgid "Plugin diagnostic information"
 msgstr "Informations de diagnostique de l’extension"
 
-#: includes/system/class-sitehealth.php:130
+#: includes/system/class-sitehealth.php:131
 msgid "OPcache settings and status"
 msgstr "Paramètres et état OPcache"
 
-#: includes/system/class-sitehealth.php:122
+#: includes/system/class-sitehealth.php:123
 msgid "Object cache"
 msgstr "Cache objet"
 
 #. translators: as in the sentence "Product W version X by author Y (license
 #. Z)"
-#: includes/libraries/class-libraries.php:212
+#: includes/libraries/class-libraries.php:174
 msgid "<a href=\"%1$s\">%2$s %3$s</a>%4$s by %5$s (%6$s)"
 msgstr "<a href=\"%1$s\">%2$s %3$s</a>%4$s par %5$s (%6$s)"
 
@@ -498,72 +529,67 @@ msgid "MIT license"
 msgstr "Licence MIT"
 
 #: includes/libraries/class-libraries.php:67
-#: includes/libraries/class-libraries.php:79
-#: includes/libraries/class-libraries.php:172
-#: includes/libraries/class-libraries.php:180
-#: includes/libraries/class-libraries.php:188
-#: includes/libraries/class-libraries.php:195
-#: includes/libraries/class-libraries.php:202
+#: includes/libraries/class-libraries.php:78
 msgid "%s & contributors"
 msgstr "%s et contributeurs"
 
-#: perfopsone/class-adminmenus.php:379
+#: perfopsone/class-adminmenus.php:406
 msgid "Requires at least PHP %1$s%2$s and WordPress %3$s%4$s."
 msgstr "Nécessite au moins PHP %1$s%2$s et WordPress %3$s%4$s."
 
-#: perfopsone/class-adminmenus.php:370
+#: perfopsone/class-adminmenus.php:397
 msgid "contribution"
 msgstr "contribution"
 
-#: perfopsone/class-adminmenus.php:369
+#: perfopsone/class-adminmenus.php:396
 msgid "support"
 msgstr "assistance"
 
-#: perfopsone/class-adminmenus.php:368
+#: perfopsone/class-adminmenus.php:395
 msgid "about"
 msgstr "à propos"
 
-#: perfopsone/class-adminmenus.php:367
+#: perfopsone/class-adminmenus.php:394
 msgid "settings"
 msgstr "réglages"
 
-#: perfopsone/class-adminmenus.php:241
+#: perfopsone/class-adminmenus.php:268
 msgid "No review yet."
 msgstr "Pas encore d’avis."
 
-#: perfopsone/class-adminmenus.php:238
+#: perfopsone/class-adminmenus.php:265
 msgid "%s reviews."
 msgstr "%s avis."
 
-#: perfopsone/class-adminmenus.php:233
+#: perfopsone/class-adminmenus.php:260
 msgid "%s downloads."
 msgstr "%s téléchargements."
 
-#: perfopsone/class-adminmenus.php:228
+#: perfopsone/class-adminmenus.php:255
 msgid "%s+ installs."
 msgstr "%s+ installations."
 
-#: perfopsone/class-adminmenus.php:211 perfopsone/class-adminmenus.php:218
+#: perfopsone/class-adminmenus.php:238 perfopsone/class-adminmenus.php:245
 msgid "need update"
 msgstr "nécessite une mise à jour"
 
-#: perfopsone/class-adminmenus.php:209 perfopsone/class-adminmenus.php:216
+#: perfopsone/class-adminmenus.php:236 perfopsone/class-adminmenus.php:243
 msgid "OK"
 msgstr "OK"
 
-#: perfopsone/class-adminmenus.php:203
+#: perfopsone/class-adminmenus.php:230
 msgid "Need to be updated to %s."
 msgstr "Nécessite d’être mis à jour vers %s."
 
-#: perfopsone/class-adminmenus.php:108
+#: perfopsone/class-adminmenus.php:112
 msgid "This analytics feature is currently disabled. Click here to activate it."
 msgstr "Cette fonctionnalité d’analyse est actuellement désactivée. Cliquez ici pour l’activer."
 
 #. translators: as in the sentence "oEmbed Manager Settings" or "WordPress
 #. Settings"
-#: perfopsone/class-adminmenus.php:70
-#: admin/partials/oembed-manager-admin-settings-main.php:24
 #: admin/class-oembed-manager-admin.php:143
+#: admin/partials/oembed-manager-admin-settings-main.php:24
+#: perfopsone/class-adminmenus.php:70
 msgid "%s Settings"
 msgstr "Réglages %s"
 
