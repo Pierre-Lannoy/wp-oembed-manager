@@ -11,7 +11,7 @@
 
 namespace Oemm\Plugin\Feature;
 
-use Oemm\System\Logger;
+
 use Oemm\System\Option;
 use Oemm\Plugin\Feature\Integration;
 use Oemm\Plugin\Feature\Cookie;
@@ -171,7 +171,7 @@ class oEmbed {
 		// Verify consent exclusions
 		if ( Option::site_get( 'exception_consent_block' ) ) {
 			if ( ! Consent::init()->evaluate( Option::site_get( 'exception_consent_id' ), Option::site_get( 'exception_consent_param', null ) ) ) {
-				Logger::debug( 'oEmbed content blocked. Reason: consent not collected. Url: ' . $url );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed content blocked. Reason: consent not collected. Url: ' . $url );
 				return Option::site_get( 'exception_consent_text' );
 			}
 		}
@@ -179,7 +179,7 @@ class oEmbed {
 		// Verify cookie exclusions
 		if ( Option::site_get( 'exception_cookie_block' ) ) {
 			if ( ! Cookie::init()->evaluate( Option::site_get( 'exception_cookie_id' ), Option::site_get( 'exception_cookie_param', null ) ) ) {
-				Logger::debug( 'oEmbed content blocked. Reason: cookie consent not collected. Url: ' . $url );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed content blocked. Reason: cookie consent not collected. Url: ' . $url );
 				return Option::site_get( 'exception_cookie_text' );
 			}
 		}
@@ -187,11 +187,11 @@ class oEmbed {
 		// Verify DNT exclusions
 		if ( Option::site_get( 'exception_dnt_block' ) ) {
 			if ( ! DNT::init()->evaluate( Option::site_get( 'exception_dnt_id' ), Option::site_get( 'exception_dnt_param', null ) ) ) {
-				Logger::debug( 'oEmbed content blocked. Reason: Do Not Track headers detected. Url: ' . $url );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed content blocked. Reason: Do Not Track headers detected. Url: ' . $url );
 				return Option::site_get( 'exception_dnt_text' );
 			}
 		}
-		Logger::debug( 'oEmbed content allowed. Url: ' . $url );
+		\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed content allowed. Url: ' . $url );
 		return $html;
 	}
 
@@ -243,7 +243,7 @@ class oEmbed {
 	public static function set_consumer( $bypass = false ) {
 		if ( $bypass ) {
 			//add_filter( 'embed_cache_oembed_types', [ self::class, 'embed_cache_oembed_types' ], PHP_INT_MAX );
-			Logger::debug( 'Consumer settings bypassed.' );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'Consumer settings bypassed.' );
 		} else {
 			if ( Option::site_get( 'disable_consumer' ) ) {
 				self::remove_autoembed();
@@ -262,13 +262,13 @@ class oEmbed {
 				remove_filter( 'oembed_response_data', 'get_oembed_response_data_rich' );
 				remove_filter( 'pre_oembed_result', 'wp_filter_pre_oembed_result' );
 				add_filter( 'tiny_mce_plugins', [ self::class, 'remove_tiny_mce_plugin' ] );
-				Logger::debug( 'oEmbed consumer disabled.' );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed consumer disabled.' );
 			} else {
 				add_filter( 'embed_oembed_html', [ self::class, 'modify_oembed_html' ], PHP_INT_MAX, 4 );
 				add_filter( 'video_embed_html', [ self::class, 'modify_video_oembed_html' ], PHP_INT_MAX, 1 );
 				add_filter( 'oembed_ttl', [ self::class, 'get_cache_ttl' ], PHP_INT_MAX );
 				add_filter( 'oembed_remote_get_args', [ self::class, 'modify_fetch_args' ], PHP_INT_MAX );
-				Logger::debug( 'oEmbed consumer enabled.' );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed consumer enabled.' );
 			}
 		}
 	}
@@ -297,10 +297,10 @@ class oEmbed {
 			remove_action( 'embed_footer', 'print_embed_scripts' );
 			remove_action( 'embed_footer', 'wp_print_footer_scripts', 20 );
 			add_filter( 'rewrite_rules_array', [ self::class, 'disable_rewrite_rules' ] );
-			Logger::debug( 'oEmbed producer disabled.' );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed producer disabled.' );
 		} else {
 			remove_filter( 'rewrite_rules_array', [ self::class, 'disable_rewrite_rules' ] );
-			Logger::debug( 'oEmbed producer enabled.' );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->debug( 'oEmbed producer enabled.' );
 		}
 	}
 
@@ -314,10 +314,10 @@ class oEmbed {
 		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
 		if ( false === $count ) {
 			$count = 0;
-			Logger::warning( 'Unable to purge oEmbed cache.' );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->warning( 'Unable to purge oEmbed cache.' );
 		} else {
 			$count = (int) ( $count / 2 );
-			Logger::info( sprintf( 'oEmbed cache purged: %d item(s) deleted.', $count ) );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache purged: %d item(s) deleted.', $count ) );
 		}
 		return $count;
 	}
@@ -333,14 +333,14 @@ class oEmbed {
 			global $wp_embed;
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
-				Logger::info( sprintf( 'oEmbed cache purged for %d post(s).', 1 ) );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache purged for %d post(s).', 1 ) );
 			}
 			if ( is_array( $id ) ) {
 				foreach ( $id as $i ) {
 					$wp_embed->delete_oembed_caches( $i );
 				}
 				if ( 0 < count( $id ) ) {
-					Logger::info( sprintf( 'oEmbed cache purged for %d post(s).', count( $id ) ) );
+					\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache purged for %d post(s).', count( $id ) ) );
 				}
 			}
 		} else {
@@ -379,7 +379,7 @@ class oEmbed {
 			self::cache_oembed( $post['ID'] );
 		}
 		if ( 0 < count( $posts ) ) {
-			Logger::info( sprintf( '%d post(s) have been checked to update/create oEmbed cache if needed.', count( $posts ) ) );
+			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( '%d post(s) have been checked to update/create oEmbed cache if needed.', count( $posts ) ) );
 		}
 	}
 
@@ -395,7 +395,7 @@ class oEmbed {
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
 				$wp_embed->cache_oembed( $id );
-				Logger::info( sprintf( 'oEmbed cache updated/created for %d post(s).', 1 ) );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache updated/created for %d post(s).', 1 ) );
 			}
 			if ( is_array( $id ) ) {
 				foreach ( $id as $i ) {
@@ -403,7 +403,7 @@ class oEmbed {
 					$wp_embed->cache_oembed( $i );
 				}
 				if ( 0 < count( $id ) ) {
-					Logger::info( sprintf( 'oEmbed cache updated/created for %d post(s).', count( $id ) ) );
+					\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache updated/created for %d post(s).', count( $id ) ) );
 				}
 			}
 		} else {

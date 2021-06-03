@@ -9,10 +9,8 @@
 
 namespace Oemm\Plugin;
 
-use Oemm\Plugin\Feature\Analytics;
-use Oemm\Plugin\Feature\AnalyticsFactory;
 use Oemm\System\Assets;
-use Oemm\System\Logger;
+
 use Oemm\System\Role;
 use Oemm\System\Option;
 use Oemm\System\Form;
@@ -315,12 +313,12 @@ class oEmbed_Manager_Admin {
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
-				Logger::info( 'Plugin settings updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( 'Plugin settings updated.', [ 'code' => $code ] );
 			} else {
 				$message = esc_html__( 'Plugin settings have not been saved. Please try again.', 'oembed-manager' );
 				$code    = 2;
 				add_settings_error( 'oemm_nonce_error', $code, $message, 'error' );
-				Logger::warning( 'Plugin settings not updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->warning( 'Plugin settings not updated.', [ 'code' => $code ] );
 			}
 		}
 	}
@@ -337,12 +335,12 @@ class oEmbed_Manager_Admin {
 				$message = esc_html__( 'Plugin settings have been reset to defaults.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
-				Logger::info( 'Plugin settings reset to defaults.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( 'Plugin settings reset to defaults.', [ 'code' => $code ] );
 			} else {
 				$message = esc_html__( 'Plugin settings have not been reset to defaults. Please try again.', 'oembed-manager' );
 				$code    = 2;
 				add_settings_error( 'oemm_nonce_error', $code, $message, 'error' );
-				Logger::warning( 'Plugin settings not reset to defaults.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->warning( 'Plugin settings not reset to defaults.', [ 'code' => $code ] );
 			}
 		}
 	}
@@ -359,12 +357,12 @@ class oEmbed_Manager_Admin {
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
-				Logger::info( 'Plugin settings updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( 'Plugin settings updated.', [ 'code' => $code ] );
 			} else {
 				$message = esc_html__( 'Plugin settings have not been saved. Please try again.', 'oembed-manager' );
 				$code    = 2;
 				add_settings_error( 'oemm_nonce_error', $code, $message, 'error' );
-				Logger::warning( 'Plugin settings not updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->warning( 'Plugin settings not updated.', [ 'code' => $code ] );
 			}
 		}
 	}
@@ -394,12 +392,12 @@ class oEmbed_Manager_Admin {
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
-				Logger::info( 'Plugin settings updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( 'Plugin settings updated.', [ 'code' => $code ] );
 			} else {
 				$message = esc_html__( 'Plugin settings have not been saved. Please try again.', 'oembed-manager' );
 				$code    = 2;
 				add_settings_error( 'oemm_nonce_error', $code, $message, 'error' );
-				Logger::warning( 'Plugin settings not updated.', $code );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->warning( 'Plugin settings not updated.', [ 'code' => $code ] );
 			}
 		}
 	}

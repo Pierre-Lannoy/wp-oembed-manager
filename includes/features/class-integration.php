@@ -11,7 +11,7 @@
 
 namespace Oemm\Plugin\Feature;
 
-use Oemm\System\Logger;
+
 use Oemm\System\Option;
 
 /**

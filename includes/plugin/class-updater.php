@@ -12,7 +12,7 @@ namespace Oemm\Plugin;
 use Oemm\System\Nag;
 use Oemm\System\Option;
 use Oemm\System\Environment;
-use Oemm\System\Logger;
+
 use Oemm\System\Role;
 use Exception;
 use Oemm\System\Markdown;
@@ -45,7 +45,7 @@ class Updater {
 				$this->update( $old );
 				// phpcs:ignore
 				$message  = sprintf( esc_html__( '%1$s has been correctly updated from version %2$s to version %3$s.', 'oembed-manager' ), OEMM_PRODUCT_NAME, $old, OEMM_VERSION );
-				Logger::notice( $message );
+				\DecaLog\Engine::eventsLogger( OEMM_SLUG )->notice( $message );
 				// phpcs:ignore
 				$message .= ' ' . sprintf( __( 'See <a href="%s">what\'s new</a>.', 'oembed-manager' ), admin_url( 'admin.php?page=oemm-settings&tab=about' ) );
 			}

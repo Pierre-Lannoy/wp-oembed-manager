@@ -11,7 +11,7 @@
 
 namespace Oemm\System;
 
-use Oemm\System\Logger;
+
 
 /**
  * Define the GeoIP functionality.

@@ -67,7 +67,7 @@ function oemm_uninstall() {
  * @since 1.0.0
  */
 function oemm_run() {
-	\Oemm\System\Logger::init();
+	\DecaLog\Engine::initPlugin( OEMM_SLUG, OEMM_PRODUCT_NAME, OEMM_VERSION );
 	$plugin = new Oemm\Plugin\Core();
 	$plugin->run();
 }

@@ -12,7 +12,7 @@
 namespace Oemm\Plugin\Feature;
 
 use Oemm\System\Conversion;
-use Oemm\System\Logger;
+
 use Oemm\System\Date;
 use Oemm\System\Timezone;
 use Oemm\Plugin\Feature\oEmbed;
