@@ -67,7 +67,7 @@ function oemm_uninstall() {
  * @since 1.0.0
  */
 function oemm_run() {
-	\DecaLog\Engine::initPlugin( OEMM_SLUG, OEMM_PRODUCT_NAME, OEMM_VERSION );
+	\DecaLog\Engine::initPlugin( OEMM_SLUG, OEMM_PRODUCT_NAME, OEMM_VERSION, \Oemm\Plugin\Core::get_base64_logo() );
 	$plugin = new Oemm\Plugin\Core();
 	$plugin->run();
 }
