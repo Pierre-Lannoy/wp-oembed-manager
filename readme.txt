@@ -12,14 +12,14 @@ Manage oEmbed capabilities of your website and take a new step in the GDPR compl
 
 == Description ==
 
-oEmbed Manager helps you to:
+**oEmbed Manager**  helps you to:
 
 * allow/disallow other websites to embed your content;
 * conditionally allow/disallow the display of embedded content on your site;
 * fine tune the way oEmbed operates in the WordPress core;
 * list, clear and update/create oEmbed cached items.
 
-To conditionally allow/disallow the display of embedded content, oEmbed Manager fully integrates with:
+To conditionally allow/disallow the display of embedded content, **oEmbed Manager**  fully integrates with:
 
 * [Cookie Consent](https://wordpress.org/plugins/uk-cookie-consent/)
 * [Cookie Notice for GDPR](https://wordpress.org/plugins/cookie-notice/)
@@ -30,6 +30,8 @@ To conditionally allow/disallow the display of embedded content, oEmbed Manager 
 * [GDPR Cookie Consent](https://wordpress.org/plugins/cookie-law-info/)
 
 If you use one of these plugins, you can set oEmbed to display embedded content only when a visitor has agreed your cookie or privacy policy, or when she/he has not set the Do Not Track flag of her/his browser.
+
+> **oEmbed Manager** is part of [PerfOps One](https://perfops.one/), a suite of free and open source WordPress plugins dedicated to observability and operations performance.
 
 = Privacy =
 
@@ -87,7 +89,7 @@ You can report bugs and suggest ideas via the official [support page](https://wo
 
 == Changelog ==
 
-Please, see [full changelog](https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md) on GitHub.
+Please, see [full changelog](https://perfops.one/oembed-manager-changelog).
 
 == Upgrade Notice ==
 

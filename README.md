@@ -4,7 +4,9 @@
 [![wordpress](https://badgen.net/badge/wordpress/5.2+/green)](https://wordpress.org/plugins/oembed-manager/)
 [![license](https://badgen.net/github/license/Pierre-Lannoy/wp-oembed-manager/)](/license.txt)
 
-**oEmbed Manager** is a WordPress plugin to manage oEmbed capabilities of your website and to take a new step in the GDPR compliance of your embedded content.
+__oEmbed Manager__ is a WordPress plugin to manage oEmbed capabilities of your website and to take a new step in the GDPR compliance of your embedded content.
+
+See [WordPress directory page](https://wordpress.org/plugins/oembed-manager/) or [official website](https://perfops.one/oembed-manager).
 
 It helps you to:
 - allow/disallow other websites to embed your content;
@@ -12,7 +14,7 @@ It helps you to:
 - fine tune the way oEmbed operates in the WordPress core;
 - list, clear and update/create oEmbed cached items.
 
-To conditionally allow/disallow the display of embedded content, **oEmbed Manager** fully integrates with:
+To conditionally allow/disallow the display of embedded content, __oEmbed Manager__ fully integrates with:
 
 - [Cookie Consent](https://wordpress.org/plugins/uk-cookie-consent/)
 - [Cookie Notice for GDPR](https://wordpress.org/plugins/cookie-notice/)
@@ -22,7 +24,7 @@ To conditionally allow/disallow the display of embedded content, **oEmbed Manage
 - [GDPR Cookie Compliance](https://wordpress.org/plugins/gdpr-cookie-compliance/)
 - [GDPR Cookie Consent](https://wordpress.org/plugins/cookie-law-info/)
 
-See [WordPress directory page](https://wordpress.org/plugins/oembed-manager/).
+> __oEmbed Manager__ is part of [PerfOps One](https://perfops.one/), a suite of free and open source WordPress plugins dedicated to observability and operations performance.
 
 ## Installation
 
@@ -32,7 +34,7 @@ See [WordPress directory page](https://wordpress.org/plugins/oembed-manager/).
 2. Search for 'oEmbed Manager'.
 3. Click on the 'Install Now' button.
 
-You can now activate **oEmbed Manager** from your _Plugins_ page.
+You can now activate __oEmbed Manager__ from your _Plugins_ page.
 
 ### Git method
 1. Just clone the repository in your `/wp-content/plugins/` directory:
@@ -41,7 +43,7 @@ cd ./wp-content/plugins
 git clone https://github.com/Pierre-Lannoy/wp-oembed-manager.git oembed-manager
 ```
 
-You can now activate **oEmbed Manager** from your _Plugins_ page.
+You can now activate __oEmbed Manager__ from your _Plugins_ page.
  
 ## Contributions
 
