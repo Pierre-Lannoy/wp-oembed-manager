@@ -1,0 +1,1 @@
+oEmbed Manager does not have WP-CLI command yet.

@@ -68,6 +68,7 @@ function oemm_uninstall() {
  */
 function oemm_run() {
 	\DecaLog\Engine::initPlugin( OEMM_SLUG, OEMM_PRODUCT_NAME, OEMM_VERSION, \Oemm\Plugin\Core::get_base64_logo() );
+	require_once __DIR__ . '/includes/features/class-wpcli.php';
 	$plugin = new Oemm\Plugin\Core();
 	$plugin->run();
 }
