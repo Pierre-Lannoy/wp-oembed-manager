@@ -28,7 +28,7 @@ $trademarks = esc_html__( 'All brands, icons and graphic illustrations are regis
 $icon       = '<img class="oemm-about-logo" style="opacity:0;" src="' . Oemm\Plugin\Core::get_base64_logo() . '" />';
 
 ?>
-<h2><?php echo esc_html( OEMM_PRODUCT_NAME . ' ' . OEMM_VERSION ); ?></h2>
+<h2><?php echo esc_html( OEMM_PRODUCT_NAME . ' ' . OEMM_VERSION ); ?> / <a href="https://perfops.one">PerfOps One</a></h2>
 <?php echo $icon; ?>
 <?php echo $warning; ?>
 <p><?php echo $intro; ?></p>
