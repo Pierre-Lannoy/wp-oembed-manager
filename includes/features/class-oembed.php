@@ -310,7 +310,7 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	private static function purge_caches() {
-		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging' );
+		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
 		global $wpdb;
 		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
 		if ( false === $count ) {
@@ -332,7 +332,7 @@ class oEmbed {
 	 */
 	public static function purge_cache( $id = null) {
 		if ( isset( $id ) ) {
-			$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging' );
+			$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
 			global $wp_embed;
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
@@ -377,7 +377,7 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	private static function set_caches() {
-		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache updating' );
+		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache updating', DECALOG_SPAN_MAIN_RUN );
 		global $wpdb;
 		$posts = $wpdb->get_results( 'SELECT DISTINCT ID FROM ' . $wpdb->posts . " WHERE post_status = 'publish' ORDER BY ID DESC", ARRAY_A );
 		foreach ( $posts as $post ) {
