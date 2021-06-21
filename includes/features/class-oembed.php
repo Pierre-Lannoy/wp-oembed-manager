@@ -310,7 +310,7 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	private static function purge_caches() {
-		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
+		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->startSpan( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
 		global $wpdb;
 		$count = $wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%_oembed_%'" );
 		if ( false === $count ) {
@@ -320,7 +320,7 @@ class oEmbed {
 			$count = (int) ( $count / 2 );
 			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache purged: %d item(s) deleted.', $count ) );
 		}
-		\DecaLog\Engine::tracesLogger( OEMM_SLUG )->end_span( $span );
+		\DecaLog\Engine::tracesLogger( OEMM_SLUG )->endSpan( $span );
 		return $count;
 	}
 
@@ -332,7 +332,7 @@ class oEmbed {
 	 */
 	public static function purge_cache( $id = null) {
 		if ( isset( $id ) ) {
-			$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
+			$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->startSpan( 'Cache purging', DECALOG_SPAN_MAIN_RUN );
 			global $wp_embed;
 			if ( is_int( $id ) ) {
 				$wp_embed->delete_oembed_caches( $id );
@@ -346,7 +346,7 @@ class oEmbed {
 					\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( 'oEmbed cache purged for %d post(s).', count( $id ) ) );
 				}
 			}
-			\DecaLog\Engine::tracesLogger( OEMM_SLUG )->end_span( $span );
+			\DecaLog\Engine::tracesLogger( OEMM_SLUG )->endSpan( $span );
 		} else {
 			return self::purge_caches();
 		}
@@ -377,7 +377,7 @@ class oEmbed {
 	 * @since 1.0.0
 	 */
 	private static function set_caches() {
-		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->start_span( 'Cache updating', DECALOG_SPAN_MAIN_RUN );
+		$span = \DecaLog\Engine::tracesLogger( OEMM_SLUG )->startSpan( 'Cache updating', DECALOG_SPAN_MAIN_RUN );
 		global $wpdb;
 		$posts = $wpdb->get_results( 'SELECT DISTINCT ID FROM ' . $wpdb->posts . " WHERE post_status = 'publish' ORDER BY ID DESC", ARRAY_A );
 		foreach ( $posts as $post ) {
@@ -386,7 +386,7 @@ class oEmbed {
 		if ( 0 < count( $posts ) ) {
 			\DecaLog\Engine::eventsLogger( OEMM_SLUG )->info( sprintf( '%d post(s) have been checked to update/create oEmbed cache if needed.', count( $posts ) ) );
 		}
-		\DecaLog\Engine::tracesLogger( OEMM_SLUG )->end_span( $span );
+		\DecaLog\Engine::tracesLogger( OEMM_SLUG )->endSpan( $span );
 	}
 
 	/**
