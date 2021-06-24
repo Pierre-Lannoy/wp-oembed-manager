@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - oEmbed Manager - Stable Readme (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-07 17:02+0100\n"
+"PO-Revision-Date: 2021-06-24 15:40+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0\n"
 "Language: fr_CA\n"
 "Project-Id-Version: Plugins - oEmbed Manager - Stable Readme (latest release)\n"
 "POT-Creation-Date: \n"
@@ -21,6 +21,14 @@ msgstr "Ajustez les capacités oEmbed de votre site Web et franchissez une nouve
 #. Plugin name.
 msgid "oEmbed Manager"
 msgstr "oEmbed Manager"
+
+#. Found in description paragraph.
+msgid "<strong>oEmbed Manager</strong> is part of <a href=\"https://perfops.one/\">PerfOps One</a>, a suite of free and open source WordPress plugins dedicated to observability and operations performance."
+msgstr "<strong>oEmbed Manager</strong> fait partie de <a href=\"https://perfops.one/\">PerfOps One</a>, une suite d’extensions WordPress gratuites et open source dédiées à l’observabilité et aux performances des opérations."
+
+#. Found in description paragraph.
+msgid "<strong>oEmbed Manager</strong>  helps you to:"
+msgstr "<strong>oEmbed Manager</strong> vous aide à :"
 
 #. Found in description paragraph.
 msgid "If you like this plugin or find it useful and want to thank me for the work done, please consider making a donation to <a href=\"https://www.laquadrature.net/en\">La Quadrature Du Net</a> or the <a href=\"https://www.eff.org/\">Electronic Frontier Foundation</a> which are advocacy groups defending the rights and freedoms of citizens on the Internet. By supporting them, you help the daily actions they perform to defend our fundamental freedoms!"
@@ -159,12 +167,8 @@ msgid "If you use one of these plugins, you can set oEmbed to display embedded c
 msgstr "Si vous utilisez l’une de ces extensions, vous pouvez paramétrer oEmbed pour qu’il affiche le contenu intégré uniquement lorsqu’un visiteur a accepté votre politique de confidentialité ou de cookies, ou lorsque son navigateur n’envoie pas d’en-tête Do Not Track."
 
 #. Found in description paragraph.
-msgid "To conditionally allow/disallow the display of embedded content, oEmbed Manager fully integrates with:"
-msgstr "Pour autoriser ou interdire de façon conditionnelle l’affichage de contenu intégré, oEmbed Manager s’intègre parfaitement avec :"
-
-#. Found in description paragraph.
-msgid "oEmbed Manager helps you to:"
-msgstr "oEmbed Manager vous aide à :"
+msgid "To conditionally allow/disallow the display of embedded content, <strong>oEmbed Manager</strong>  fully integrates with:"
+msgstr "Pour autoriser ou interdire de façon conditionnelle l’affichage de contenu intégré, <strong>oEmbed Manager</strong> s’intègre parfaitement avec :"
 
 #. Found in description list item.
 msgid "<a href=\"https://wordpress.org/plugins/gdpr/\">GDPR</a>"
@@ -199,5 +203,5 @@ msgid "Consumer Settings"
 msgstr "Réglages du consommateur"
 
 #. Found in changelog paragraph.
-msgid "Please, see <a href=\"https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md\">full changelog</a> on GitHub."
-msgstr "Merci de consulter le <a href=\"https://github.com/Pierre-Lannoy/wp-oembed-manager/blob/master/CHANGELOG.md\">registre des modifications</a> sur GitHub."
+msgid "Please, see <a href=\"https://perfops.one/oembed-manager-changelog\">full changelog</a>."
+msgstr "Merci de consulter le <a href=\"https://perfops.one/oembed-manager-changelog\">journal des modifications</a>."
