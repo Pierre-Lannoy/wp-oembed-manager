@@ -19,7 +19,7 @@ use Oemm\System\Date;
 use Oemm\System\Timezone;
 use Oemm\System\GeoIP;
 use Oemm\System\Environment;
-use PerfOpsOne\AdminMenus;
+use PerfOpsOne\Menus;
 use Oemm\Plugin\Feature\oEmbed;
 
 /**
@@ -130,7 +130,7 @@ class oEmbed_Manager_Admin {
 	 * @return array    The completed menus array.
 	 * @since 1.0.0
 	 */
-	public function init_perfops_admin_menus( $perfops ) {
+	public function init_perfopsone_admin_menus( $perfops ) {
 		if ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) {
 			$perfops['settings'][] = [
 				'name'          => OEMM_PRODUCT_NAME,
@@ -142,7 +142,6 @@ class oEmbed_Manager_Admin {
 				'menu_title'    => OEMM_PRODUCT_NAME,
 				'capability'    => 'manage_options',
 				'callback'      => [ $this, 'get_settings_page' ],
-				'position'      => 50,
 				'plugin'        => OEMM_SLUG,
 				'version'       => OEMM_VERSION,
 				'activated'     => true,
@@ -158,7 +157,6 @@ class oEmbed_Manager_Admin {
 				'menu_title'    => esc_html__( 'oEmbed', 'oembed-manager' ),
 				'capability'    => 'manage_options',
 				'callback'      => [ $this, 'get_tools_page' ],
-				'position'      => 50,
 				'plugin'        => OEMM_SLUG,
 				'activated'     => true,
 				'remedy'        => '',
@@ -168,13 +166,22 @@ class oEmbed_Manager_Admin {
 	}
 
 	/**
+	 * Dispatch the items in the settings menu.
+	 *
+	 * @since 2.0.0
+	 */
+	public function finalize_admin_menus() {
+		Menus::finalize();
+	}
+
+	/**
 	 * Set the items in the settings menu.
 	 *
 	 * @since 1.0.0
 	 */
 	public function init_admin_menus() {
-		add_filter( 'init_perfops_admin_menus', [ $this, 'init_perfops_admin_menus' ] );
-		AdminMenus::initialize();
+		add_filter( 'init_perfopsone_admin_menus', [ $this, 'init_perfopsone_admin_menus' ] );
+		Menus::initialize();
 	}
 
 	/**
