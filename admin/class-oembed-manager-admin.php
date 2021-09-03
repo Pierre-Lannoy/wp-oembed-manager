@@ -20,6 +20,7 @@ use Oemm\System\Timezone;
 use Oemm\System\GeoIP;
 use Oemm\System\Environment;
 use PerfOpsOne\Menus;
+use PerfOpsOne\AdminBar;
 use Oemm\Plugin\Feature\oEmbed;
 
 /**
@@ -166,6 +167,43 @@ class oEmbed_Manager_Admin {
 	}
 
 	/**
+	 * Init PerfOps admin bar.
+	 *
+	 * @param array $perfops    The already declared items.
+	 * @return array    The completed items array.
+	 * @since 3.2.0
+	 */
+	public function init_perfopsone_admin_bar( $perfops ) {
+		if ( ! ( $action = filter_input( INPUT_GET, 'action' ) ) ) {
+			$action = filter_input( INPUT_POST, 'action' );
+		}
+		if ( ! ( $tab = filter_input( INPUT_GET, 'tab' ) ) ) {
+			$tab = filter_input( INPUT_POST, 'tab' );
+		}
+		$early_signal  = ( 'misc' === $tab && 'do-save' === $action ) && ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() );
+		$early_signal &= ( ! empty( $_POST ) && array_key_exists( 'submit', $_POST ) );
+		$early_signal &= ( array_key_exists( '_wpnonce', $_POST ) && wp_verify_nonce( $_POST['_wpnonce'], 'oemm-plugin-options' ) );
+		if ( $early_signal ) {
+			Option::network_set( 'adminbar', array_key_exists( 'oemm_plugin_options_adminbar', $_POST ) );
+		}
+		if ( Option::network_get( 'adminbar' ) && ( Role::SUPER_ADMIN === Role::admin_type() || Role::SINGLE_ADMIN === Role::admin_type() || Role::LOCAL_ADMIN === Role::admin_type() ) ) {
+			$perfops[] = [
+				'id'    => 'oemm-tools-reset',
+				'title' => '<strong>oEmbed</strong>&nbsp;&nbsp;➜&nbsp;&nbsp;' . __( 'Clear All Caches', 'oembed-manager' ),
+				'href'  => add_query_arg( '_wpnonce', wp_create_nonce( 'quick-action-oemm-tools' ), admin_url( 'admin.php?page=oemm-tools&quick-action=reset' ) ),
+				'meta'  => false,
+			];
+			$perfops[] = [
+				'id'    => 'oemm-tools-warmup',
+				'title' => '<strong>oEmbed</strong>&nbsp;&nbsp;➜&nbsp;&nbsp;' . __( 'Update All Caches', 'oembed-manager' ),
+				'href'  => add_query_arg( '_wpnonce', wp_create_nonce( 'quick-action-oemm-tools' ), admin_url( 'admin.php?page=oemm-tools&quick-action=warmup' ) ),
+				'meta'  => false,
+			];
+		}
+		return $perfops;
+	}
+
+	/**
 	 * Dispatch the items in the settings menu.
 	 *
 	 * @since 2.0.0
@@ -190,7 +228,9 @@ class oEmbed_Manager_Admin {
 	 */
 	public function init_admin_menus() {
 		add_filter( 'init_perfopsone_admin_menus', [ $this, 'init_perfopsone_admin_menus' ] );
+		add_filter( 'init_perfopsone_admin_bar', [ $this, 'init_perfopsone_admin_bar' ] );
 		Menus::initialize();
+		AdminBar::initialize();
 	}
 
 	/**
@@ -326,6 +366,7 @@ class oEmbed_Manager_Admin {
 			if ( array_key_exists( '_wpnonce', $_POST ) && wp_verify_nonce( $_POST['_wpnonce'], 'oemm-plugin-options' ) ) {
 				Option::network_set( 'use_cdn', array_key_exists( 'oemm_plugin_options_usecdn', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_options_usecdn' ) : false );
 				Option::network_set( 'display_nag', array_key_exists( 'oemm_plugin_options_nag', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_options_nag' ) : false );
+				Option::network_set( 'adminbar', array_key_exists( 'oemm_plugin_options_adminbar', $_POST ) ? (bool) filter_input( INPUT_POST, 'oemm_plugin_options_adminbar' ) : false );
 				$message = esc_html__( 'Plugin settings have been saved.', 'oembed-manager' );
 				$code    = 0;
 				add_settings_error( 'oemm_no_error', $code, $message, 'updated' );
@@ -443,6 +484,22 @@ class oEmbed_Manager_Admin {
 			]
 		);
 		register_setting( 'oemm_plugin_options_section', 'oemm_plugin_options_logger' );
+		add_settings_field(
+			'oemm_plugin_options_adminbar',
+			__( 'Quick actions', 'oembed-manager' ),
+			[ $form, 'echo_field_checkbox' ],
+			'oemm_plugin_options_section',
+			'oemm_plugin_options_section',
+			[
+				'text'        => esc_html__( 'Display in admin bar', 'oembed-manager' ),
+				'id'          => 'oemm_plugin_options_adminbar',
+				'checked'     => Option::network_get( 'adminbar' ),
+				'description' => esc_html__( 'If checked, oEmbed Manager will display in admin bar the most important actions, if any.', 'oembed-manager' ),
+				'full_width'  => false,
+				'enabled'     => true,
+			]
+		);
+		register_setting( 'oemm_plugin_options_section', 'oemm_plugin_options_adminbar' );
 		add_settings_field(
 			'oemm_plugin_options_usecdn',
 			esc_html__( 'Resources', 'oembed-manager' ),

@@ -74,7 +74,8 @@ class Option {
 		self::$defaults['last_check']              = [];
 		self::$defaults['history']                 = 21;
 		self::$defaults['analytics']               = true;
-		self::$network                             = [ 'version', 'use_cdn', 'script_in_footer', 'display_nag', 'analytics', 'history' ];
+		self::$defaults['adminbar']                = true;
+		self::$network                             = [ 'version', 'use_cdn', 'script_in_footer', 'display_nag', 'analytics', 'history', 'adminbar' ];
 		self::$defaults['disable_producer']        = false;
 		self::$defaults['disable_consumer']        = false;
 		self::$defaults['consumer_mode']           = 0;
