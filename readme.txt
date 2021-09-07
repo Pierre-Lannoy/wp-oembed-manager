@@ -4,7 +4,7 @@ Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 5.2
 Tested up to: 5.8
 Requires PHP: 7.2
-Stable tag: 2.4.1
+Stable tag: 2.5.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -97,3 +97,4 @@ Please, see [full changelog](https://perfops.one/oembed-manager-changelog).
 
 1. Consumer Settings
 2. Producer Settings
+3. Quick Actions in Admin Bar

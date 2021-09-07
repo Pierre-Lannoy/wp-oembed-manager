@@ -3,7 +3,7 @@ All notable changes to **oEmbed Manager** are documented in this *changelog*.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.5.0] - Unreleased
+## [2.5.0] - 2021-09-07
 
 ### Added
 - New menu in the admin bar for "clear all caches" and "delete all caches" quick actions.
