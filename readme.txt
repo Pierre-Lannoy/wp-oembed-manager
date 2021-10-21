@@ -2,7 +2,7 @@
 Contributors: PierreLannoy
 Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 5.2
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 7.2
 Stable tag: 2.5.0
 License: GPLv3

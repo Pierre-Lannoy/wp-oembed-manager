@@ -26,6 +26,12 @@ To conditionally allow/disallow the display of embedded content, __oEmbed Manage
 
 > __oEmbed Manager__ is part of [PerfOps One](https://perfops.one/), a suite of free and open source WordPress plugins dedicated to observability and operations performance.
 
+__oEmbed Manager__ is a free and open source plugin for WordPress. It integrates many other free and open source works (as-is or modified). Please, see 'about' tab in the plugin settings to see the details.
+
+## Hooks
+
+__oEmbed Manager__ introduces some filters and actions to allow plugin customization. Please, read the [hooks reference](HOOKS.md) to learn more about them.
+
 ## Installation
 
 ### WordPress method (recommended)
