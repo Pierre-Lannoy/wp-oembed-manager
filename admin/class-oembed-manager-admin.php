@@ -284,7 +284,6 @@ class oEmbed_Manager_Admin {
 	public function add_row_meta( $links, $file ) {
 		if ( 0 === strpos( $file, OEMM_SLUG . '/' ) ) {
 			$links[] = '<a href="https://wordpress.org/support/plugin/' . OEMM_SLUG . '/">' . esc_html__( 'Support', 'oembed-manager' ) . '</a>';
-			$links[] = '<a href="https://perfops.one">PefOps One</a>';
 		}
 		return $links;
 	}

@@ -8,13 +8,13 @@
  *
  * @wordpress-plugin
  * Plugin Name:       oEmbed Manager
- * Plugin URI:        https://github.com/Pierre-Lannoy/wp-oembed-manager
+ * Plugin URI:        https://perfops.one/oembed-manager
  * Description:       Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content.
  * Version:           2.5.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
- * Author:            Pierre Lannoy
- * Author URI:        https://pierre.lannoy.fr
+ * Author:            PerfOps One / Pierre Lannoy
+ * Author URI:        https://perfops.one
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       oembed-manager
