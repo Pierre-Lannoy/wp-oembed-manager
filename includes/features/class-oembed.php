@@ -44,7 +44,7 @@ class oEmbed {
 	public static function init() {
 		global $pagenow;
 		// phpcs:ignore
-		if ( ( 'admin.php' === $pagenow ) && ( 'oemm-tools' === ( array_key_exists( 'page', $_GET ) ? (string) filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING ) : '') ) ) {
+		if ( ( 'admin.php' === $pagenow ) && ( 'oemm-tools' === ( array_key_exists( 'page', $_GET ) ? (string) filter_input( INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS ) : '') ) ) {
 			self::set_consumer( true );
 		} else {
 			self::set_consumer();
