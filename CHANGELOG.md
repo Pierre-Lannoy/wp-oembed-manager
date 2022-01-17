@@ -3,6 +3,11 @@ All notable changes to **oEmbed Manager** are documented in this *changelog*.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.1] - 2022-01-17
+
+### Fixed
+- The Site Health page may launch deprecated tests.
+
 ## [2.7.0] - 2022-01-17
 
 ### Added
