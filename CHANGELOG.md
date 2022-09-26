@@ -3,6 +3,11 @@ All notable changes to **oEmbed Manager** are documented in this *changelog*.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and **oEmbed Manager** adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.9.0] - Not Yet Released
+
+### Added
+- Compatibility with WordPress 6.1.
+
 ## [2.8.0] - 2022-04-20
 
 ### Added
