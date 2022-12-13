@@ -45,7 +45,7 @@ class oEmbed_Manager_Public {
 	 * @since 1.0.0
 	 */
 	public function enqueue_styles() {
-		$this->assets->register_style( OEMM_ASSETS_ID, OEMM_PUBLIC_URL, 'css/oembed-manager.min.css' );
+		//$this->assets->register_style( OEMM_ASSETS_ID, OEMM_PUBLIC_URL, 'css/oembed-manager.min.css' );
 	}
 
 	/**
@@ -54,7 +54,7 @@ class oEmbed_Manager_Public {
 	 * @since 1.0.0
 	 */
 	public function enqueue_scripts() {
-		$this->assets->register_script( OEMM_ASSETS_ID, OEMM_PUBLIC_URL, 'js/oembed-manager.min.js', [ 'jquery' ] );
+		//$this->assets->register_script( OEMM_ASSETS_ID, OEMM_PUBLIC_URL, 'js/oembed-manager.min.js', [ 'jquery' ] );
 	}
 
 }
