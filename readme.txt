@@ -1,5 +1,5 @@
 === oEmbed Manager ===
-Contributors: PierreLannoy
+Contributors: PierreLannoy, hosterra
 Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 5.2
 Tested up to: 6.1
