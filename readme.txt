@@ -2,9 +2,9 @@
 Contributors: PierreLannoy, hosterra
 Tags: oembed, embed, privacy, gdpr, manager
 Requires at least: 5.2
-Tested up to: 6.3
+Tested up to: 6.4
 Requires PHP: 7.2
-Stable tag: 2.11.0
+Stable tag: 2.12.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
