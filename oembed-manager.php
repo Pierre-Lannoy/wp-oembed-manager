@@ -10,7 +10,7 @@
  * Plugin Name:       oEmbed Manager
  * Plugin URI:        https://perfops.one/oembed-manager
  * Description:       Manage oEmbed capabilities of your website and take a new step in the GDPR compliance of your embedded content.
- * Version:           2.14.0
+ * Version:           3.0.0
  * Requires at least: 6.2
  * Requires PHP:      8.1
  * Author:            Pierre Lannoy / PerfOps One
