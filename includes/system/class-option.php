@@ -93,9 +93,9 @@ class Option {
 		self::$defaults['exception_consent_id']    = '';
 		self::$defaults['exception_cookie_id']     = '';
 		self::$defaults['exception_dnt_id']        = '';
-		self::$defaults['exception_consent_text']  = '<p>' . __( 'In order to respect your opposition to our privacy policy, this embedded content have been disabled.', 'oembed-manager' ) . '</p>';
-		self::$defaults['exception_cookie_text']   = '<p>' . __( 'In order to respect your choice about cookies, this embedded content have been disabled.', 'oembed-manager' ) . '</p>';
-		self::$defaults['exception_dnt_text']      = '<p>' . __( 'In order to honor the <em>Do Not Track</em> request sent by your browser, this embedded content have been disabled to prevent third-party tracking cookies.', 'oembed-manager' ) . '</p>';
+		self::$defaults['exception_consent_text']  = '<p>In order to respect your opposition to our privacy policy, this embedded content have been disabled.</p>';
+		self::$defaults['exception_cookie_text']   = '<p>In order to respect your choice about cookies, this embedded content have been disabled.</p>';
+		self::$defaults['exception_dnt_text']      = '<p>In order to honor the <em>Do Not Track</em> request sent by your browser, this embedded content have been disabled to prevent third-party tracking cookies.</p>';
 		self::$site                                = [ 'disable_producer', 'disable_consumer', 'consumer_mode', 'advanced_clickable', 'advanced_ttl', 'advanced_timeout', 'advanced_size', 'exception_consent_block', 'exception_cookie_block', 'exception_dnt_block', 'exception_consent_param', 'exception_cookie_param', 'exception_dnt_param', 'exception_consent_id', 'exception_cookie_id', 'exception_dnt_id', 'exception_consent_text', 'exception_cookie_text', 'exception_dnt_text' ];
 	}
 

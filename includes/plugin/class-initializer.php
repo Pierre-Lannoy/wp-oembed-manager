@@ -39,10 +39,6 @@ class Initializer {
 		\Oemm\System\Sitehealth::init();
 		\Oemm\Plugin\Feature\oEmbed::init();
 		\Oemm\System\APCu::init();
-		//if ( 'en_US' !== determine_locale() ) {
-			unload_textdomain( OEMM_SLUG );
-			load_plugin_textdomain( OEMM_SLUG );
-		//}
 	}
 
 	/**
