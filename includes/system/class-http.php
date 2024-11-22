@@ -186,7 +186,7 @@ class Http {
 	 * @since  1.0.0
 	 */
 	public static function user_agent() {
-		return OEMM_PRODUCT_NAME . ' (' . Environment::wordpress_version_id() . '; ' . Environment::plugin_version_id() . '; +' . OEMM_PRODUCT_URL . ')';
+		return 'PerfOps One - ' . OEMM_PRODUCT_NAME . ' / ' . OEMM_VERSION . ' (https://perfops.one/' . OEMM_SLUG . ')';
 	}
 
 	/**
