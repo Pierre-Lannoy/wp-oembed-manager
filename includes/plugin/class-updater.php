@@ -13,6 +13,7 @@ use Oemm\System\Nag;
 use Oemm\System\Option;
 use Oemm\System\Environment;
 use Oemm\System\Cache;
+use Oemm\System\Http;
 use Oemm\System\Role;
 use Exception;
 use Oemm\System\Markdown;
@@ -116,7 +117,8 @@ class Updater {
 				[
 					'timeout' => 10,
 					'headers' => [
-						'Accept' => 'application/vnd.github+json'
+						'Accept'     => 'application/vnd.github+json',
+						'user-agent' => Http::user_agent(),
 					]
 				]
 			);
@@ -135,8 +137,8 @@ class Updater {
 				[
 					'timeout' => 10,
 					'headers' => [
-						'Accept' => 'application/vnd.github+json'
-					]
+						'user-agent' => Http::user_agent(),
+					],
 				]
 			);
 			if ( is_wp_error( $remote ) || 200 !== wp_remote_retrieve_response_code( $remote ) || empty( wp_remote_retrieve_body( $remote ) ) ) {
