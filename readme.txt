@@ -1,10 +1,10 @@
 === oEmbed Manager ===
 Contributors: PierreLannoy, hosterra
 Tags: oembed, embed, privacy, gdpr, manager
-Requires at least: 6.2
-Requires PHP: 8.1
-Tested up to: 6.9
-Stable tag: 3.3.0
+Requires at least: 6.4
+Requires PHP: 8.2
+Tested up to: 7.0
+Stable tag: 3.4.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -66,10 +66,6 @@ If you like this plugin or find it useful and want to thank me for the work done
 2. Enjoy!
 
 == Frequently Asked Questions ==
-
-= What are the requirements for this plugin to work? =
-
-You need **WordPress 5.2** and at least **PHP 7.2**.
 
 = What are the cases where this plugin does not work? =
 
