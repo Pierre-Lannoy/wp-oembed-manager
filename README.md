@@ -1,7 +1,7 @@
 # oEmbed Manager
 [![version](https://badgen.net/github/release/Pierre-Lannoy/wp-oembed-manager/)](https://wordpress.org/plugins/oembed-manager/)
-[![php](https://badgen.net/badge/php/7.2+/green)](https://wordpress.org/plugins/oembed-manager/)
-[![wordpress](https://badgen.net/badge/wordpress/5.2+/green)](https://wordpress.org/plugins/oembed-manager/)
+[![php](https://badgen.net/badge/php/8.2+/green)](https://wordpress.org/plugins/oembed-manager/)
+[![wordpress](https://badgen.net/badge/wordpress/7.4+/green)](https://wordpress.org/plugins/oembed-manager/)
 [![license](https://badgen.net/github/license/Pierre-Lannoy/wp-oembed-manager/)](/license.txt)
 
 __oEmbed Manager__ is a WordPress plugin to manage oEmbed capabilities of your website and to take a new step in the GDPR compliance of your embedded content.
@@ -60,7 +60,3 @@ If you find bugs, have good ideas to make this plugin better, you're welcome to 
 Before submitting an issue or a pull request, please read the [contribution guidelines](CONTRIBUTING.md).
 
 > ⚠️ The `master` branch is the current development state of the plugin. If you want a stable, production-ready version, please pick the last official [release](https://github.com/Pierre-Lannoy/wp-oembed-manager/releases).
-
-## Smoke tests
-[![WP compatibility](https://plugintests.com/plugins/oembed-manager/wp-badge.svg)](https://plugintests.com/plugins/oembed-manager/latest)
-[![PHP compatibility](https://plugintests.com/plugins/oembed-manager/php-badge.svg)](https://plugintests.com/plugins/oembed-manager/latest)
